@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letterboxd Icon Toggles</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Base styling */
+        body {
+            font-family: Arial, sans-serif;
+            width: 230px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h2 {
+            font-size: 16px;
+            color: #555;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        /* Toggle container */
+        .toggle-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Text styling */
+        .toggle-container span {
+            font-size: 14px;
+            flex: 1;
+            margin-right: 10px;
+            color: #444;
+        }
+
+        /* Switch styling */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 48px;
+            height: 20px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #bbb;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 12px;
+            width: 12px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(18px);
+        }
+
+        .category-header {
+            font-size: 14px;
+            color: #555;
+            margin: 20px 0 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer; /* Indicate that the header is clickable */
+            display: flex;
+            align-items: center; /* Center the icon and text */
+        }
+
+        .toggle-icon {
+            margin-right: 8px; /* Space between icon and text */
+            transition: transform 0.3s; /* Smooth transition for rotation */
+        }
+    </style>
+</head>
+<body>
+    <h2>Letterboxd Icon Toggles</h2>
+
+    <!-- Letterboxd Tweaks Section -->
+    <h3 class="category-header">
+        <span class="toggle-icon">+</span> Letterboxd Tweaks
+    </h3>
+    <div class="toggle-content">
+        <div class="toggle-container">
+            <span>Use First Non-Premiere Release Year</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleNonPremiere">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Convert Runtime to Hours and Minutes</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleConvertRuntime">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Remove Ratings and Histogram</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleRemoveRatings">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <!-- Master Toggle -->
+    <h3 class="category-header">
+        <span class="toggle-icon">+</span> Master Toggle
+    </h3>
+    <div class="toggle-content">
+        <div class="toggle-container">
+            <span><strong>Enable All Icons</strong></span>
+            <label class="switch">
+                <input type="checkbox" id="toggleMasterAll">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <!-- Major Awards Section -->
+    <h3 class="category-header">
+        <span class="toggle-icon">+</span> Major Awards
+    </h3>
+    <div class="toggle-content">
+        <div class="toggle-container">
+            <span><strong>Enable All Major Awards</strong></span>
+            <label class="switch">
+                <input type="checkbox" id="toggleMasterMajorAwards">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Oscar Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleWinOscar">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Oscar Nominees</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleNomOscar">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>BAFTA Best Film Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleBafta">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Golden Globe Best Drama Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleGoldend">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Golden Globe Best Comedy/Musical Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleGoldenc">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Critics' Choice Best Picture Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleCritic">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>SAG Outstanding Performance by a Cast Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleScreen">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>DGA Outstanding Directing Award Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleDirect">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>PGA Best Theatrical Motion Picture Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePga">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <!-- Letterboxd Stats Page Section -->
+    <h3 class="category-header">
+        <span class="toggle-icon">+</span> Letterboxd Stats Page
+    </h3>
+    <div class="toggle-content">
+        <div class="toggle-container">
+            <span><strong>Enable All Stats Page Icons</strong></span>
+            <label class="switch">
+                <input type="checkbox" id="toggleMasterStatsPage">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>IMDB Top 250</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleImdb">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Oscar Best Picture Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleFilm">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Cannes Palme d'Or Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePalm">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Box Office Mojo All Time 100</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleMoney">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>AFI 100 Years 100 Movies</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleAFI">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Sight & Sound Greatest Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleSightSound">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>1,001 Movies You Must See Before You Die</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleMovies1001">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Edgar Wright's 1,000 Favorites</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleEdgar">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Roger Ebert's Great Movies</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleEbert">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Women-Directed</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePink">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 100 Black-Directed</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleBlack">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Most Fans</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleHeartEyes">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Documentaries</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleDocumentary">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 100 Animation</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleAnimation">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Horror</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleGhost">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <!-- Genre Lists Section -->
+    <h3 class="category-header">
+        <span class="toggle-icon">+</span> Genre Lists
+    </h3>
+    <div class="toggle-content">
+        <div class="toggle-container">
+            <span><strong>Enable All Genre Lists</strong></span>
+            <label class="switch">
+                <input type="checkbox" id="toggleMasterGenreLists">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Action Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleAction">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular Action Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopAction">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">  
+            <span>Top 250 Adventure Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleAdventure">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular Adventure Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopAdventure">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular Animation Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopAnimation">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Comedy Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleFunny">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular Comedy Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopComedy">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Crime Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleCrime">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular Crime Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopCrime">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Drama Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleDrama">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular Drama Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopDrama">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Family Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleFamily">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular Family Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopFamily">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Fantasy Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleFantasy">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular Fantasy Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopFantasy">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 History Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleHistory">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular History Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopHistory">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Music Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleMusic">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular Music Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopMusic">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Mystery Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleMystery">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular Mystery Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopMystery">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Romance Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleRomance">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular Romance Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopRomance">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Science Fiction Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleScienceFiction">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular Science Fiction Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopScienceFiction">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular Horror Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopHorror">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Thriller Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleThriller">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular Thriller Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopThriller">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 War Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleWar">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular War Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopWar">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Western Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleWestern">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular Western Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopWestern">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Romantic Comedy Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleRomcom">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Short Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleShorts">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 TV Miniseries</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleTv">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 100 Stand-Up Comedy Specials</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleComedy">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 100 Concert Films & Digital Albums</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleConcert">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Anime TV Miniseries</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleAnime">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <!-- Other Awards Section -->
+    <h3 class="category-header">
+        <span class="toggle-icon">+</span> Other Awards
+    </h3>
+    <div class="toggle-content">
+        <div class="toggle-container">
+            <span><strong>Enable All Other Awards</strong></span>
+            <label class="switch">
+                <input type="checkbox" id="toggleMasterOtherAwards">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Venice Film Festival Golden Lion Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleLion">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Sundance Grand Jury Prize Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleSundance">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Berlin Film Festival Golden Bear Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleBear">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>TIFF People's Choice Award Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleTiff">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Independent Spirit Award Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleSpirit">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>WGA Best Screenplay Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleWga">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Annie Award Best Animated Feature Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleAnnie">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Razzie Award Worst Picture Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleRazzie">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Saturn Best Horror Film Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleSaturnh">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Saturn Best Fantasy Film Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleSaturnf">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Saturn Best Science Fiction Film Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleSaturns">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Gotham Awards Best Feature Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleGotham">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Los Angeles Film Critics Association Best Film Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleLafca">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>National Board of Review Best Film Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleNbr">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>National Society of Film Critics Best Film Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleNsf">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>New York Film Critics Circle Best Film Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleNyfc">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <!-- Letterboxd Lists Section -->
+    <h3 class="category-header">
+        <span class="toggle-icon">+</span> Letterboxd Lists
+    </h3>
+    <div class="toggle-content">
+        <div class="toggle-container">
+            <span><strong>Enable All Letterboxd Lists</strong></span>
+            <label class="switch">
+                <input type="checkbox" id="toggleMasterLetterboxdLists">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>5,000 Highest Rated Narrative Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleCrown">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>5,000 Most Popular Narrative Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleFire">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>The Anti-Letterboxd 250</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePoop">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Previous Top 250 Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleGray">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Unweighted Top 250 Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleUnweighted">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Most Controversial Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleThumbs">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Highest Rated Things on Letterboxd</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleLetterboxdTop250">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 50 Official Narrative Feature Films Under 5,000 Reviews</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleObscure">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top Rated Movie Per Year</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleYear">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Most Popular Film Per Year</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleMostPopularYear">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 100 G Rated Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleGRated">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 200 Popular G Rated Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopGRated">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 PG Rated Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePGRated">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular PG Rated Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopPGRated">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 PG-13 Rated Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePG13Rated">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular PG-13 Rated Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopPG13Rated">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 R Rated Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleRRated">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular R Rated Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopRRated">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 20 NC-17 Rated Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleNC17Rated">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 NR Rated Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleNrRated">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Popular NR Rated Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopNRated">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 25 Popular NC-17 Rated Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopNC17Rated">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Most Fans with He Pronouns 2024</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleMale">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Most Fans with She Pronouns 2024</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleShe">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Most Fans with Ze or Xe Pronouns 2024</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleZe">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Most Fans per Viewer</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleFansPerView">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 North American Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleNorthAmerica">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Asian Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleAsianNarrative">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 European Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleEuropeanNarrative">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 South American Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleSouthAmerica">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 100 African Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleAfricanNarrative">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 75 Australian Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleAustralianNarrative">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Most Popular 250 North American Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopNorthAmerica">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Most Popular 250 South American Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopSouthAmerica">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Most Popular 250 European Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopEurope">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Most Popular 20 African Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopAfrica">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Most Popular 250 Asian Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopAsia">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Most Popular 150 Australian Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopAustralia">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Under 90 Minute Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleShortFilms250">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Popular 250 Under 90 Minute Films</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePopFilms250">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 250 Films Under 2 hours</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleTop250Under120">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Popular 250 Films Under 2 hours</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePop250Under120">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 150 Films Over 3 hours</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleTop150Over180">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Popular 150 Films Over 3 hours</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePop150Over180">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 20 Films Over 4 Hours</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleTop240Minutes">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Popular 20 Films Over 4 Hours</span>
+            <label class="switch">
+                <input type="checkbox" id="togglePop240Minutes">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Movies Where a 5-Star Rating is Most Common</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleFiveStar">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Highest Rated Films from the 19th Century</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleLetterboxd113">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <!-- External Lists Section -->
+    <h3 class="category-header">
+        <span class="toggle-icon">+</span> External Lists
+    </h3>
+    <div class="toggle-content">
+        <div class="toggle-container">
+            <span><strong>Enable All External Lists</strong></span>
+            <label class="switch">
+                <input type="checkbox" id="toggleMasterExternalLists">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Martin Scorsese's Film School</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleMarty">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Guillermo del Toro's Twitter Recommendations</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleToro">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Francis Ford Coppola's Recommendations</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleFord">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Mike Flanagan's 100 Favorites</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleFlanagan">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>WGA's 101 Greatest Screenplays of the 21st Century</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleWga101">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Library of Congress National Film Registry</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleRegister">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Highest Grossing Domestic Films, Inflation Adjusted</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleInflate">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Rotten Tomatoes 300 Best Movies</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleFresh">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Letterboxd's Four Favorites Interviews</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleFourFavorites">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Highest Grossing Film by Year of Release</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleYearlyDollar">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Biggest Box Office Bombs (Inflation Adjusted)</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleBurningCash">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Ranked #1 at the Weekly Box Office</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleBoxOffice">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Horror Movies Everyone Should Watch</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleScream">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>r/TrueFilm's Film Canon</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleTrueFilm">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>r/Movies Must Watch Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleRmovies">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Four Greatest Films of Each Year, According to r/letterboxd</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleFourGreatest">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Grossed One Billion Dollars, Unadjusted</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleBillionDollarClub">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Most Expensive Films (Inflation Adjusted)</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleMoneybagOld">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Most Expensive Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleMoneybag">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top 5,000 Films of All Time (Calculated)</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleNerd">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>They Shoot Pictures, Don't They? 1,000 Greatest Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleShoot">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Top10ner's 1,000 Greatest Films</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleTop10">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Raj's Personal Rankings</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleRaj">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Criterion Collection</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleCriterion">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <!-- Icon Settings Section -->
+    <h3 class="category-header">
+        <span class="toggle-icon">+</span> Icon Settings
+    </h3>
+    <div class="toggle-content">
+        <div class="toggle-container">
+            <span>Enhanced Oscar Icons for Multi-Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleOscarHierarchy">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Hide Oscar Nomination Icon for Oscar Winners</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleHideNomForWin">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Include Previous '1,001 Movies' Versions</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleMovies1001Alt">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Expanded Animation Top 250</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleAnimation250">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Expanded Box Office Top 250</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleMoneyAlt">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Use Unofficial Horror 250</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleHorrorAlt">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <!-- Assorted Shenanigans Section -->
+    <h3 class="category-header">
+        <span class="toggle-icon">+</span> Assorted Shenanigans
+    </h3>
+    <div class="toggle-content">
+        <div class="toggle-container">
+            <span>Enable Assorted Shenanigans</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleGarfield">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-container">
+            <span>Silence the Shenanigans</span>
+            <label class="switch">
+                <input type="checkbox" id="toggleMuteAudio">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
