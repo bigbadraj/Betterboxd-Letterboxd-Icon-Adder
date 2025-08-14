@@ -1,5 +1,5 @@
 const DEBUG = {
-    ICON: false,    // For icon-related debugging
+    ICON: true,    // For icon-related debugging
     SETTINGS: false, // For general Letterboxd tweaks debugging
     EASTER: false,   // For easter egg debugging
 };
@@ -565,9 +565,9 @@ const ICON_CONFIG = {
         })
     },
     bafta: {
-        url: 'film_titles_every-bafta-best-film-winner.json',
+        url: 'film_titles_all-bafta-best-film-award-winners.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/bigbadraj/list/every-bafta-best-film-winner/",
+            href: "https://letterboxd.com/bafta/list/all-bafta-best-film-award-winners/",
             imgSrc: "bafta.png",
             height: "16",
             width: "16",
@@ -577,9 +577,9 @@ const ICON_CONFIG = {
         })
     },
     goldend: {
-        url: 'film_titles_golden-globes-winners-for-best-drama.json',
+        url: 'film_titles_golden-globe-award-for-best-motion-picture.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/bigbadraj/list/golden-globes-winners-for-best-drama/",
+            href: "https://letterboxd.com/edd_gosbender/list/golden-globe-award-for-best-motion-picture/",
             imgSrc: "goldend.png",
             height: "16",
             width: "16",
@@ -589,9 +589,9 @@ const ICON_CONFIG = {
         })
     },
     goldenc: {
-        url: 'film_titles_golden-globe-winners-for-best-comedy-musical.json',
+        url: 'film_titles_golden-globe-award-for-best-motion-picture-1.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/bigbadraj/list/golden-globe-winners-for-best-comedy-musical/",
+            href: "https://letterboxd.com/edd_gosbender/list/golden-globe-award-for-best-motion-picture-1/",
             imgSrc: "goldenc.png",
             height: "16",
             width: "16",
@@ -1005,7 +1005,7 @@ const ICON_CONFIG = {
             width: "16",
             className: "obscure-icon floating-icon",
             showRanking: true,
-            tooltipText: "№ {ranking} in the Top 50 Under 5,000 Reviews"
+            tooltipText: "№ {ranking} in the Top 50 Under 15,000 Reviews"
         })
     },
     gilmore: {  // New icon entry for Gilmore Girls
@@ -1990,6 +1990,18 @@ const ICON_CONFIG = {
             className: "unweighted-icon floating-icon",
             showRanking: true, 
             tooltipText: "№ {ranking} in the top 250 Letterboxd Unweighted"
+        })
+    },
+    silent: {  // New icon entry for Top 100 Silent Films
+        url: 'film_titles_letterboxds-top-100-silent-films.json',
+        addFunction: createIconAdder({
+            href: "https://letterboxd.com/brsan/list/letterboxds-top-100-silent-films/",
+            imgSrc: "silent.png",
+            height: "16",
+            width: "16",
+            className: "silent-icon floating-icon",
+            showRanking: true,
+            tooltipText: "№ {ranking} in the Top 100 Silent Films"
         })
     },
 };
@@ -3149,7 +3161,7 @@ async function addIcon(filmId, iconKey, settings) {
         return;
     }
 
-    if (iconKey === 'popThriller' && settings.showPopThrillerAlt === true) {
+    if (iconKey === 'popThriller' && settings.showGarfield === true) {
         debugLog('ICON', 'Skipping popThriller icon - popThrillerAlt is enabled');
         return;
     }
@@ -3170,8 +3182,8 @@ async function addIcon(filmId, iconKey, settings) {
     if ((iconKey === 'moneyAlt' && settings.showMoney === false) || 
         (iconKey === 'movies1001Alt' && settings.showMovies1001 === false) ||
         (iconKey === 'animation250' && settings.showAnimation === false) ||
-        (iconKey === 'thrillerAlt' && settings.showThriller === false) ||
-        (iconKey === 'popThrillerAlt' && settings.showPopThriller === false) ||
+        (iconKey === 'thrillerAlt' && settings.showGarfield === false) ||
+        (iconKey === 'popThrillerAlt' && settings.showGarfield === false) ||
         (iconKey === 'horrorAlt' && settings.showHorror === false)) {
         debugLog('ICON', `Skipping ${iconKey} - parent toggle is disabled`);
         return;

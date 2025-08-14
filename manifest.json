@@ -211,7 +211,8 @@
                 "images/pop90.png",
                 "images/pop120.png",
                 "images/pop180.png",
-                "images/pop240.png"
+                "images/pop240.png",
+                "images/silent.png"
             ],
             "matches": ["<all_urls>"]
         }
