@@ -1,5 +1,5 @@
 const DEBUG = {
-    ICON: true,    // For icon-related debugging
+    ICON: false,    // For icon-related debugging
     SETTINGS: false, // For general Letterboxd tweaks debugging
     EASTER: false,   // For easter egg debugging
 };
@@ -1608,30 +1608,6 @@ const ICON_CONFIG = {
             tooltipText: "№ {ranking} in the Popular NC-17 250"
         })
     },
-    nrRated: { // New entry for NR Rated Films
-        url: 'film_titles_top-250-nr-rated-narrative-feature-films.json',
-        addFunction: createIconAdder({
-            href: "https://letterboxd.com/bigbadraj/list/top-250-nr-rated-narrative-feature-films/",
-            imgSrc: "nrrated.jpg",
-            height: "16",
-            width: "16",
-            className: "nrrated-icon floating-icon",
-            showRanking: true,
-            tooltipText: "№ {ranking} in the Top 250 NR Rated Films"
-        })
-    },
-    popNrRated: { // New entry for NR Rated Films
-        url: 'film_titles_top-250-most-popular-nr-rated-narrative-feature.json',
-        addFunction: createIconAdder({
-            href: "https://letterboxd.com/bigbadraj/list/top-250-most-popular-nr-rated-narrative-feature/",
-            imgSrc: "popNR.png",
-            height: "16",
-            width: "16",
-            className: "popNR-icon floating-icon",
-            showRanking: true,
-            tooltipText: "№ {ranking} in the Popular NR 250"
-        })
-    },
     northAmerica: { // New entry for North American Narrative
         url: 'film_titles_top-250-highest-rated-north-american-narrative.json',
         addFunction: createIconAdder({
@@ -3206,16 +3182,73 @@ async function addIcon(filmId, iconKey, settings) {
     try {
         // debugLog('ICON', `Fetching data for ${iconKey}`);
         const data = await fetchData(ICON_CONFIG[iconKey].url);
-        const itemIndex = data.findIndex(item => item.ID === filmId.toString());
+        
+        // Try to find the film by ID (could be numeric ID or film slug)
+        let itemIndex = data.findIndex(item => item.ID === filmId.toString());
+        
+        // If not found by exact ID match, try to find by film slug from URL
+        if (itemIndex === -1 && filmId && filmId !== "Unknown") {
+            // Extract film slug from current URL as fallback
+            const urlMatch = window.location.pathname.match(/\/film\/([^\/]+)/);
+            if (urlMatch) {
+                const urlFilmSlug = urlMatch[1];
+                debugLog('ICON', `Trying to match by URL film slug: ${urlFilmSlug}`);
+                itemIndex = data.findIndex(item => item.ID === urlFilmSlug);
+            }
+        }
+        
+        // If still not found, try using the unique film identifier for additional matching
+        if (itemIndex === -1 && window.currentFilmUniqueId) {
+            const uniqueId = window.currentFilmUniqueId;
+            debugLog('ICON', `Trying to match using unique film identifier:`, uniqueId);
+            
+            // Try matching by slug first
+            itemIndex = data.findIndex(item => item.ID === uniqueId.slug);
+            
+            // If still not found, try matching by title and year (for cases where ID is "Unknown")
+            if (itemIndex === -1 && uniqueId.slug && uniqueId.slug !== "Unknown") {
+                // Look for films with "Unknown" ID but matching title and year
+                itemIndex = data.findIndex(item => {
+                    if (item.ID === "Unknown" && item.Title && item.Year) {
+                        // Create a normalized title for comparison
+                        const normalizedItemTitle = item.Title.toLowerCase().replace(/[^a-z0-9]/g, '');
+                        const normalizedCurrentTitle = uniqueId.title ? uniqueId.title.toLowerCase().replace(/[^a-z0-9]/g, '') : '';
+                        
+                        // Check if titles and years match
+                        return normalizedItemTitle === normalizedCurrentTitle && 
+                               item.Year === uniqueId.year;
+                    }
+                    return false;
+                });
+                
+                if (itemIndex !== -1) {
+                    debugLog('ICON', `Found film by title/year match at index ${itemIndex}`);
+                }
+            }
+        }
         
         if (itemIndex !== -1) {
-            debugLog('ICON', `Found film in ${iconKey} list at index ${itemIndex}`);
+            debugLog('ICON', `Found film in ${iconKey} list at index ${itemIndex} with ID: ${data[itemIndex].ID}`);
             
             // Special handling for Oscar nominations
             if (iconKey === 'nomOscar' && settings.hideNomForWin) {
                 debugLog('ICON', 'Checking if film is Oscar winner before adding nomination icon');
                 const winnerData = await fetchData('film_titles_every-oscar-winner-ever-1.json');
-                if (winnerData.some(item => item.ID === filmId.toString())) {
+                
+                // Try to find the film by ID (could be numeric ID or film slug)
+                let found = winnerData.some(item => item.ID === filmId.toString());
+                
+                // If not found by exact ID match, try to find by film slug from URL
+                if (!found && filmId && filmId !== "Unknown") {
+                    const urlMatch = window.location.pathname.match(/\/film\/([^\/]+)/);
+                    if (urlMatch) {
+                        const urlFilmSlug = urlMatch[1];
+                        debugLog('ICON', `Trying to match Oscar winner check by URL film slug: ${urlFilmSlug}`);
+                        found = winnerData.some(item => item.ID === urlFilmSlug);
+                    }
+                }
+                
+                if (found) {
                     debugLog('ICON', 'Skipping nomination icon - film is Oscar winner');
                     return;
                 }
@@ -3307,7 +3340,21 @@ async function addOscarIcon(filmId, settings) {
                 addIcon(filmId, 'nomOscar', settings);
             } else {
                 const winnerData = await fetchData(ICON_CONFIG.winOscar.url);
-                if (!winnerData.some(item => item.ID === filmId.toString())) {
+                
+                // Try to find the film by ID (could be numeric ID or film slug)
+                let found = winnerData.some(item => item.ID === filmId.toString());
+                
+                // If not found by exact ID match, try to find by film slug from URL
+                if (!found && filmId && filmId !== "Unknown") {
+                    const urlMatch = window.location.pathname.match(/\/film\/([^\/]+)/);
+                    if (urlMatch) {
+                        const urlFilmSlug = urlMatch[1];
+                        debugLog('ICON', `Trying to match Oscar nomination check by URL film slug: ${urlFilmSlug}`);
+                        found = winnerData.some(item => item.ID === urlFilmSlug);
+                    }
+                }
+                
+                if (!found) {
                     addIcon(filmId, 'nomOscar', settings);
                 }
             }
@@ -3358,12 +3405,155 @@ async function updateReleaseYear(settings) {
     }
 }
 
+// Function to create a unique film identifier
+function createUniqueFilmId(filmSlug, filmTitle, filmYear) {
+    // Create a hash-like identifier that combines multiple pieces of information
+    // This ensures uniqueness even if film slugs are similar
+    const cleanTitle = filmTitle ? filmTitle.toLowerCase().replace(/[^a-z0-9]/g, '') : '';
+    const cleanYear = filmYear ? filmYear.toString() : '';
+    const cleanSlug = filmSlug ? filmSlug.toLowerCase().replace(/[^a-z0-9]/g, '') : '';
+    
+    // Combine all elements to create a unique identifier
+    const combined = `${cleanSlug}_${cleanTitle}_${cleanYear}`;
+    
+    // Create a simple hash to make it more compact
+    let hash = 0;
+    for (let i = 0; i < combined.length; i++) {
+        const char = combined.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash; // Convert to 32-bit integer
+    }
+    
+    // Return both the original slug and the hash for maximum uniqueness
+    return {
+        slug: filmSlug,
+        hash: Math.abs(hash).toString(36),
+        combined: `${filmSlug}_${Math.abs(hash).toString(36)}`
+    };
+}
+
 // Main function
 async function fetchID() {
-    const filmPoster = document.querySelector(".film-poster");
-    if (!filmPoster) return;
-
-    const filmId = filmPoster.getAttribute("data-film-id");
+    // Debug: Log current page structure to help diagnose issues
+    debugLog('ICON', '=== DEBUGGING PAGE STRUCTURE ===');
+    debugLog('ICON', `Current URL: ${window.location.href}`);
+    debugLog('ICON', `Current pathname: ${window.location.pathname}`);
+    
+    // Try multiple selectors to find the film poster or film ID
+    let filmPoster = document.querySelector(".film-poster");
+    let filmId = null;
+    let filmTitle = null;
+    let filmYear = null;
+    
+    if (filmPoster) {
+        filmId = filmPoster.getAttribute("data-film-id");
+        debugLog('ICON', `Found film-poster element, data-film-id: ${filmId}`);
+        debugLog('ICON', `Film-poster element:`, filmPoster);
+    } else {
+        debugLog('ICON', 'Film-poster element not found');
+    }
+    
+    // If we didn't get the film ID from film-poster, try alternative methods
+    if (!filmId) {
+        debugLog('ICON', 'Film ID not found in film-poster, trying alternative methods...');
+        
+        // Try to get film ID from URL
+        const urlMatch = window.location.pathname.match(/\/film\/([^\/]+)/);
+        if (urlMatch) {
+            filmId = urlMatch[1];
+            debugLog('ICON', `Extracted film ID from URL: ${filmId}`);
+        }
+        
+        // Try other potential selectors for film ID
+        if (!filmId) {
+            const alternativeSelectors = [
+                '[data-film-id]',
+                '[data-film-slug]',
+                '.film-header [data-*]',
+                '.film-details [data-*]'
+            ];
+            
+            for (const selector of alternativeSelectors) {
+                const element = document.querySelector(selector);
+                if (element) {
+                    debugLog('ICON', `Found element with selector ${selector}:`, element);
+                    filmId = element.getAttribute('data-film-id') || 
+                             element.getAttribute('data-film-slug') || 
+                             element.getAttribute('data-film');
+                    if (filmId) {
+                        debugLog('ICON', `Found film ID using selector ${selector}: ${filmId}`);
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    
+    // Try to extract film title and year for additional uniqueness
+    if (filmId) {
+        // Look for film title in various places
+        const titleSelectors = [
+            'h1.film-title',
+            '.film-header h1',
+            'h1[class*="title"]',
+            '.film-details h1'
+        ];
+        
+        for (const selector of titleSelectors) {
+            const titleElement = document.querySelector(selector);
+            if (titleElement) {
+                const titleText = titleElement.textContent.trim();
+                if (titleText) {
+                    // Extract year and title
+                    const yearMatch = titleText.match(/\((\d{4})\)/);
+                    if (yearMatch) {
+                        filmYear = yearMatch[1];
+                        filmTitle = titleText.replace(/\(\d{4}\)/, '').trim();
+                    } else {
+                        filmTitle = titleText;
+                    }
+                    debugLog('ICON', `Extracted title: "${filmTitle}" and year: "${filmYear}"`);
+                    break;
+                }
+            }
+        }
+        
+        // Create a more unique identifier
+        const uniqueId = createUniqueFilmId(filmId, filmTitle, filmYear);
+        debugLog('ICON', `Created unique film ID:`, uniqueId);
+        
+        // Store the unique identifier for use in icon matching
+        window.currentFilmUniqueId = uniqueId;
+    }
+    
+    // If we still don't have a film ID, log and return
+    if (!filmId) {
+        debugLog('ICON', 'ERROR: Could not find film ID using any method. Page structure may have changed.');
+        console.error('Letterboxd extension: Could not find film ID. Page structure may have changed.');
+        
+        // Additional debugging: log all elements with data attributes
+        debugLog('ICON', '=== SEARCHING FOR ANY DATA ATTRIBUTES ===');
+        const allElements = document.querySelectorAll('*');
+        const elementsWithData = Array.from(allElements).filter(el => {
+            const attrs = el.attributes;
+            for (let i = 0; i < attrs.length; i++) {
+                if (attrs[i].name.startsWith('data-')) {
+                    return true;
+                }
+            }
+            return false;
+        });
+        
+        if (elementsWithData.length > 0) {
+            debugLog('ICON', `Found ${elementsWithData.length} elements with data attributes`);
+            elementsWithData.slice(0, 10).forEach((el, i) => {
+                const attrs = Array.from(el.attributes).filter(attr => attr.name.startsWith('data-'));
+                debugLog('ICON', `Element ${i + 1}:`, el.tagName, attrs.map(attr => `${attr.name}="${attr.value}"`));
+            });
+        }
+        
+        return;
+    }
     
     // Add a 1ms delay before proceeding
     await new Promise(resolve => setTimeout(resolve, 1));
@@ -3382,6 +3572,25 @@ async function fetchID() {
             initializeAmericanPsychoPlaylist();
         }
         
+        // Debug: Check for stats container
+        debugLog('ICON', '=== CHECKING FOR STATS CONTAINER ===');
+        const statsSelectors = ['.production-statistic-list', '.film-stats', '.stats', '[class*="stats"]'];
+        let statsContainer = null;
+        
+        for (const selector of statsSelectors) {
+            const element = document.querySelector(selector);
+            if (element) {
+                statsContainer = element;
+                debugLog('ICON', `Found stats container with selector: ${selector}`);
+                debugLog('ICON', `Stats container:`, element);
+                break;
+            }
+        }
+        
+        if (!statsContainer) {
+            debugLog('ICON', 'WARNING: No stats container found. Icons may not display properly.');
+        }
+        
         // Create array of promises for icon additions
         const iconPromises = Object.keys(ICON_CONFIG)
             .filter(iconKey => !iconKey.startsWith('oscar') && 
@@ -3397,13 +3606,25 @@ async function fetchID() {
 
 // Replace the current fetchID() call with this code
 const initializeIcons = () => {
-    debugLog('ICON', 'Waiting for film-poster and stats container to be available...');
-    const observer = new MutationObserver((mutations, obs) => {
-        const filmPoster = document.querySelector(".film-poster");
-        const statsContainer = document.querySelector(".production-statistic-list");
+    debugLog('ICON', 'Waiting for film elements and stats container to be available...');
+    
+    // Set a timeout to prevent infinite waiting
+    const timeout = setTimeout(() => {
+        debugLog('ICON', 'WARNING: Timeout reached waiting for page elements. Page structure may have changed significantly.');
+        console.warn('Letterboxd extension: Timeout waiting for page elements. Page structure may have changed.');
         
-        if (filmPoster && statsContainer) {
-            debugLog('ICON', 'Film poster and stats container found, initializing icons');
+        // Try to run fetchID anyway - it will handle the error gracefully
+        fetchID();
+    }, 10000); // 10 second timeout
+    
+    const observer = new MutationObserver((mutations, obs) => {
+        // Try to find any film-related element and stats container
+        const filmElement = document.querySelector(".film-poster, [data-film-id], [data-film-slug], .film-header, .film-details");
+        const statsContainer = document.querySelector(".production-statistic-list, .film-stats, .stats, [class*='stats']");
+        
+        if (filmElement && statsContainer) {
+            debugLog('ICON', 'Film element and stats container found, initializing icons');
+            clearTimeout(timeout);
             obs.disconnect();
             fetchID();
         }
@@ -3415,14 +3636,64 @@ const initializeIcons = () => {
     });
 
     // Also try immediately in case the elements are already there
-    if (document.querySelector(".film-poster") && document.querySelector(".production-statistic-list")) {
-        debugLog('ICON', 'Film poster and stats container already present, initializing icons');
+    const filmElement = document.querySelector(".film-poster, [data-film-id], [data-film-slug], .film-header, .film-details");
+    const statsContainer = document.querySelector(".production-statistic-list, .film-stats, .stats, [class*='stats']");
+    if (filmElement && statsContainer) {
+        debugLog('ICON', 'Film element and stats container already present, initializing icons');
+        clearTimeout(timeout);
         observer.disconnect();
         fetchID();
     }
 };
 
 initializeIcons();
+
+// Debug function that can be called from console
+window.debugLetterboxdExtension = () => {
+    console.log('=== LETTERBOXD EXTENSION DEBUG ===');
+    console.log('Current URL:', window.location.href);
+    console.log('Current pathname:', window.location.pathname);
+    
+    // Check for film-poster
+    const filmPoster = document.querySelector('.film-poster');
+    console.log('Film poster element:', filmPoster);
+    if (filmPoster) {
+        console.log('Film poster attributes:', Array.from(filmPoster.attributes).map(attr => `${attr.name}="${attr.value}"`));
+    }
+    
+    // Check for stats container
+    const statsSelectors = ['.production-statistic-list', '.film-stats', '.stats'];
+    statsSelectors.forEach(selector => {
+        const element = document.querySelector(selector);
+        if (element) {
+            console.log(`Stats container (${selector}):`, element);
+        }
+    });
+    
+    // Check for any data attributes
+    const elementsWithData = document.querySelectorAll('[data-*]');
+    console.log(`Found ${elementsWithData.length} elements with data attributes`);
+    elementsWithData.slice(0, 20).forEach((el, i) => {
+        const attrs = Array.from(el.attributes).filter(attr => attr.name.startsWith('data-'));
+        if (attrs.length > 0) {
+            console.log(`Element ${i + 1} (${el.tagName}):`, attrs.map(attr => `${attr.name}="${attr.value}"`));
+        }
+    });
+    
+    // Check for film-related classes
+    const filmClasses = document.querySelectorAll('[class*="film"]');
+    console.log(`Found ${filmClasses.length} elements with "film" in class name`);
+    filmClasses.slice(0, 10).forEach((el, i) => {
+        console.log(`Film class element ${i + 1}:`, el.tagName, el.className);
+    });
+    
+    // Check current film unique ID if available
+    if (window.currentFilmUniqueId) {
+        console.log('Current film unique ID:', window.currentFilmUniqueId);
+    }
+    
+    console.log('=== END DEBUG ===');
+};
 
 function handleTrainJumpscare() {
     

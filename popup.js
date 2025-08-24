@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         StatsPage: ['Imdb', 'Film', 'Palm', 'Money', 'AFI', 'SightSound', 'Movies1001', 'Edgar', 'Ebert', 'Pink', 'Black', 'HeartEyes', 'Documentary', 'Animation', 'Ghost'],
         GenreLists: ['Funny', 'Romcom', 'Anime', 'Comedy', 'Shorts', 'Tv', 'Concert', 'Action', 'PopAction', 'Adventure', 'PopAdventure', 'PopAnimation', 'PopComedy', 'Crime', 'PopCrime', 'Drama', 'PopDrama', 'Family', 'PopFamily', 'Fantasy', 'PopFantasy', 'History', 'PopHistory', 'PopHorror', 'Music', 'PopMusic', 'Mystery', 'PopMystery', 'Romance', 'PopRomance', 'ScienceFiction', 'PopScienceFiction', 'Thriller', 'PopThriller', 'War', 'PopWar', 'Western', 'PopWestern'],
         OtherAwards: ['Lion', 'Sundance', 'Bear', 'Tiff', 'Spirit', 'Wga', 'Annie', 'Saturnh', 'Saturnf', 'Saturns', 'Razzie', 'Gotham', 'Lafca', 'Nbr', 'Nsf', 'Nyfc'],
-        LetterboxdLists: ['Crown', 'Fire', 'Poop', 'LetterboxdTop250', 'MostPopularYear', 'Gray', 'Thumbs', 'Year', 'FiveStar', 'Male', 'She', 'Ze', 'FansPerView', 'Letterboxd113', 'Obscure', 'GRated', 'PopGRated', 'PGRated', 'PopPGRated', 'PG13Rated', 'PopPG13Rated', 'RRated', 'PopRRated', 'NC17Rated', 'PopNC17Rated', 'NrRated', 'PopNRated', 'NorthAmerica', 'PopNorthAmerica', 'PopSouthAmerica', 'PopEurope', 'PopAfrica', 'PopAsia', 'PopAustralia', 'SouthAmerica', 'EuropeanNarrative', 'AfricanNarrative', 'AsianNarrative', 'AustralianNarrative', 'ShortFilms250', 'PopFilms250', 'Top250Under120', 'Pop250Under120', 'Top150Over180', 'Pop150Over180', 'Top240Minutes', 'Pop240Minutes', 'Unweighted', 'Silent'],
+        LetterboxdLists: ['Crown', 'Fire', 'Poop', 'LetterboxdTop250', 'MostPopularYear', 'Gray', 'Thumbs', 'Year', 'FiveStar', 'Male', 'She', 'Ze', 'FansPerView', 'Letterboxd113', 'Obscure', 'GRated', 'PopGRated', 'PGRated', 'PopPGRated', 'PG13Rated', 'PopPG13Rated', 'RRated', 'PopRRated', 'NC17Rated', 'PopNC17Rated', 'NorthAmerica', 'PopNorthAmerica', 'PopSouthAmerica', 'PopEurope', 'PopAfrica', 'PopAsia', 'PopAustralia', 'SouthAmerica', 'EuropeanNarrative', 'AfricanNarrative', 'AsianNarrative', 'AustralianNarrative', 'ShortFilms250', 'PopFilms250', 'Top250Under120', 'Pop250Under120', 'Top150Over180', 'Pop150Over180', 'Top240Minutes', 'Pop240Minutes', 'Unweighted', 'Silent'],
         ExternalLists: ['Marty', 'Toro', 'Ford', 'Wga101', 'Nerd', 'Inflate', 'Fresh', 'Scream', 'FourFavorites', 'TrueFilm', 'Rmovies', 'Top10', 'Register', 'Raj', 'Shoot', 'Criterion', "BillionDollarClub", "Flanagan", 'FourGreatest', 'BoxOffice', 'BurningCash', 'YearlyDollar', 'MoneybagOld', 'Moneybag', 'BoxOffice', 'BurningCash', 'YearlyDollar'],
     };
 
@@ -253,7 +253,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'PG13Rated': 'showPG13Rated',
         'RRated': 'showRRated',
         'NC17Rated': 'showNC17Rated',
-        'NrRated': 'showNrRated',
         'NorthAmerica': 'showNorthAmerica',
         'SouthAmerica': 'showSouthAmerica',
         'EuropeanNarrative': 'showEuropeanNarrative',
@@ -305,7 +304,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'PopPG13Rated': 'showPopPG13Rated',
         'PopRRated': 'showPopRRated',
         'PopNC17Rated': 'showPopNC17Rated',
-        'PopNRated': 'showPopNRated',
         'Silent': 'showSilent',
            
     };
