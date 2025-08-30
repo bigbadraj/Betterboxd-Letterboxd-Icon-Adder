@@ -3434,6 +3434,12 @@ function createUniqueFilmId(filmSlug, filmTitle, filmYear) {
 
 // Main function
 async function fetchID() {
+    // Check if we're on a film page - only proceed if URL starts with /film/
+    if (!window.location.pathname.startsWith('/film/')) {
+        debugLog('ICON', 'Not on a film page - skipping icon initialization');
+        return;
+    }
+    
     // Debug: Log current page structure to help diagnose issues
     debugLog('ICON', '=== DEBUGGING PAGE STRUCTURE ===');
     debugLog('ICON', `Current URL: ${window.location.href}`);
@@ -3565,10 +3571,8 @@ async function fetchID() {
         // Add the release year update
         updateReleaseYear(settings);
         
-        // Add the Megalopolis easter egg if Garfield mode is enabled
+        // Initialize American Psycho playlist if on the right page (only on film pages)
         if (settings.showGarfield) {
-            easterEggs();
-            // Initialize American Psycho playlist if on the right page
             initializeAmericanPsychoPlaylist();
         }
         
@@ -3606,6 +3610,12 @@ async function fetchID() {
 
 // Replace the current fetchID() call with this code
 const initializeIcons = () => {
+    // Check if we're on a film page - only proceed if URL starts with /film/
+    if (!window.location.pathname.startsWith('/film/')) {
+        debugLog('ICON', 'Not on a film page - skipping icon initialization');
+        return;
+    }
+    
     debugLog('ICON', 'Waiting for film elements and stats container to be available...');
     
     // Set a timeout to prevent infinite waiting
@@ -3643,10 +3653,18 @@ const initializeIcons = () => {
         clearTimeout(timeout);
         observer.disconnect();
         fetchID();
-    }
-};
+        }
+    };
 
+// Initialize icons only on film pages
 initializeIcons();
+
+// Initialize easter eggs on all pages (if Garfield mode is enabled)
+chrome.storage.sync.get(['showGarfield'], (settings) => {
+    if (settings.showGarfield) {
+        easterEggs();
+    }
+});
 
 // Debug function that can be called from console
 window.debugLetterboxdExtension = () => {
