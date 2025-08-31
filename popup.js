@@ -87,8 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Handle mute audio toggle
             const muteToggle = document.getElementById('toggleMuteAudio');
             if (muteToggle) {
-                muteToggle.disabled = result.showGarfield === false;
-                muteToggle.checked = result.showGarfield !== false && result.muteAudio === true;
+                        muteToggle.disabled = result.showGarfield === false;
+        muteToggle.checked = result.showGarfield !== false && result.muteAudio === true;
             }
         });
     }
@@ -314,35 +314,22 @@ document.addEventListener('DOMContentLoaded', () => {
         if (toggle) {
             toggle.addEventListener('change', () => {
                 chrome.storage.sync.set({ [storageKey]: toggle.checked });
+                
+                // Special handling for Garfield toggle
+                if (toggleName === 'Garfield') {
+                    // Update mute toggle state
+                    const muteToggle = document.getElementById('toggleMuteAudio');
+                    if (muteToggle) {
+                        muteToggle.disabled = !toggle.checked;
+                        if (!toggle.checked) {
+                            muteToggle.checked = false;
+                            chrome.storage.sync.set({ muteAudio: false });
+                        }
+                    }
+                }
             });
         }
     });
-
-    // Special handling for Garfield toggle
-    const garfieldToggle = document.getElementById('toggleGarfield');
-    if (garfieldToggle) {
-        garfieldToggle.addEventListener('change', function(e) {
-            if (this.checked) {
-                if (!confirm('Are you sure you want to enable Assorted Shenanigans™️?\n\nYou acknowledge the risks inherant with your actions...')) {
-                    this.checked = false;
-                    return;
-                }
-            }
-            chrome.storage.sync.set({ 'showGarfield': this.checked });
-            chrome.storage.sync.set({ 'showGilmore': this.checked });
-            chrome.storage.sync.set({ 'showGoose': this.checked });
-            
-            // Update mute toggle state
-            const muteToggle = document.getElementById('toggleMuteAudio');
-            if (muteToggle) {
-                muteToggle.disabled = !this.checked;
-                if (!this.checked) {
-                    muteToggle.checked = false;
-                    chrome.storage.sync.set({ muteAudio: false });
-                }
-            }
-        });
-    }
     
     // Initialize all toggles when popup opens
     initializeToggles();
