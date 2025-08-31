@@ -1,5 +1,3 @@
-// EasterEgg.js - All easter egg functionality for the Letterboxd extension
-
 // Debug logging function (copied from content.js for independence)
 const EASTER_DEBUG = {
     EASTER: true,   // For easter egg debugging - temporarily enabled
@@ -16,18 +14,15 @@ const EASTER_EGG_CONFIG = {
   global: {
     // text-only "egg" (no chance/url; used only by text replacer)
     brendanFraser: {
-      description: "Brendan Fraser name replacement",
       type: "text"
     },
     rickroll: {
       chance: 1 / 5000,
       url: "https://youtu.be/-nmCeXgztxM",
-      description: "Rickroll redirect"
     },
     freddyGotFingered: {
       chance: 1 / 5000,
       url: "https://letterboxd.com/film/freddy-got-fingered/",
-      description: "Freddy Got Fingered redirect"
     }
   },
 
@@ -44,11 +39,9 @@ const EASTER_EGG_CONFIG = {
         },
         'american-psycho': {
             type: 'playlist',
-            description: "Patrick Bateman's favorite tracks"
         },
         'memento': {
             type: 'textReversal',
-            description: "Reverse sentence order like the film's structure"
         },
         'the-bye-bye-man': {
             type: 'imageReplacement',
@@ -60,22 +53,18 @@ const EASTER_EGG_CONFIG = {
         'inception': {
             type: 'audio',
             audio: 'audio/inception.mp3',
-            description: "BWAAAH sound on click"
         },
         'spider-man-into-the-spider-verse': {
             type: 'audio',
             audio: 'audio/prowler.mp3',
-            description: "Prowler theme on click"
         },
         'spider-man-across-the-spider-verse': {
             type: 'audio',
             audio: 'audio/prowler.mp3',
-            description: "Prowler theme on click"
         },
         'spider-man-beyond-the-spider-verse': {
             type: 'audio',
             audio: 'audio/prowler.mp3',
-            description: "Prowler theme on click"
         },
         'joker-2019': {
             type: 'taglineReplacement',
@@ -85,25 +74,21 @@ const EASTER_EGG_CONFIG = {
             type: 'audio',
             audio: 'audio/candyman.mp3',
             loop: true,
-            description: "Candyman theme loop"
         },
         'candyman-farewell-to-the-flesh': {
             type: 'audio',
             audio: 'audio/candyman.mp3',
             loop: true,
-            description: "Candyman theme loop"
         },
         'candyman-day-of-the-dead': {
             type: 'audio',
             audio: 'audio/candyman.mp3',
             loop: true,
-            description: "Candyman theme loop"
         },
         'candyman-2021': {
             type: 'audio',
             audio: 'audio/candyman.mp3',
             loop: true,
-            description: "Candyman theme loop"
         },
         'five-nights-at-freddys': {
             type: 'jumpscare',
@@ -115,11 +100,9 @@ const EASTER_EGG_CONFIG = {
                 'video/fnaf5.mp4',
                 'video/fnaf6.mp4'
             ],
-            description: "Random FNAF jumpscares"
         },
         'zodiac': {
             type: 'cipher',
-            description: "Zodiac cipher text conversion"
         },
         'the-game': {
             type: 'taglineReplacement',
@@ -145,25 +128,21 @@ const EASTER_EGG_CONFIG = {
                 'audio/fart7.mp3',
                 'audio/fart8.mp3'
             ],
-            description: "Random fart sounds on interaction"
         },
         'flow-2024': {
             type: 'audio',
             audio: 'audio/flow.mp3',
             loop: true,
-            description: "Flow theme loop"
         },
         'challengers': {
             type: 'audio',
             audio: 'audio/challengers.mp3',
             loop: true,
-            description: "Challengers theme loop"
         },
         'the-lego-movie': {
             type: 'audio',
             audio: 'audio/lego.mp3',
             loop: true,
-            description: "Lego theme loop"
         },
         'the-substance': {
             type: 'taglineReplacement',
@@ -176,17 +155,14 @@ const EASTER_EGG_CONFIG = {
         'borat-cultural-learnings-of-america-for-make-benefit-glorious-nation-of-kazakhstan': {
             type: 'backgroundReplacement',
             image: 'images/borat.jpg',
-            description: "Replace backdrop with Borat image"
         },
         'the-arrival-of-a-train-at-la-ciotat': {
             type: 'jumpscare',
             video: 'video/train.mp4',
-            description: "Train jumpscare"
         },
         'the-truman-show': {
             type: 'video',
             video: 'video/truman.mp4',
-            description: "Live view of Truman"
         }
     }
 };
@@ -196,11 +172,11 @@ function initializeEasterEggs() {
     console.log('EasterEgg.js: initializeEasterEggs() called');
     
         // Check if easter eggs are enabled
-    chrome.storage.sync.get(['showGarfield'], (settings) => {
+    chrome.storage.sync.get(['showEasterEggs'], (settings) => {
         console.log('EasterEgg.js: Settings retrieved:', settings);
 
-        if (!settings.showGarfield) {
-            console.log('EasterEgg.js: Assorted Shenanigans disabled, returning');
+        if (!settings.showEasterEggs) {
+            console.log('EasterEgg.js: Easter eggs disabled, returning');
             return;
         }
         
@@ -237,8 +213,8 @@ function initializeGlobalEasterEggs() {
 
 // Handle global easter egg clicks (rickroll, Freddy Got Fingered, etc.)
 function handleGlobalEasterEggClick() {
-    chrome.storage.sync.get(['showGarfield'], (settings) => {
-        if (!settings.showGarfield) return;
+    chrome.storage.sync.get(['showEasterEggs'], (settings) => {
+        if (!settings.showEasterEggs) return;
 
         // Roll once for each global redirect easter egg
         for (const [key, egg] of Object.entries(EASTER_EGG_CONFIG.global)) {

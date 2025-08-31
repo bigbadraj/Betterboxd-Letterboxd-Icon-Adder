@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Excluded from master toggle
-    const excludedToggles = ['HideNomForWin', 'Movies1001Alt', 'OscarHierarchy', 'MoneyAlt', 'Garfield', 'NonPremiere', 'RemoveRatings', 'MuteAudio', 'ConvertRuntime', 'Animation250', 'HorrorAlt'];
+    const excludedToggles = ['HideNomForWin', 'Movies1001Alt', 'OscarHierarchy', 'MoneyAlt', 'EasterEggs', 'NonPremiere', 'RemoveRatings', 'MuteAudio', 'ConvertRuntime', 'Animation250', 'HorrorAlt'];
 
     // Function to toggle section visibility
     function toggleSection(header) {
@@ -87,8 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Handle mute audio toggle
             const muteToggle = document.getElementById('toggleMuteAudio');
             if (muteToggle) {
-                        muteToggle.disabled = result.showGarfield === false;
-        muteToggle.checked = result.showGarfield !== false && result.muteAudio === true;
+                        muteToggle.disabled = result.showEasterEggs === false;
+        muteToggle.checked = result.showEasterEggs !== false && result.muteAudio === true;
             }
         });
     }
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Poop': 'showPoop',
         'Toro': 'showToro',
         'TrueFilm': 'showTrueFilm',
-        'Garfield': 'showGarfield',
+        'EasterEggs': 'showEasterEggs',
         'Shorts': 'showShorts',
         'Wga': 'showWga',
         'Gray': 'showGray',
@@ -315,8 +315,8 @@ document.addEventListener('DOMContentLoaded', () => {
             toggle.addEventListener('change', () => {
                 chrome.storage.sync.set({ [storageKey]: toggle.checked });
                 
-                // Special handling for Garfield toggle
-                if (toggleName === 'Garfield') {
+                        // Special handling for EasterEggs toggle
+        if (toggleName === 'EasterEggs') {
                     // Update mute toggle state
                     const muteToggle = document.getElementById('toggleMuteAudio');
                     if (muteToggle) {

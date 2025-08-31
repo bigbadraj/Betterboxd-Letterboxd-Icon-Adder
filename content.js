@@ -1,7 +1,6 @@
 const DEBUG = {
     ICON: false,    // For icon-related debugging
     SETTINGS: false, // For general Letterboxd tweaks debugging
-    EASTER: true,   // For easter egg debugging
 };
 
 // Add debug logging helper function
@@ -2088,12 +2087,12 @@ async function addIcon(filmId, iconKey, settings) {
     }
 
     // Thriller easter egg logic: show alt versions when easter eggs are enabled
-    if (iconKey === 'thriller' && settings.showGarfield === true) {
+            if (iconKey === 'thriller' && settings.showEasterEggs === true) {
         debugLog('ICON', 'Skipping thriller icon - easter eggs enabled, will show thrillerAlt instead');
         return;
     }
 
-    if (iconKey === 'popThriller' && settings.showGarfield === true) {
+            if (iconKey === 'popThriller' && settings.showEasterEggs === true) {
         debugLog('ICON', 'Skipping popThriller icon - easter eggs enabled, will show popThrillerAlt instead');
         return;
     }
@@ -2122,7 +2121,7 @@ async function addIcon(filmId, iconKey, settings) {
     }
     
     // Thriller alt versions should only show when easter eggs are enabled
-    if ((iconKey === 'thrillerAlt' || iconKey === 'popThrillerAlt') && settings.showGarfield !== true) {
+            if ((iconKey === 'thrillerAlt' || iconKey === 'popThrillerAlt') && settings.showEasterEggs !== true) {
         debugLog('ICON', `Skipping ${iconKey} - easter eggs disabled, showing regular versions instead`);
         return;
     }
@@ -2131,16 +2130,16 @@ async function addIcon(filmId, iconKey, settings) {
         return;
     }
     // Add check for FlanaganBaby icon
-    if (iconKey === 'flanaganBaby' && settings.showGarfield === false) {
-        debugLog('ICON', `Skipping ${iconKey} - parent toggle 'showGarfield' is disabled`);
-        return;
-    }
+            if (iconKey === 'flanaganBaby' && settings.showEasterEggs === false) {
+            debugLog('ICON', `Skipping ${iconKey} - parent toggle 'showEasterEggs' is disabled`);
+            return;
+        }
     
     // Add check for Garfield icon
-    if (iconKey === 'garfield' && settings.showGarfield === false) {
-        debugLog('ICON', `Skipping ${iconKey} - parent toggle 'showGarfield' is disabled`);
-        return;
-    }
+            if (iconKey === 'garfield' && settings.showEasterEggs === false) {
+            debugLog('ICON', `Skipping ${iconKey} - parent toggle 'showEasterEggs' is disabled`);
+            return;
+        }
 
     if (settings[`show${iconKey.charAt(0).toUpperCase() + iconKey.slice(1)}`] === false) {
         debugLog('ICON', `Skipping ${iconKey} - toggle is disabled`);
@@ -2627,11 +2626,11 @@ initializeIcons();
 
 // Initialize easter eggs on all pages (if enabled)
 console.log('content.js: Starting easter egg initialization...');
-chrome.storage.sync.get(['showGarfield'], (settings) => {
+chrome.storage.sync.get(['showEasterEggs'], (settings) => {
     console.log('content.js: Retrieved settings:', settings);
-    console.log('content.js: showGarfield value:', settings.showGarfield);
+    console.log('content.js: showEasterEggs value:', settings.showEasterEggs);
     
-    if (settings.showGarfield) {
+    if (settings.showEasterEggs) {
         console.log('content.js: Easter eggs enabled, attempting to initialize...');
         console.log('content.js: window.EasterEgg available:', !!window.EasterEgg);
         console.log('content.js: window.EasterEgg object:', window.EasterEgg);
@@ -2653,7 +2652,7 @@ chrome.storage.sync.get(['showGarfield'], (settings) => {
             }, 100);
         }
     } else {
-        console.log('content.js: Assorted Shenanigans disabled in settings');
+        console.log('content.js: Easter eggs disabled in settings');
     }
 });
 
