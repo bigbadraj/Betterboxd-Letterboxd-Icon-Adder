@@ -9,6 +9,17 @@ function debugLog(category, message, ...args) {
     }
 }
 
+// Simple function to set audio volume based on mute setting
+function setAudioVolume(audioElement) {
+    chrome.storage.sync.get(['muteAudio'], (result) => {
+        if (result.muteAudio) {
+            audioElement.volume = 0; // Silent but still plays
+        } else {
+            audioElement.volume = 1; // Full volume
+        }
+    });
+}
+
 // Configuration for easter eggs
 const EASTER_EGG_CONFIG = {
   global: {
@@ -19,14 +30,15 @@ const EASTER_EGG_CONFIG = {
     rickroll: {
       chance: 1 / 5000,
       url: "https://youtu.be/-nmCeXgztxM",
+      description: "Rickroll redirect"
     },
     freddyGotFingered: {
       chance: 1 / 5000,
       url: "https://letterboxd.com/film/freddy-got-fingered/",
+      description: "Freddy Got Fingered redirect"
     }
   },
 
-    
     // Film-specific easter eggs
     filmSpecific: {
         'megalopolis-2024': {
@@ -39,6 +51,7 @@ const EASTER_EGG_CONFIG = {
         },
         'american-psycho': {
             type: 'playlist',
+            description: "Patrick Bateman's favorite tracks"
         },
         'memento': {
             type: 'textReversal',
@@ -53,18 +66,22 @@ const EASTER_EGG_CONFIG = {
         'inception': {
             type: 'audio',
             audio: 'audio/inception.mp3',
+            description: "BWAAAH sound on click"
         },
         'spider-man-into-the-spider-verse': {
             type: 'audio',
             audio: 'audio/prowler.mp3',
+            description: "Prowler theme on click"
         },
         'spider-man-across-the-spider-verse': {
             type: 'audio',
             audio: 'audio/prowler.mp3',
+            description: "Prowler theme on click"
         },
         'spider-man-beyond-the-spider-verse': {
             type: 'audio',
             audio: 'audio/prowler.mp3',
+            description: "Prowler theme on click"
         },
         'joker-2019': {
             type: 'taglineReplacement',
@@ -74,21 +91,25 @@ const EASTER_EGG_CONFIG = {
             type: 'audio',
             audio: 'audio/candyman.mp3',
             loop: true,
+            description: "Candyman theme loop"
         },
         'candyman-farewell-to-the-flesh': {
             type: 'audio',
             audio: 'audio/candyman.mp3',
             loop: true,
+            description: "Candyman theme loop"
         },
         'candyman-day-of-the-dead': {
             type: 'audio',
             audio: 'audio/candyman.mp3',
             loop: true,
+            description: "Candyman theme loop"
         },
         'candyman-2021': {
             type: 'audio',
             audio: 'audio/candyman.mp3',
             loop: true,
+            description: "Candyman theme loop"
         },
         'five-nights-at-freddys': {
             type: 'jumpscare',
@@ -100,9 +121,11 @@ const EASTER_EGG_CONFIG = {
                 'video/fnaf5.mp4',
                 'video/fnaf6.mp4'
             ],
+            description: "Random FNAF jumpscares"
         },
         'zodiac': {
             type: 'cipher',
+            description: "Zodiac cipher text conversion"
         },
         'the-game': {
             type: 'taglineReplacement',
@@ -128,21 +151,25 @@ const EASTER_EGG_CONFIG = {
                 'audio/fart7.mp3',
                 'audio/fart8.mp3'
             ],
+            description: "Random fart sounds on interaction"
         },
         'flow-2024': {
             type: 'audio',
             audio: 'audio/flow.mp3',
             loop: true,
+            description: "Flow theme loop"
         },
         'challengers': {
             type: 'audio',
             audio: 'audio/challengers.mp3',
             loop: true,
+            description: "Challengers theme loop"
         },
         'the-lego-movie': {
             type: 'audio',
             audio: 'audio/lego.mp3',
             loop: true,
+            description: "Lego theme loop"
         },
         'the-substance': {
             type: 'taglineReplacement',
@@ -155,14 +182,17 @@ const EASTER_EGG_CONFIG = {
         'borat-cultural-learnings-of-america-for-make-benefit-glorious-nation-of-kazakhstan': {
             type: 'backgroundReplacement',
             image: 'images/borat.jpg',
+            description: "Replace backdrop with Borat image"
         },
         'the-arrival-of-a-train-at-la-ciotat': {
             type: 'jumpscare',
             video: 'video/train.mp4',
+            description: "Train jumpscare"
         },
         'the-truman-show': {
             type: 'video',
             video: 'video/truman.mp4',
+            description: 'Live view of Truman'
         }
     }
 };
@@ -353,6 +383,7 @@ function initializeTextReplacementEasterEgg(config) {
         
         document.addEventListener('click', () => {
             audio.muted = false;
+            setAudioVolume(audio); // Set volume based on mute setting
             audio.play().catch(() => {
                 audio.muted = true;
                 audio.play();
@@ -390,6 +421,7 @@ function initializeAudioEasterEgg(config) {
         
         // Unmute and play
         audio.muted = false;
+        setAudioVolume(audio); // Set volume based on mute setting
         audio.play().catch(() => {
             // Fallback: mute and play if autoplay fails
             audio.muted = true;
@@ -662,6 +694,7 @@ function initializeVideoEasterEgg(config) {
         videoElement.loop = true;
         videoElement.autoplay = true;
         videoElement.muted = true;
+        setAudioVolume(videoElement); // Set volume based on mute setting
 
         const label = document.createElement('div');
         label.innerText = config.description || 'Video Easter Egg';
@@ -893,6 +926,9 @@ function initializeFNAFJumpscare(videos) {
             video.muted = settings.muteAudio || false;
         });
         
+        // Set volume based on mute setting
+        setAudioVolume(video);
+        
         overlay.innerHTML = '';
         overlay.appendChild(video);
         overlay.style.display = 'block';
@@ -960,6 +996,7 @@ function initializeTrainJumpscare(videoPath) {
             video.src = chrome.runtime.getURL(videoPath);
             video.autoplay = true;
             video.muted = forceMuted;
+            setAudioVolume(video); // Set volume based on mute setting
 
             document.body.appendChild(video);
 
@@ -1267,6 +1304,9 @@ function initializeCipherEasterEgg(config) {
             video.muted = settings.muteAudio || false;
         });
         
+        // Set volume based on mute setting
+        setAudioVolume(video);
+        
         video.autoplay = true;
         video.loop = false;
 
@@ -1291,8 +1331,11 @@ function initializeCipherEasterEgg(config) {
 
 // Playlist easter eggs (like American Psycho)
 function initializePlaylistEasterEgg(config) {
-    if (config.description.includes('Patrick Bateman')) {
-        initializeAmericanPsychoPlaylist();
+    if (config.type === 'playlist') {
+        // Check if this is American Psycho or another playlist
+        if (window.location.pathname.includes('american-psycho')) {
+            initializeAmericanPsychoPlaylist();
+        }
     }
 }
 
@@ -1330,12 +1373,13 @@ function initializeAmericanPsychoPlaylist() {
         hasUserInteracted = true;
         debugLog('EASTER', 'User interaction detected - allowing audio playback');
         if (currentAudio) {
-            // Unmute the audio when user interacts
-            currentAudio.muted = false;
-            debugLog('EASTER', 'Audio unmuted due to user interaction');
-            currentAudio.play().catch(error => {
-                debugLog('EASTER', `Playback error: ${error.message}`);
-            });
+                    // Unmute the audio when user interacts
+        currentAudio.muted = false;
+        setAudioVolume(currentAudio); // Set volume based on mute setting
+        debugLog('EASTER', 'Audio unmuted due to user interaction');
+        currentAudio.play().catch(error => {
+            debugLog('EASTER', `Playback error: ${error.message}`);
+        });
         }
     });
 
@@ -1365,7 +1409,7 @@ function initializeAmericanPsychoPlaylist() {
         const songPath = getRandomSong();
         currentAudio = new Audio(chrome.runtime.getURL(songPath));
         currentAudio.muted = !hasUserInteracted; // Only mute if user hasn't interacted yet
-        currentAudio.volume = 0.5;
+        setAudioVolume(currentAudio); // Set volume based on mute setting
         
         currentAudio.addEventListener('play', () => {
             debugLog('EASTER', `Playback started for: ${songPath.split('/').pop()}`);
@@ -1384,6 +1428,7 @@ function initializeAmericanPsychoPlaylist() {
         // If we've already had user interaction or this isn't a reload, play immediately
         if (hasUserInteracted || !isReload) {
             debugLog('EASTER', 'Playing automatically - user has already interacted or direct load');
+            setAudioVolume(currentAudio); // Set volume based on mute setting
             currentAudio.play()
                 .catch(error => {
                     debugLog('EASTER', `Playback error: ${error.message}`);

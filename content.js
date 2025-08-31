@@ -2140,6 +2140,12 @@ async function addIcon(filmId, iconKey, settings) {
             debugLog('ICON', `Skipping ${iconKey} - parent toggle 'showEasterEggs' is disabled`);
             return;
         }
+    
+    // Add check for Goose icon
+        if (iconKey === 'goose' && settings.showEasterEggs === false) {
+            debugLog('ICON', `Skipping ${iconKey} - parent toggle 'showEasterEggs' is disabled`);
+            return;
+        }
 
     if (settings[`show${iconKey.charAt(0).toUpperCase() + iconKey.slice(1)}`] === false) {
         debugLog('ICON', `Skipping ${iconKey} - toggle is disabled`);
