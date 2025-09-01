@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Define sections and their toggles
     const sections = {
-        MajorAwards: ['NomOscar', 'WinOscar', 'Bafta', 'Goldend', 'Goldenc', 'Critic', 'Screen', 'Direct', 'Pga'],
-        StatsPage: ['Imdb', 'Film', 'Palm', 'Money', 'AFI', 'SightSound', 'Movies1001', 'Edgar', 'Ebert', 'Pink', 'Black', 'HeartEyes', 'Documentary', 'Animation', 'Ghost'],
-        GenreLists: ['Funny', 'Romcom', 'Anime', 'Comedy', 'Shorts', 'Tv', 'Concert', 'Action', 'PopAction', 'Adventure', 'PopAdventure', 'PopAnimation', 'PopComedy', 'Crime', 'PopCrime', 'Drama', 'PopDrama', 'Family', 'PopFamily', 'Fantasy', 'PopFantasy', 'History', 'PopHistory', 'PopHorror', 'Music', 'PopMusic', 'Mystery', 'PopMystery', 'Romance', 'PopRomance', 'ScienceFiction', 'PopScienceFiction', 'Thriller', 'PopThriller', 'War', 'PopWar', 'Western', 'PopWestern'],
-        OtherAwards: ['Lion', 'Sundance', 'Bear', 'Tiff', 'Spirit', 'Wga', 'Annie', 'Saturnh', 'Saturnf', 'Saturns', 'Razzie', 'Gotham', 'Lafca', 'Nbr', 'Nsf', 'Nyfc'],
-        LetterboxdLists: ['Crown', 'Fire', 'Poop', 'LetterboxdTop250', 'MostPopularYear', 'Gray', 'Thumbs', 'Year', 'FiveStar', 'Male', 'She', 'Ze', 'FansPerView', 'Letterboxd113', 'Obscure', 'GRated', 'PopGRated', 'PGRated', 'PopPGRated', 'PG13Rated', 'PopPG13Rated', 'RRated', 'PopRRated', 'NC17Rated', 'PopNC17Rated', 'NorthAmerica', 'PopNorthAmerica', 'PopSouthAmerica', 'PopEurope', 'PopAfrica', 'PopAsia', 'PopAustralia', 'SouthAmerica', 'EuropeanNarrative', 'AfricanNarrative', 'AsianNarrative', 'AustralianNarrative', 'ShortFilms250', 'PopFilms250', 'Top250Under120', 'Pop250Under120', 'Top150Over180', 'Pop150Over180', 'Top240Minutes', 'Pop240Minutes', 'Unweighted', 'Silent'],
-        ExternalLists: ['Marty', 'Toro', 'Ford', 'Wga101', 'Nerd', 'Inflate', 'Fresh', 'Scream', 'FourFavorites', 'TrueFilm', 'Rmovies', 'Top10', 'Register', 'Raj', 'Shoot', 'Criterion', "BillionDollarClub", "Flanagan", 'FourGreatest', 'BoxOffice', 'BurningCash', 'YearlyDollar', 'MoneybagOld', 'Moneybag', 'BoxOffice', 'BurningCash', 'YearlyDollar'],
+        'Major Awards': ['NomOscar', 'WinOscar', 'Bafta', 'Goldend', 'Goldenc', 'Critic', 'Screen', 'Direct', 'Pga'],
+        'Letterboxd Stats Page': ['Imdb', 'Film', 'Palm', 'Money', 'AFI', 'SightSound', 'Movies1001', 'Edgar', 'Ebert', 'Pink', 'Black', 'HeartEyes', 'Documentary', 'Animation', 'Ghost'],
+        'Genre Lists': ['Funny', 'Romcom', 'Anime', 'Comedy', 'Shorts', 'Tv', 'Concert', 'Action', 'PopAction', 'Adventure', 'PopAdventure', 'PopAnimation', 'PopComedy', 'Crime', 'PopCrime', 'Drama', 'PopDrama', 'Family', 'PopFamily', 'Fantasy', 'PopFantasy', 'History', 'PopHistory', 'PopHorror', 'Music', 'PopMusic', 'Mystery', 'PopMystery', 'Romance', 'PopRomance', 'ScienceFiction', 'PopScienceFiction', 'Thriller', 'PopThriller', 'War', 'PopWar', 'Western', 'PopWestern'],
+        'Other Awards': ['Lion', 'Sundance', 'Bear', 'Tiff', 'Spirit', 'Wga', 'Annie', 'Saturnh', 'Saturnf', 'Saturns', 'Razzie', 'Gotham', 'Lafca', 'Nbr', 'Nsf', 'Nyfc'],
+        'Letterboxd Lists': ['Crown', 'Fire', 'Poop', 'LetterboxdTop250', 'MostPopularYear', 'Gray', 'Thumbs', 'Year', 'FiveStar', 'Male', 'She', 'Ze', 'FansPerView', 'Letterboxd113', 'Obscure', 'GRated', 'PopGRated', 'PGRated', 'PopPGRated', 'PG13Rated', 'PopPG13Rated', 'RRated', 'PopRRated', 'NC17Rated', 'PopNC17Rated', 'NorthAmerica', 'PopNorthAmerica', 'PopSouthAmerica', 'PopEurope', 'PopAfrica', 'PopAsia', 'PopAustralia', 'SouthAmerica', 'EuropeanNarrative', 'AfricanNarrative', 'AsianNarrative', 'AustralianNarrative', 'ShortFilms250', 'PopFilms250', 'Top250Under120', 'Pop250Under120', 'Top150Over180', 'Pop150Over180', 'Top240Minutes', 'Pop240Minutes', 'Unweighted', 'Silent'],
+        'External Lists': ['Marty', 'Toro', 'Ford', 'Wga101', 'Nerd', 'Inflate', 'Fresh', 'Scream', 'FourFavorites', 'TrueFilm', 'Rmovies', 'Top10', 'Register', 'Raj', 'Shoot', 'Criterion', "BillionDollarClub", "Flanagan", 'FourGreatest', 'BoxOffice', 'BurningCash', 'YearlyDollar', 'MoneybagOld', 'Moneybag', 'BoxOffice', 'BurningCash', 'YearlyDollar'],
     };
 
     // Excluded from master toggle
@@ -20,33 +20,33 @@ document.addEventListener('DOMContentLoaded', () => {
         // Check current state and toggle accordingly
         const isOpen = content.style.display === "block"; // Determine if currently open
         content.style.display = isOpen ? "none" : "block"; // Toggle visibility
-        icon.textContent = isOpen ? "-" : "+"; // Update icon: set to "-" when collapsed, "+" when expanded
+        icon.textContent = ""; // Remove the icon text (keep the span empty)
+        
+        // Save the section state to storage
+        const sectionName = header.textContent.trim(); // Get the section name
+        chrome.storage.sync.set({ [sectionName]: !isOpen }); // Save the new state (opposite of current isOpen)
     }
 
     // Function to initialize section states from storage
     function initializeSectionStates() {
-        Object.keys(sections).forEach(section => {
-            chrome.storage.sync.get([section], (result) => {
-                const isOpen = result[section] !== undefined ? result[section] : true; // Default to true (open) if not set
+        // Get all section headers from the DOM
+        const headers = document.querySelectorAll('.category-header');
+        
+        headers.forEach(header => {
+            const sectionName = header.textContent.trim(); // Get the section name
+            
+            chrome.storage.sync.get([sectionName], (result) => {
+                const isOpen = result[sectionName] !== undefined ? result[sectionName] : true; // Default to true (open) if not set
                 
-                // Find the header by matching text content
-                const header = Array.from(document.querySelectorAll('.category-header')).find(h => h.textContent.trim() === section);
-                if (header) {
-                    const content = header.nextElementSibling; // Get the content div
-                    const icon = header.querySelector('.toggle-icon'); // Get the icon element
+                const content = header.nextElementSibling; // Get the content div
+                const icon = header.querySelector('.toggle-icon'); // Get the icon element
 
-                    // Set the initial state based on stored value
-                    content.style.display = isOpen ? "block" : "none"; // Show or hide content
-                    icon.textContent = isOpen ? "-" : "+"; // Set icon to minus or plus
-                }
+                // Set the initial state based on stored value
+                content.style.display = isOpen ? "block" : "none"; // Show or hide content
+                icon.textContent = ""; // Keep the icon span empty
             });
         });
     }
-
-    // Initialize all sections to be open if their display is empty
-    document.querySelectorAll('.toggle-content').forEach(content => {
-        content.style.display = "block"; // Ensure all sections start open
-    });
 
     // Attach click event listeners to section headers
     document.querySelectorAll('.category-header').forEach(header => {
@@ -332,6 +332,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // Initialize all toggles when popup opens
+    initializeSectionStates(); // Initialize section states first
     initializeToggles();
-    initializeSectionStates(); // Initialize section states
 });
