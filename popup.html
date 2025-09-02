@@ -3,24 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Letterboxd Icon Toggles</title>
+    <title>Betterboxd</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Base styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Graphik-Regular-Web', Arial, sans-serif;
             width: 230px;
             padding: 15px;
-            background-color: #f9f9f9;
-            color: #333;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            color: #abc;
+            margin: 0;
+            min-height: 100vh;
+            border-radius: 8px;
         }
         h2 {
-            font-size: 16px;
-            color: #555;
+            font-size: 18px;
+            color: #00e054;
             text-align: center;
             margin-bottom: 20px;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 2px solid #00e054;
             padding-bottom: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(0, 224, 84, 0.3);
         }
 
         /* Toggle container */
@@ -30,10 +37,18 @@
             align-items: center;
             margin-bottom: 12px;
             padding: 10px;
-            background-color: #fff;
-            border: 1px solid #ddd;
+            background-color: #2a2a2a;
+            border: 1px solid #456;
             border-radius: 8px;
-            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .toggle-container:hover {
+            background-color: #333;
+            border-color: #00e054;
+            box-shadow: 0px 3px 8px rgba(0, 224, 84, 0.2);
+            transform: translateY(-1px);
         }
 
         /* Text styling */
@@ -41,7 +56,7 @@
             font-size: 14px;
             flex: 1;
             margin-right: 10px;
-            color: #444;
+            color: #abc;
         }
 
         /* Switch styling */
@@ -63,7 +78,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: #bbb;
+            background-color: #456;
             border-radius: 20px;
             transition: background-color 0.3s;
         }
@@ -79,31 +94,88 @@
             border-radius: 50%;
         }
         input:checked + .slider {
-            background-color: #2196F3;
+            background-color: #00e054;
         }
         input:checked + .slider:before {
             transform: translateX(18px);
         }
 
+        /* Switch hover effects */
+        .switch:hover .slider {
+            box-shadow: 0 0 8px rgba(0, 224, 84, 0.3);
+        }
+
+        .switch:hover input:checked + .slider {
+            box-shadow: 0 0 12px rgba(0, 224, 84, 0.5);
+        }
+
         .category-header {
             font-size: 14px;
-            color: #555;
+            color: #00e054;
             margin: 20px 0 10px;
             padding-bottom: 5px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #456;
             cursor: pointer; /* Indicate that the header is clickable */
             display: flex;
             align-items: center; /* Center the icon and text */
+            font-weight: bold;
+            transition: color 0.2s ease;
+        }
+
+        .category-header:hover {
+            color: #00ff6b;
+            border-bottom-color: #00e054;
+            transform: translateX(2px);
         }
 
         .toggle-icon {
             margin-right: 8px; /* Space between icon and text */
             transition: transform 0.3s; /* Smooth transition for rotation */
         }
+
+        /* Toggle content styling */
+        .toggle-content {
+            margin-bottom: 15px;
+            padding-left: 5px;
+        }
+
+        /* Scrollbar styling for webkit browsers */
+        body::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background: #456;
+            border-radius: 3px;
+        }
+
+        body::-webkit-scrollbar-thumb:hover {
+            background: #00e054;
+        }
+
+        /* Animation for popup load */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            animation: fadeInUp 0.3s ease-out;
+        }
     </style>
 </head>
 <body>
-    <h2>Letterboxd Icon Toggles</h2>
+    <h2>Betterboxd</h2>
 
     <!-- Letterboxd Tweaks Section -->
     <h3 class="category-header">
@@ -1325,27 +1397,30 @@
         </div>
     </div>
 
-    <!-- Assorted Shenanigans Section -->
-    <h3 class="category-header">
-        <span class="toggle-icon"></span> Assorted Shenanigans
-    </h3>
-    <div class="toggle-content">
-        <div class="toggle-container">
-            <span>Enable Assorted Shenanigans</span>
-            <label class="switch">
-                <input type="checkbox" id="toggleEasterEggs">
-                <span class="slider"></span>
-            </label>
-        </div>
-        <div class="toggle-container">
-            <span>Silence the Shenanigans</span>
-            <label class="switch">
-                <input type="checkbox" id="toggleMuteAudio">
-                <span class="slider"></span>
-            </label>
-        </div>
-    </div>
+
 
     <script src="popup.js"></script>
+    
+    <!-- Footer text -->
+    <div style="
+        margin-top: 30px;
+        padding: 15px;
+        background-color: #2a2a2a;
+        border: 1px solid #456;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 11px;
+        line-height: 1.4;
+        color: #abc;
+        border-top: 2px solid #00e054;
+    ">
+        <p style="margin: 0 0 8px 0;">
+            If you have any suggestions, concerns, or requests for new icons please send them to 
+            <strong style="color: #00e054;">betterboxdext@gmail.com</strong>.
+        </p>
+        <p style="margin: 0; color: #00e054; font-weight: bold;">
+            If you enjoy it, please leave this extension a positive review!
+        </p>
+    </div>
 </body>
 </html>

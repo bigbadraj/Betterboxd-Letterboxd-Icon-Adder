@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Define sections and their toggles
     const sections = {
-        'Major Awards': ['NomOscar', 'WinOscar', 'Bafta', 'Goldend', 'Goldenc', 'Critic', 'Screen', 'Direct', 'Pga'],
-        'Letterboxd Stats Page': ['Imdb', 'Film', 'Palm', 'Money', 'AFI', 'SightSound', 'Movies1001', 'Edgar', 'Ebert', 'Pink', 'Black', 'HeartEyes', 'Documentary', 'Animation', 'Ghost'],
-        'Genre Lists': ['Funny', 'Romcom', 'Anime', 'Comedy', 'Shorts', 'Tv', 'Concert', 'Action', 'PopAction', 'Adventure', 'PopAdventure', 'PopAnimation', 'PopComedy', 'Crime', 'PopCrime', 'Drama', 'PopDrama', 'Family', 'PopFamily', 'Fantasy', 'PopFantasy', 'History', 'PopHistory', 'PopHorror', 'Music', 'PopMusic', 'Mystery', 'PopMystery', 'Romance', 'PopRomance', 'ScienceFiction', 'PopScienceFiction', 'Thriller', 'PopThriller', 'War', 'PopWar', 'Western', 'PopWestern'],
-        'Other Awards': ['Lion', 'Sundance', 'Bear', 'Tiff', 'Spirit', 'Wga', 'Annie', 'Saturnh', 'Saturnf', 'Saturns', 'Razzie', 'Gotham', 'Lafca', 'Nbr', 'Nsf', 'Nyfc'],
-        'Letterboxd Lists': ['Crown', 'Fire', 'Poop', 'LetterboxdTop250', 'MostPopularYear', 'Gray', 'Thumbs', 'Year', 'FiveStar', 'Male', 'She', 'Ze', 'FansPerView', 'Letterboxd113', 'Obscure', 'GRated', 'PopGRated', 'PGRated', 'PopPGRated', 'PG13Rated', 'PopPG13Rated', 'RRated', 'PopRRated', 'NC17Rated', 'PopNC17Rated', 'NorthAmerica', 'PopNorthAmerica', 'PopSouthAmerica', 'PopEurope', 'PopAfrica', 'PopAsia', 'PopAustralia', 'SouthAmerica', 'EuropeanNarrative', 'AfricanNarrative', 'AsianNarrative', 'AustralianNarrative', 'ShortFilms250', 'PopFilms250', 'Top250Under120', 'Pop250Under120', 'Top150Over180', 'Pop150Over180', 'Top240Minutes', 'Pop240Minutes', 'Unweighted', 'Silent'],
-        'External Lists': ['Marty', 'Toro', 'Ford', 'Wga101', 'Nerd', 'Inflate', 'Fresh', 'Scream', 'FourFavorites', 'TrueFilm', 'Rmovies', 'Top10', 'Register', 'Raj', 'Shoot', 'Criterion', "BillionDollarClub", "Flanagan", 'FourGreatest', 'BoxOffice', 'BurningCash', 'YearlyDollar', 'MoneybagOld', 'Moneybag', 'BoxOffice', 'BurningCash', 'YearlyDollar'],
+        'MajorAwards': ['NomOscar', 'WinOscar', 'Bafta', 'Goldend', 'Goldenc', 'Critic', 'Screen', 'Direct', 'Pga'],
+        'StatsPage': ['Imdb', 'Film', 'Palm', 'Money', 'AFI', 'SightSound', 'Movies1001', 'Edgar', 'Ebert', 'Pink', 'Black', 'HeartEyes', 'Documentary', 'Animation', 'Ghost'],
+        'GenreLists': ['Funny', 'Romcom', 'Anime', 'Comedy', 'Shorts', 'Tv', 'Concert', 'Action', 'PopAction', 'Adventure', 'PopAdventure', 'PopAnimation', 'PopComedy', 'Crime', 'PopCrime', 'Drama', 'PopDrama', 'Family', 'PopFamily', 'Fantasy', 'PopFantasy', 'History', 'PopHistory', 'PopHorror', 'Music', 'PopMusic', 'Mystery', 'PopMystery', 'Romance', 'PopRomance', 'ScienceFiction', 'PopScienceFiction', 'Thriller', 'PopThriller', 'War', 'PopWar', 'Western', 'PopWestern'],
+        'OtherAwards': ['Lion', 'Sundance', 'Bear', 'Tiff', 'Spirit', 'Wga', 'Annie', 'Saturnh', 'Saturnf', 'Saturns', 'Razzie', 'Gotham', 'Lafca', 'Nbr', 'Nsf', 'Nyfc'],
+        'LetterboxdLists': ['Crown', 'Fire', 'Poop', 'LetterboxdTop250', 'MostPopularYear', 'Gray', 'Thumbs', 'Year', 'FiveStar', 'Male', 'She', 'Ze', 'FansPerView', 'Letterboxd113', 'Obscure', 'GRated', 'PopGRated', 'PGRated', 'PopPGRated', 'PG13Rated', 'PopPG13Rated', 'RRated', 'PopRRated', 'NC17Rated', 'PopNC17Rated', 'NorthAmerica', 'PopNorthAmerica', 'PopSouthAmerica', 'PopEurope', 'PopAfrica', 'PopAsia', 'PopAustralia', 'SouthAmerica', 'EuropeanNarrative', 'AfricanNarrative', 'AsianNarrative', 'AustralianNarrative', 'ShortFilms250', 'PopFilms250', 'Top250Under120', 'Pop250Under120', 'Top150Over180', 'Pop150Over180', 'Top240Minutes', 'Pop240Minutes', 'Unweighted', 'Silent'],
+        'ExternalLists': ['Marty', 'Toro', 'Ford', 'Wga101', 'Nerd', 'Inflate', 'Fresh', 'Scream', 'FourFavorites', 'TrueFilm', 'Rmovies', 'Top10', 'Register', 'Raj', 'Shoot', 'Criterion', "BillionDollarClub", "Flanagan", 'FourGreatest', 'BoxOffice', 'BurningCash', 'YearlyDollar', 'MoneybagOld', 'Moneybag', 'BoxOffice', 'BurningCash', 'YearlyDollar'],
     };
 
     // Excluded from master toggle
-    const excludedToggles = ['HideNomForWin', 'Movies1001Alt', 'OscarHierarchy', 'MoneyAlt', 'EasterEggs', 'NonPremiere', 'RemoveRatings', 'MuteAudio', 'ConvertRuntime', 'Animation250', 'HorrorAlt'];
+    const excludedToggles = ['HideNomForWin', 'Movies1001Alt', 'OscarHierarchy', 'MoneyAlt', 'NonPremiere', 'RemoveRatings', 'ConvertRuntime', 'Animation250', 'HorrorAlt'];
 
     // Function to toggle section visibility
     function toggleSection(header) {
@@ -84,12 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 masterToggle.checked = allTogglesState;
             }
 
-            // Handle mute audio toggle
-            const muteToggle = document.getElementById('toggleMuteAudio');
-            if (muteToggle) {
-                        muteToggle.disabled = result.showEasterEggs === false;
-        muteToggle.checked = result.showEasterEggs !== false && result.muteAudio === true;
-            }
+
         });
     }
 
@@ -167,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Poop': 'showPoop',
         'Toro': 'showToro',
         'TrueFilm': 'showTrueFilm',
-        'EasterEggs': 'showEasterEggs',
+
         'Shorts': 'showShorts',
         'Wga': 'showWga',
         'Gray': 'showGray',
@@ -315,18 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toggle.addEventListener('change', () => {
                 chrome.storage.sync.set({ [storageKey]: toggle.checked });
                 
-                        // Special handling for EasterEggs toggle
-        if (toggleName === 'EasterEggs') {
-                    // Update mute toggle state
-                    const muteToggle = document.getElementById('toggleMuteAudio');
-                    if (muteToggle) {
-                        muteToggle.disabled = !toggle.checked;
-                        if (!toggle.checked) {
-                            muteToggle.checked = false;
-                            chrome.storage.sync.set({ muteAudio: false });
-                        }
-                    }
-                }
+
             });
         }
     });

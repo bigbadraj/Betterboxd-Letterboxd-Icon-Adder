@@ -275,18 +275,7 @@ const ICON_CONFIG = {
             tooltipText: "№ {ranking} in the r/TrueFilm Canon 1000"
         })
     },
-    garfield: {
-        url: 'film_titles_films-where-andrew-garfield-goes-up-against.json',
-        addFunction: createIconAdder({
-            href: "https://letterboxd.com/george808/list/films-where-andrew-garfield-goes-up-against/",
-            imgSrc: "garfield.png",
-            height: "16",
-            width: "16",
-            className: "garfield-icon positioned-icon",
-            showRanking: false,
-            tooltipText: "Films Where Andrew Garfield Goes Up Against Lizard Man"
-        })
-    },
+
     shorts: {
         url: 'film_titles_letterboxds-top-250-highest-rated-short-films.json',
         addFunction: createIconAdder({
@@ -863,18 +852,7 @@ const ICON_CONFIG = {
             tooltipText: "Saturn Best Science Fiction Film Winner"
         })
     },
-    flanaganBaby: {
-        url: 'film_titles_mike-flanagans-recommended-gateway-horror.json',
-        addFunction: createIconAdder({
-            href: "https://letterboxd.com/flanaganfilm/list/mike-flanagans-recommended-gateway-horror/",
-            imgSrc: "baby.png",
-            height: "16",
-            width: "16",
-            className: "flanagan-baby-icon positioned-icon",
-            showRanking: false,
-            tooltipText: "Mike Flanagan's Gateway Horror Recommendations"
-        })
-    },
+
     flanagan: { // This is the "favorites" one
         url: 'film_titles_flanagans-favorites-my-top-100.json',
         addFunction: createIconAdder({
@@ -1019,18 +997,7 @@ const ICON_CONFIG = {
             tooltipText: "Referenced in Gilmore Girls"
         })
     },
-    goose: {  // New icon entry for Movies Where the Protagonist Witnesses a Goose
-        url: 'film_titles_movies-where-the-protagonist-witnesses-a.json',
-        addFunction: createIconAdder({
-            href: "https://letterboxd.com/tintinabello/list/movies-where-the-protagonist-witnesses-a/",
-            imgSrc: "goose.png",  // Assuming the image is named goose.png
-            height: "16",
-            width: "16",
-            className: "goose-icon floating-icon",
-            showRanking: false,  // Unranked
-            tooltipText: "Movies Where the Protagonist Witnesses a Goose Die and is Left with the Responsibility of Raising the Goose's Son"
-        })
-    },
+
     romcom: {
         url: 'film_titles_letterboxds-top-250-romantic-comedy-films.json',
         addFunction: createIconAdder({
@@ -1415,30 +1382,7 @@ const ICON_CONFIG = {
             tooltipText: "№ {ranking} in the Popular Thriller 250"
         })
     },
-    thrillerAlt: { // New entry for Top 250 Thriller Films
-        url: 'film_titles_top-250-highest-rated-thriller-narrative.json',
-        addFunction: createIconAdder({
-            href: "https://letterboxd.com/bigbadraj/list/top-250-highest-rated-thriller-narrative/",
-            imgSrc: "thrilleralt.png",
-            height: "16",
-            width: "16",
-            className: "thriller-icon floating-icon",
-            showRanking: true,
-            tooltipText: "№ {ranking} in the Top 250 Thriller Films"
-        })
-    },
-    popThrillerAlt: {
-        url: 'film_titles_top-250-most-popular-thriller-narrative-feature.json',
-        addFunction: createIconAdder({
-            href: "https://letterboxd.com/bigbadraj/list/top-250-most-popular-thriller-narrative-feature/",
-            imgSrc: "popThrillerAlt.png",
-            height: "16",
-            width: "16",
-            className: "popThrillerAlt-icon floating-icon",
-            showRanking: true,
-            tooltipText: "№ {ranking} in the Popular Thriller 250"
-        })
-    },
+
     war: { // New entry for War Films
         url: 'film_titles_top-250-highest-rated-war-narrative-feature.json',
         addFunction: createIconAdder({
@@ -2031,7 +1975,7 @@ async function fetchData(url) {
 }
 
 // Near the top of the file, add a static audio instance
-// All easter egg code has been moved to EasterEgg.js
+
 
 function isInTop250() {
     return new Promise((resolve) => {
@@ -2086,16 +2030,7 @@ async function addIcon(filmId, iconKey, settings) {
         return;
     }
 
-    // Thriller easter egg logic: show alt versions when easter eggs are enabled
-            if (iconKey === 'thriller' && settings.showEasterEggs === true) {
-        debugLog('ICON', 'Skipping thriller icon - easter eggs enabled, will show thrillerAlt instead');
-        return;
-    }
 
-            if (iconKey === 'popThriller' && settings.showEasterEggs === true) {
-        debugLog('ICON', 'Skipping popThriller icon - easter eggs enabled, will show popThrillerAlt instead');
-        return;
-    }
 
     if (iconKey === 'crown' || iconKey === 'gray') {
         // Wait for isInTop250() to finish before proceeding
@@ -2120,32 +2055,12 @@ async function addIcon(filmId, iconKey, settings) {
         return;
     }
     
-    // Thriller alt versions should only show when easter eggs are enabled
-            if ((iconKey === 'thrillerAlt' || iconKey === 'popThrillerAlt') && settings.showEasterEggs !== true) {
-        debugLog('ICON', `Skipping ${iconKey} - easter eggs disabled, showing regular versions instead`);
-        return;
-    }
+
     if (iconKey === 'oscarHierarchy' && settings.showWinOscar === false) {
         debugLog('ICON', `Skipping ${iconKey} - parent toggle 'showWinOscar' is disabled`);
         return;
     }
-    // Add check for FlanaganBaby icon
-            if (iconKey === 'flanaganBaby' && settings.showEasterEggs === false) {
-            debugLog('ICON', `Skipping ${iconKey} - parent toggle 'showEasterEggs' is disabled`);
-            return;
-        }
-    
-    // Add check for Garfield icon
-            if (iconKey === 'garfield' && settings.showEasterEggs === false) {
-            debugLog('ICON', `Skipping ${iconKey} - parent toggle 'showEasterEggs' is disabled`);
-            return;
-        }
-    
-    // Add check for Goose icon
-        if (iconKey === 'goose' && settings.showEasterEggs === false) {
-            debugLog('ICON', `Skipping ${iconKey} - parent toggle 'showEasterEggs' is disabled`);
-            return;
-        }
+
 
     if (settings[`show${iconKey.charAt(0).toUpperCase() + iconKey.slice(1)}`] === false) {
         debugLog('ICON', `Skipping ${iconKey} - toggle is disabled`);
@@ -2544,7 +2459,7 @@ async function fetchID() {
         // Add the release year update
         updateReleaseYear(settings);
         
-        // American Psycho playlist is now handled by EasterEgg.js
+        
         // No need to call it here anymore
         
         // Debug: Check for stats container
@@ -2630,37 +2545,7 @@ const initializeIcons = () => {
 // Initialize icons only on film pages
 initializeIcons();
 
-// Initialize easter eggs on all pages (if enabled)
-console.log('content.js: Starting easter egg initialization...');
-chrome.storage.sync.get(['showEasterEggs'], (settings) => {
-    console.log('content.js: Retrieved settings:', settings);
-    console.log('content.js: showEasterEggs value:', settings.showEasterEggs);
-    
-    if (settings.showEasterEggs) {
-        console.log('content.js: Easter eggs enabled, attempting to initialize...');
-        console.log('content.js: window.EasterEgg available:', !!window.EasterEgg);
-        console.log('content.js: window.EasterEgg object:', window.EasterEgg);
-        
-        if (window.EasterEgg && window.EasterEgg.initializeEasterEggs) {
-            console.log('content.js: Calling window.EasterEgg.initializeEasterEggs()');
-            window.EasterEgg.initializeEasterEggs();
-        } else {
-            console.log('content.js: EasterEgg not available yet, retrying in 100ms...');
-            // Retry after a short delay in case EasterEgg.js hasn't loaded yet
-            setTimeout(() => {
-                console.log('content.js: Retry - window.EasterEgg available:', !!window.EasterEgg);
-                if (window.EasterEgg && window.EasterEgg.initializeEasterEggs) {
-                    console.log('content.js: Retry successful - calling initializeEasterEggs()');
-                    window.EasterEgg.initializeEasterEggs();
-                } else {
-                    console.error('content.js: EasterEgg still not available after retry');
-                }
-            }, 100);
-        }
-    } else {
-        console.log('content.js: Easter eggs disabled in settings');
-    }
-});
+
 
 // Debug function that can be called from console
 window.debugLetterboxdExtension = () => {
