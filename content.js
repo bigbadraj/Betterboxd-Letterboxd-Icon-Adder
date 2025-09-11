@@ -1,5 +1,5 @@
 const DEBUG = {
-    ICON: false,    // For icon-related debugging
+    ICON: true,    // For icon-related debugging
     SETTINGS: false, // For general Letterboxd tweaks debugging
 };
 
@@ -120,9 +120,9 @@ const ICON_CONFIG = {
         })
     },
     movies1001: {
-        url: 'film_titles_1001-movies-you-must-see-before-you-die-2021.json',
+        url: 'film_titles_1001-movies-you-must-see-before-you-die-2024.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/gubarenko/list/1001-movies-you-must-see-before-you-die-2021/",
+            href: "https://letterboxd.com/gubarenko/list/1001-movies-you-must-see-before-you-die-2024/",
             imgSrc: "1001.png",
             height: "16",
             width: "16",
@@ -543,7 +543,7 @@ const ICON_CONFIG = {
     lion: {
         url: 'film_titles_golden-lion-winners.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/cinelove/list/golden-lion-winners/",
+            href: "https://letterboxd.com/bigbadraj/list/golden-lion-winners/",
             imgSrc: "lion.png",
             height: "16",
             width: "16",
@@ -687,7 +687,7 @@ const ICON_CONFIG = {
     tiff: {
         url: 'film_titles_tiff-peoples-choice-award-winners.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/harmenyolo/list/tiff-peoples-choice-award-winners/",
+            href: "https://letterboxd.com/robertpace/list/tiff-peoples-choice-award-winners/",
             imgSrc: "tiff.png",
             height: "16",
             width: "16",
@@ -747,7 +747,7 @@ const ICON_CONFIG = {
     screen: {
         url: 'film_titles_every-screen-actors-guild-outstanding-performance.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/bigbadraj/list/screen-actors-guild-outstanding-performance/",
+            href: "https://letterboxd.com/bigbadraj/list/every-screen-actors-guild-outstanding-performance/",
             imgSrc: "screen.png",
             height: "16",
             width: "16",
@@ -985,19 +985,6 @@ const ICON_CONFIG = {
             tooltipText: "№ {ranking} in the Top 50 Under 15,000 Reviews"
         })
     },
-    gilmore: {  // New icon entry for Gilmore Girls
-        url: 'film_titles_every-movie-referenced-watched-in-gilmore.json',
-        addFunction: createIconAdder({
-            href: "https://letterboxd.com/lesaladino/list/every-movie-referenced-watched-in-gilmore/",
-            imgSrc: "gilmore.png",  // Assuming the image is named gilmore.png
-            height: "16",
-            width: "16",
-            className: "gilmore-icon floating-icon",
-            showRanking: false,  // Unranked
-            tooltipText: "Referenced in Gilmore Girls"
-        })
-    },
-
     romcom: {
         url: 'film_titles_letterboxds-top-250-romantic-comedy-films.json',
         addFunction: createIconAdder({
@@ -1106,14 +1093,14 @@ const ICON_CONFIG = {
             tooltipText: "№ {ranking} in the Top 250 Animated Films"
         })
     },
-    animationPop: {  // New icon entry for Top 250 Animation
+    popAnimation: {  // New icon entry for Top 250 Popular Animation
         url: 'film_titles_top-250-most-popular-animation-narrative.json',
         addFunction: createIconAdder({
             href: "https://letterboxd.com/bigbadraj/list/top-250-most-popular-animation-narrative/",
-            imgSrc: "popAnimation.png", // Using the same image
+            imgSrc: "popAnimation.png",
             height: "16",
             width: "16",
-            className: "animationPop-icon floating-icon",
+            className: "popAnimation-icon floating-icon",
             showRanking: true,
             tooltipText: "№ {ranking} in the Popular Animated Films"
         })
@@ -1452,7 +1439,7 @@ const ICON_CONFIG = {
             width: "16",
             className: "popG-icon floating-icon",
             showRanking: true,
-            tooltipText: "№ {ranking} in the Top 200 Popular G Rated Films"
+            tooltipText: "№ {ranking} in the Popular 200 G Rated Films"
         })
     },
     pGRated: { // New entry for PG Rated Films
@@ -1476,7 +1463,7 @@ const ICON_CONFIG = {
             width: "16",
             className: "popPG-icon floating-icon",
             showRanking: true,
-            tooltipText: "№ {ranking} in the Popular PG 250"
+            tooltipText: "№ {ranking} in the Popular 250 PG Rated Films"
         })
     },
     pG13Rated: { // New entry for PG-13 Rated Films
@@ -1500,7 +1487,7 @@ const ICON_CONFIG = {
             width: "16",
             className: "popPG13-icon floating-icon",
             showRanking: true,
-            tooltipText: "№ {ranking} in the Popular PG-13 250"
+            tooltipText: "№ {ranking} in the Popular 250 PG-13 Rated Films"
         })
     },
     rRated: { // New entry for R Rated Films
@@ -1524,7 +1511,7 @@ const ICON_CONFIG = {
             width: "16",
             className: "popR-icon floating-icon",
             showRanking: true,
-            tooltipText: "№ {ranking} in the Popular R 250"
+            tooltipText: "№ {ranking} in the Popular 250 R Rated Films"
         })
     },
     nC17Rated: { // New entry for NC-17 Rated Films
@@ -1548,7 +1535,7 @@ const ICON_CONFIG = {
             width: "16",
             className: "popNC17-icon floating-icon",
             showRanking: true,
-            tooltipText: "№ {ranking} in the Popular NC-17 250"
+            tooltipText: "№ {ranking} in the Popular 25 NC-17 Rated Films"
         })
     },
     northAmerica: { // New entry for North American Narrative
@@ -2025,8 +2012,14 @@ async function addIcon(filmId, iconKey, settings) {
         return;
     }
 
-    if (iconKey === 'horror' && settings.showHorrorAlt === true) {
-        debugLog('ICON', 'Skipping horror icon - horrorAlt is enabled');
+    // Prevent any horror icons from appearing if main horror toggle is off
+    if ((iconKey === 'horror' || iconKey === 'horrorAlt') && settings.showGhost === false) {
+        debugLog('ICON', `Skipping ${iconKey} - main horror toggle is disabled`);
+        return;
+    }
+
+    if (iconKey === 'horror' && settings.showHorrorAlt === true && settings.showGhost === true) {
+        debugLog('ICON', 'Skipping horror icon - horrorAlt is enabled and main horror toggle is on');
         return;
     }
 
@@ -2049,8 +2042,7 @@ async function addIcon(filmId, iconKey, settings) {
         (iconKey === 'movies1001Alt' && settings.showMovies1001 === false) ||
         (iconKey === 'animation250' && settings.showAnimation === false) ||
         (iconKey === 'thrillerAlt' && settings.showThriller === false) ||
-        (iconKey === 'popThrillerAlt' && settings.showPopThriller === false) ||
-        (iconKey === 'horrorAlt' && settings.showHorror === false)) {
+        (iconKey === 'popThrillerAlt' && settings.showPopThriller === false)) {
         debugLog('ICON', `Skipping ${iconKey} - parent toggle is disabled`);
         return;
     }
@@ -2062,7 +2054,9 @@ async function addIcon(filmId, iconKey, settings) {
     }
 
 
-    if (settings[`show${iconKey.charAt(0).toUpperCase() + iconKey.slice(1)}`] === false) {
+    const settingName = `show${iconKey.charAt(0).toUpperCase() + iconKey.slice(1)}`;
+    debugLog('ICON', `Checking setting: ${settingName} = ${settings[settingName]}`);
+    if (settings[settingName] === false) {
         debugLog('ICON', `Skipping ${iconKey} - toggle is disabled`);
         return;
     }
@@ -2118,8 +2112,8 @@ async function addIcon(filmId, iconKey, settings) {
         if (itemIndex !== -1) {
             debugLog('ICON', `Found film in ${iconKey} list at index ${itemIndex} with ID: ${data[itemIndex].ID}`);
             
-            // Special handling for Oscar nominations
-            if (iconKey === 'nomOscar' && settings.hideNomForWin) {
+            // Special handling for Oscar nominations (only if Oscar Winners toggle is ON)
+            if (iconKey === 'nomOscar' && settings.hideNomForWin && settings.showWinOscar !== false) {
                 debugLog('ICON', 'Checking if film is Oscar winner before adding nomination icon');
                 const winnerData = await fetchData('film_titles_every-oscar-winner-ever-1.json');
                 
@@ -2181,69 +2175,76 @@ async function addIcon(filmId, iconKey, settings) {
 
 // Update the addOscarIcon function
 async function addOscarIcon(filmId, settings) {
-    // First check if Oscar Winners toggle is enabled
-    if (settings.showWinOscar === false) return;
-
     try {
-        // If Oscar hierarchy is enabled and parent toggle is on, only show hierarchy
-        if (settings.showWinOscar !== false && settings.showOscarHierarchy !== false) {
-            const oscarTiers = ['oscar10', 'oscar7', 'oscar5', 'oscar3'];
-            let foundTier = false;
-            
-            for (const tier of oscarTiers) {
-                const data = await fetchData(ICON_CONFIG[tier].url);
-                if (data.some(item => item.ID === filmId.toString())) {
-                    const iconElement = ICON_CONFIG[tier].addFunction();
-                    
-                    new MutationObserver((mutations, observer) => {
-                        const ul = document.querySelector(".production-statistic-list");
-                        if (ul && !ul.querySelector(`.${tier}-icon`)) {
-                            ul.appendChild(iconElement);
-                            observer.disconnect();
-                        }
-                    }).observe(document, { childList: true, subtree: true });
-                    
-                    foundTier = true;
-                    break;
-                }
-            }
-
-            // If no tier matches and hierarchy is enabled, show regular Oscar winner icon
-            if (!foundTier) {
-                // Only add regular winner icon if the film is an Oscar winner
-                const winnerData = await fetchData(ICON_CONFIG.winOscar.url);
-                if (winnerData.some(item => item.ID === filmId.toString())) {
-                    addIcon(filmId, 'winOscar', settings);
-                }
-            }
-        } else {
-            // If hierarchy is disabled but Oscar Winners is enabled, show regular Oscar winner icon
-            addIcon(filmId, 'winOscar', settings);
-        }
-
-        // Always check for nominations if enabled
-        if (settings.showNomOscar !== false) {
-            // Only add nomination icon if hideNomForWin is false or the film isn't a winner
-            if (!settings.hideNomForWin) {
-                addIcon(filmId, 'nomOscar', settings);
-            } else {
-                const winnerData = await fetchData(ICON_CONFIG.winOscar.url);
+        // Handle Oscar Winners (only if enabled)
+        if (settings.showWinOscar !== false) {
+            // If Oscar hierarchy is enabled and parent toggle is on, only show hierarchy
+            if (settings.showOscarHierarchy !== false) {
+                const oscarTiers = ['oscar10', 'oscar7', 'oscar5', 'oscar3'];
+                let foundTier = false;
                 
-                // Try to find the film by ID (could be numeric ID or film slug)
-                let found = winnerData.some(item => item.ID === filmId.toString());
-                
-                // If not found by exact ID match, try to find by film slug from URL
-                if (!found && filmId && filmId !== "Unknown") {
-                    const urlMatch = window.location.pathname.match(/\/film\/([^\/]+)/);
-                    if (urlMatch) {
-                        const urlFilmSlug = urlMatch[1];
-                        debugLog('ICON', `Trying to match Oscar nomination check by URL film slug: ${urlFilmSlug}`);
-                        found = winnerData.some(item => item.ID === urlFilmSlug);
+                for (const tier of oscarTiers) {
+                    const data = await fetchData(ICON_CONFIG[tier].url);
+                    if (data.some(item => item.ID === filmId.toString())) {
+                        const iconElement = ICON_CONFIG[tier].addFunction();
+                        
+                        new MutationObserver((mutations, observer) => {
+                            const ul = document.querySelector(".production-statistic-list");
+                            if (ul && !ul.querySelector(`.${tier}-icon`)) {
+                                ul.appendChild(iconElement);
+                                observer.disconnect();
+                            }
+                        }).observe(document, { childList: true, subtree: true });
+                        
+                        foundTier = true;
+                        break;
                     }
                 }
-                
-                if (!found) {
+
+                // If no tier matches and hierarchy is enabled, show regular Oscar winner icon
+                if (!foundTier) {
+                    // Only add regular winner icon if the film is an Oscar winner
+                    const winnerData = await fetchData(ICON_CONFIG.winOscar.url);
+                    if (winnerData.some(item => item.ID === filmId.toString())) {
+                        addIcon(filmId, 'winOscar', settings);
+                    }
+                }
+            } else {
+                // If hierarchy is disabled but Oscar Winners is enabled, show regular Oscar winner icon
+                addIcon(filmId, 'winOscar', settings);
+            }
+        }
+
+        // Handle Oscar Nominations (independent of winner toggle)
+        debugLog('ICON', `Oscar Nominee check: showNomOscar=${settings.showNomOscar}, showWinOscar=${settings.showWinOscar}`);
+        if (settings.showNomOscar !== false) {
+            // If Oscar Winners is OFF, always show nominees (hideNomForWin setting doesn't apply)
+            if (settings.showWinOscar === false) {
+                debugLog('ICON', 'Oscar Winners OFF - showing all nominees');
+                addIcon(filmId, 'nomOscar', settings);
+            } else {
+                // If Oscar Winners is ON, check the hideNomForWin setting
+                if (!settings.hideNomForWin) {
                     addIcon(filmId, 'nomOscar', settings);
+                } else {
+                    const winnerData = await fetchData(ICON_CONFIG.winOscar.url);
+                    
+                    // Try to find the film by ID (could be numeric ID or film slug)
+                    let found = winnerData.some(item => item.ID === filmId.toString());
+                    
+                    // If not found by exact ID match, try to find by film slug from URL
+                    if (!found && filmId && filmId !== "Unknown") {
+                        const urlMatch = window.location.pathname.match(/\/film\/([^\/]+)/);
+                        if (urlMatch) {
+                            const urlFilmSlug = urlMatch[1];
+                            debugLog('ICON', `Trying to match Oscar nomination check by URL film slug: ${urlFilmSlug}`);
+                            found = winnerData.some(item => item.ID === urlFilmSlug);
+                        }
+                    }
+                    
+                    if (!found) {
+                        addIcon(filmId, 'nomOscar', settings);
+                    }
                 }
             }
         }
@@ -2283,7 +2284,7 @@ async function updateReleaseYear(settings) {
     }
 
     if (earliestNonPremiereDate) {
-        const releaseYearElement = document.querySelector('.releaseyear a');
+        const releaseYearElement = document.querySelector('.releasedate a');
         if (releaseYearElement) {
             const year = earliestNonPremiereDate.getFullYear();
             debugLog('SETTINGS', `Updating release year to ${year}`);
