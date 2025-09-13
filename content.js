@@ -1910,6 +1910,114 @@ const ICON_CONFIG = {
             tooltipText: "№ {ranking} in the Top 100 Silent Films"
         })
     },
+    imdbGray: {
+        url: 'film_titles_every-film-that-has-ever-been-on-the-imdb.json',
+        addFunction: createIconAdder({
+            href: "https://letterboxd.com/jamesmorison/list/every-film-that-has-ever-been-on-the-imdb/",
+            imgSrc: "imdbGray.png",
+            height: "16",
+            width: "16",
+            className: "imdbGray-icon positioned-icon",
+            showRanking: false,
+            tooltipText: "Previous Entry in the IMDb Top 250"
+        })
+    },
+    Harvard: {
+        url: 'film_titles_harvard-film-phd-program-narrative-films.json',
+        addFunction: createIconAdder({
+            href: "https://letterboxd.com/pileofcrowns/list/harvard-film-phd-program-narrative-films/",
+            imgSrc: "Harvard.png",
+            height: "16",
+            width: "16",
+            className: "Harvard-icon floating-icon",
+            showRanking: false,
+            tooltipText: "Part of the Harvard PhD Film Program"
+        })
+    },
+    Bong: {
+        url: 'film_titles_bong-joon-hos-favorites.json',
+        addFunction: createIconAdder({
+            href: "https://letterboxd.com/gpu/list/bong-joon-hos-favorites/",
+            imgSrc: "bong.png",
+            height: "16",
+            width: "16",
+            className: "bong-icon floating-icon",
+            showRanking: false,
+            tooltipText: "One of Bong Joon-Ho’s Favorite Movies"
+        })
+    },
+    Spike: {
+        url: 'film_titles_spike-lees-95-essential-films-all-aspiring.json',
+        addFunction: createIconAdder({
+            href: "https://letterboxd.com/theodo/list/spike-lees-95-essential-films-all-aspiring/",
+            imgSrc: "spike.png",
+            height: "16",
+            width: "16",
+            className: "spike-icon floating-icon",
+            showRanking: false,
+            tooltipText: "One of Spike Lee's Favorite Joints"
+        })
+    },
+    tarantino: {
+        url: 'film_titles_quentin-tarantinos-199-favorite-films.json',
+        addFunction: createIconAdder({
+            href: "https://letterboxd.com/zachaigley/list/quentin-tarantinos-199-favorite-films/",
+            imgSrc: "tarantino.png",
+            height: "16",
+            width: "16",
+            className: "tarantino-icon floating-icon",
+            showRanking: false,
+            tooltipText: "One of Quentin Tarantino's Favorite Movies"
+        })
+    },
+    greta: {
+        url: 'film_titles_greta-gerwig-talked-about-these-films.json',
+        addFunction: createIconAdder({
+            href: "https://letterboxd.com/nataliaivonica/list/greta-gerwig-talked-about-these-films/",
+            imgSrc: "greta.png",
+            height: "16",
+            width: "16",
+            className: "greta-icon floating-icon",
+            showRanking: false,
+            tooltipText: "A Film Greta Gerwig has Talked About Positively"
+        })
+    },
+    kubrick: {
+        url: 'film_titles_stanley-kubricks-100-favorite-filmsthat-we.json',
+        addFunction: createIconAdder({
+            href: "https://letterboxd.com/jeffroskull/list/stanley-kubricks-100-favorite-filmsthat-we/",
+            imgSrc: "kubrick.png",
+            height: "16",
+            width: "16",
+            className: "kubrick-icon floating-icon",
+            showRanking: false,
+            tooltipText: "Stanley Kubrick’s 100 Favorite Films"
+        })
+    },
+    kurosawa: {
+        url: 'film_titles_akira-kurosawas-100-favorite-movies.json',
+        addFunction: createIconAdder({
+            href: "https://letterboxd.com/michaelj/list/akira-kurosawas-100-favorite-movies/",
+            imgSrc: "kurosawa.png",
+            height: "16",
+            width: "16",
+            className: "kurosawa-icon floating-icon",
+            showRanking: false,
+            tooltipText: "Akira Kurosawa’s 100 Favorite Films"
+        })
+    },
+    fincher: {
+        url: 'film_titles_david-finchers-favorite-films.json',
+        addFunction: createIconAdder({
+            href: "https://letterboxd.com/abdurrhmknkl/list/david-finchers-favorite-films/",
+            imgSrc: "fincher.png",
+            height: "16",
+            width: "16",
+            className: "fincher-icon floating-icon",
+            showRanking: false,
+            tooltipText: "David Fincher’s Favorite Films"
+        })
+    },
 };
 
 // Generic icon creator function
@@ -1991,6 +2099,28 @@ function isInTop250() {
     });
 }
 
+async function isInImdbTop250() {
+    debugLog('ICON', 'Checking if the film is in the IMDb Top 250 JSON...');
+    
+    // Get the current film ID from the URL
+    const currentPath = window.location.pathname;
+    const filmId = currentPath.split('/')[2]; // Extract film ID from /film/film-id/
+    
+    // Load the IMDb Top 250 JSON data
+    const imdbData = await fetchData('film_titles_imdb-top-250.json');
+    
+    // Check if the film is in the regular IMDb Top 250 JSON
+    const itemIndex = imdbData.findIndex(item => item.ID === filmId);
+    
+    if (itemIndex !== -1) {
+        debugLog('ICON', `Film ${filmId} found in regular IMDb Top 250 JSON at index ${itemIndex}`);
+        return true; // The film is in the current IMDb Top 250
+    } else {
+        debugLog('ICON', `Film ${filmId} not found in regular IMDb Top 250 JSON`);
+        return false; // The film is not in the current IMDb Top 250
+    }
+}
+
 // Unified icon addition function
 async function addIcon(filmId, iconKey, settings) {
     debugLog('ICON', `Attempting to add icon: ${iconKey} for film ID: ${filmId}`);
@@ -2037,16 +2167,29 @@ async function addIcon(filmId, iconKey, settings) {
         debugLog('ICON', `Proceeding with adding ${iconKey} icon.`);
     }  
 
+    
+    // Proceed with adding the icon if not in the IMDb Top 250
+    debugLog('ICON', `Proceeding with adding ${iconKey} icon.`);
+    
+
     // Check for parent toggle dependencies
     if ((iconKey === 'moneyAlt' && settings.showMoney === false) || 
         (iconKey === 'movies1001Alt' && settings.showMovies1001 === false) ||
-        (iconKey === 'animation250' && settings.showAnimation === false) ||
-        (iconKey === 'thrillerAlt' && settings.showThriller === false) ||
-        (iconKey === 'popThrillerAlt' && settings.showPopThriller === false)) {
+        (iconKey === 'animation250' && settings.showAnimation === false)) {
         debugLog('ICON', `Skipping ${iconKey} - parent toggle is disabled`);
         return;
     }
     
+    // Handle IMDb icon priority - if both are enabled, prefer regular IMDb over imdbGray
+    if (iconKey === 'imdbGray' && settings.showImdb === true) {
+        const isImdbTop250 = await isInImdbTop250();
+        if (isImdbTop250) {
+            debugLog('ICON', `Skipping imdbGray - film is in current IMDb Top 250, regular IMDb icon will show instead`);
+            return;
+        }
+    } else if (iconKey === 'imdbGray' && settings.showImdb === false) {
+        debugLog('ICON', `Regular IMDb toggle is off, proceeding with imdbGray as normal icon`);
+    }
 
     if (iconKey === 'oscarHierarchy' && settings.showWinOscar === false) {
         debugLog('ICON', `Skipping ${iconKey} - parent toggle 'showWinOscar' is disabled`);
