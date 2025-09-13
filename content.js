@@ -373,7 +373,7 @@ const ICON_CONFIG = {
         })
     },
     marty: {
-        url: 'film_titles_martin-scorseses-film-school-the-85-films.json',
+        url: 'film_titles_martin-scorseses-film-school.json',
         addFunction: createIconAdder({
             href: "https://letterboxd.com/pinheadlarry145/list/martin-scorseses-film-school-the-85-films/",
             imgSrc: "marty.png",
@@ -874,7 +874,7 @@ const ICON_CONFIG = {
             width: "16",
             className: "fourfav-icon floating-icon",
             showRanking: true,
-            tooltipText: "№ {ranking} in the Letterboxd Four Favorites"
+            tooltipText: "№ {ranking} in the Letterboxd Four Favorite Interviews"
         })
     },
     year: {
