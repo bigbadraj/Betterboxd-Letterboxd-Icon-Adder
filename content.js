@@ -1,5 +1,5 @@
 const DEBUG = {
-    ICON: true,    // For icon-related debugging
+    ICON: false,    // For icon-related debugging
     SETTINGS: false, // For general Letterboxd tweaks debugging
 };
 
