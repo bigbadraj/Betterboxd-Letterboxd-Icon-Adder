@@ -792,18 +792,6 @@ const ICON_CONFIG = {
             tooltipText: "№ {ranking} in They Shoot Pictures, Don't They? 1000 Greatest Films"
         })
     },
-    raj: {
-        url: 'film_titles_every-movie-ive-seen-ranked.json',
-        addFunction: createIconAdder({
-            href: "https://letterboxd.com/bigbadraj/list/every-movie-ive-seen-ranked/",
-            imgSrc: "raj.png",
-            height: "16",
-            width: "16",
-            className: "raj-icon floating-icon",
-            showRanking: true,
-            tooltipText: "№ {ranking} in Raj's Personal Ranking"
-        })
-    },
     movies1001Alt: {
         url: 'film_titles_1001-movies-you-must-see-before-you-die.json',
         addFunction: createIconAdder({
