@@ -1,22 +1,31 @@
 {
     "name": "Betterboxd: Letterboxd Icon Adder",
     "description": "Adds additional list icons to movies on Letterboxd",
-    "version": "1.0",
+    "version": "1.0.5",
     "manifest_version": 3,
     "content_scripts": [
         {
-            "matches": ["https://letterboxd.com/*"],
-            "js": ["content.js"],
-            "css": ["styles.css"],
+            "matches": [
+                "https://letterboxd.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "styles.css"
+            ],
             "run_at": "document_idle"
         }
     ],
     "web_accessible_resources": [
         {
             "resources": [
-                "images/*"
+                "images/*",
+                "data/*.json"
             ],
-            "matches": ["https://letterboxd.com/*"]
+            "matches": [
+                "https://letterboxd.com/*"
+            ]
         }
     ],
     "action": {
@@ -27,5 +36,8 @@
             "128": "images/Logo128.png"
         }
     },
-    "permissions": ["storage", "tabs"]
+    "permissions": [
+        "storage",
+        "tabs"
+    ]
 }
