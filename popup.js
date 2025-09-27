@@ -259,11 +259,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         }, 3000);
                     }).catch(() => {
                         // Fallback: try to open in a new tab
-                        chrome.tabs.create({ url: href });
+                        window.open(href, '_blank');
                     });
                 } else if (href.startsWith('http://') || href.startsWith('https://')) {
                     // Handle external links
-                    chrome.tabs.create({ url: href });
+                    window.open(href, '_blank');
                 }
             });
             
