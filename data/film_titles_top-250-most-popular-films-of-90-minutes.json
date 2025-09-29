@@ -1,1502 +1,1502 @@
 [
     {
         "ListNumber": 1,
-        "Title": "Fantastic Mr. Fox",
+        "Title": "Fantastic Mr Fox",
         "Year": "2009",
-        "ID": "fantastic-mr-fox"
+        "ID": "10315"
     },
     {
         "ListNumber": 2,
         "Title": "Shrek",
         "Year": "2001",
-        "ID": "shrek"
+        "ID": "808"
     },
     {
         "ListNumber": 3,
         "Title": "My Neighbor Totoro",
         "Year": "1988",
-        "ID": "my-neighbor-totoro"
+        "ID": "8392"
     },
     {
         "ListNumber": 4,
         "Title": "Toy Story",
         "Year": "1995",
-        "ID": "toy-story"
+        "ID": "862"
     },
     {
         "ListNumber": 5,
         "Title": "The Lion King",
         "Year": "1994",
-        "ID": "the-lion-king"
+        "ID": "8587"
     },
     {
         "ListNumber": 6,
         "Title": "The Nightmare Before Christmas",
         "Year": "1993",
-        "ID": "the-nightmare-before-christmas"
+        "ID": "9479"
     },
     {
         "ListNumber": 7,
         "Title": "Perfect Blue",
         "Year": "1997",
-        "ID": "perfect-blue"
+        "ID": "10494"
     },
     {
         "ListNumber": 8,
         "Title": "A Real Pain",
         "Year": "2024",
-        "ID": "a-real-pain"
+        "ID": "1013850"
     },
     {
         "ListNumber": 9,
         "Title": "Corpse Bride",
         "Year": "2005",
-        "ID": "corpse-bride"
+        "ID": "3933"
     },
     {
         "ListNumber": 10,
-        "Title": "Flow",
+        "Title": "Flow 2024",
         "Year": "2024",
-        "ID": "flow-2024"
+        "ID": "823219"
     },
     {
         "ListNumber": 11,
         "Title": "Grave of the Fireflies",
         "Year": "1988",
-        "ID": "grave-of-the-fireflies"
+        "ID": "12477"
     },
     {
         "ListNumber": 12,
-        "Title": "Stand by Me",
+        "Title": "Stand By Me",
         "Year": "1986",
-        "ID": "stand-by-me"
+        "ID": "235"
     },
     {
         "ListNumber": 13,
         "Title": "Kung Fu Panda",
         "Year": "2008",
-        "ID": "kung-fu-panda"
+        "ID": "9502"
     },
     {
         "ListNumber": 14,
         "Title": "Before Sunset",
         "Year": "2004",
-        "ID": "before-sunset"
+        "ID": "80"
     },
     {
         "ListNumber": 15,
-        "Title": "But I'm a Cheerleader",
+        "Title": "But Im A Cheerleader",
         "Year": "1999",
-        "ID": "but-im-a-cheerleader"
+        "ID": "20770"
     },
     {
         "ListNumber": 16,
         "Title": "Mulan",
         "Year": "1998",
-        "ID": "mulan"
+        "ID": "10674"
     },
     {
         "ListNumber": 17,
         "Title": "The Texas Chain Saw Massacre",
         "Year": "1974",
-        "ID": "the-texas-chain-saw-massacre"
+        "ID": "30497"
     },
     {
         "ListNumber": 18,
-        "Title": "mid90s",
+        "Title": "Mid90S",
         "Year": "2018",
-        "ID": "mid90s"
+        "ID": "437586"
     },
     {
         "ListNumber": 19,
         "Title": "Palm Springs",
         "Year": "2020",
-        "ID": "palm-springs-2020"
+        "ID": "587792"
     },
     {
         "ListNumber": 20,
         "Title": "Frances Ha",
         "Year": "2012",
-        "ID": "frances-ha"
+        "ID": "121986"
     },
     {
         "ListNumber": 21,
-        "Title": "Lilo & Stitch",
+        "Title": "Lilo Stitch",
         "Year": "2002",
-        "ID": "lilo-stitch"
+        "ID": "11544"
     },
     {
         "ListNumber": 22,
         "Title": "Zombieland",
         "Year": "2009",
-        "ID": "zombieland"
+        "ID": "19908"
     },
     {
         "ListNumber": 23,
         "Title": "Shiva Baby",
         "Year": "2020",
-        "ID": "shiva-baby-2020"
+        "ID": "664300"
     },
     {
         "ListNumber": 24,
         "Title": "The Blair Witch Project",
         "Year": "1999",
-        "ID": "the-blair-witch-project"
+        "ID": "2667"
     },
     {
         "ListNumber": 25,
         "Title": "Eraserhead",
         "Year": "1977",
-        "ID": "eraserhead"
+        "ID": "985"
     },
     {
         "ListNumber": 26,
         "Title": "Zoolander",
         "Year": "2001",
-        "ID": "zoolander"
+        "ID": "9398"
     },
     {
         "ListNumber": 27,
         "Title": "Ice Age",
         "Year": "2002",
-        "ID": "ice-age"
+        "ID": "425"
     },
     {
         "ListNumber": 28,
         "Title": "Madagascar",
         "Year": "2005",
-        "ID": "madagascar"
+        "ID": "953"
     },
     {
         "ListNumber": 29,
-        "Title": "The Emperor's New Groove",
+        "Title": "The Emperors New Groove",
         "Year": "2000",
-        "ID": "the-emperors-new-groove"
+        "ID": "11688"
     },
     {
         "ListNumber": 30,
-        "Title": "Paprika",
+        "Title": "Paprika 2006",
         "Year": "2006",
-        "ID": "paprika-2006"
+        "ID": "4977"
     },
     {
         "ListNumber": 31,
-        "Title": "Beauty and the Beast",
+        "Title": "Beauty And The Beast 1991",
         "Year": "1991",
-        "ID": "beauty-and-the-beast-1991"
+        "ID": "10020"
     },
     {
         "ListNumber": 32,
         "Title": "Persona",
         "Year": "1966",
-        "ID": "persona"
+        "ID": "797"
     },
     {
         "ListNumber": 33,
-        "Title": "What We Do in the Shadows",
+        "Title": "What We Do In The Shadows",
         "Year": "2014",
-        "ID": "what-we-do-in-the-shadows"
+        "ID": "246741"
     },
     {
         "ListNumber": 34,
-        "Title": "Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan",
+        "Title": "Borat Cultural Learnings Of America For Make Benefit Glorious Nation Of Kazakhstan",
         "Year": "2006",
-        "ID": "borat-cultural-learnings-of-america-for-make-benefit-glorious-nation-of-kazakhstan"
+        "ID": "496"
     },
     {
         "ListNumber": 35,
         "Title": "Immaculate",
         "Year": "2024",
-        "ID": "immaculate-2024"
+        "ID": "1041613"
     },
     {
         "ListNumber": 36,
         "Title": "The Iron Giant",
         "Year": "1999",
-        "ID": "the-iron-giant"
+        "ID": "10386"
     },
     {
         "ListNumber": 37,
         "Title": "Project X",
         "Year": "2012",
-        "ID": "project-x-2012"
+        "ID": "57214"
     },
     {
         "ListNumber": 38,
-        "Title": "Scooby-Doo",
+        "Title": "Scooby Doo",
         "Year": "2002",
-        "ID": "scooby-doo"
+        "ID": "9637"
     },
     {
         "ListNumber": 39,
         "Title": "The Evil Dead",
         "Year": "1981",
-        "ID": "the-evil-dead"
+        "ID": "764"
     },
     {
         "ListNumber": 40,
         "Title": "The Little Mermaid",
         "Year": "1989",
-        "ID": "the-little-mermaid"
+        "ID": "10144"
     },
     {
         "ListNumber": 41,
         "Title": "Lucy",
         "Year": "2014",
-        "ID": "lucy-2014"
+        "ID": "240832"
     },
     {
         "ListNumber": 42,
         "Title": "House",
         "Year": "1977",
-        "ID": "house"
+        "ID": "25623"
     },
     {
         "ListNumber": 43,
         "Title": "Scary Movie",
         "Year": "2000",
-        "ID": "scary-movie-2000"
+        "ID": "4247"
     },
     {
         "ListNumber": 44,
         "Title": "Terrifier",
         "Year": "2016",
-        "ID": "terrifier-2016"
+        "ID": "420634"
     },
     {
         "ListNumber": 45,
         "Title": "Marcel the Shell with Shoes On",
         "Year": "2021",
-        "ID": "marcel-the-shell-with-shoes-on-2021"
+        "ID": "869626"
     },
     {
         "ListNumber": 46,
-        "Title": "Neon Genesis Evangelion: The End of Evangelion",
+        "Title": "Neon Genesis Evangelion The End Of Evangelion",
         "Year": "1997",
-        "ID": "neon-genesis-evangelion-the-end-of-evangelion"
+        "ID": "18491"
     },
     {
         "ListNumber": 47,
         "Title": "Airplane!",
         "Year": "1980",
-        "ID": "airplane"
+        "ID": "813"
     },
     {
         "ListNumber": 48,
-        "Title": "Wallace & Gromit: Vengeance Most Fowl",
+        "Title": "Wallace Gromit Vengeance Most Fowl",
         "Year": "2024",
-        "ID": "wallace-gromit-vengeance-most-fowl"
+        "ID": "929204"
     },
     {
         "ListNumber": 49,
-        "Title": "Minions: The Rise of Gru",
+        "Title": "Minions The Rise Of Gru",
         "Year": "2022",
-        "ID": "minions-the-rise-of-gru"
+        "ID": "438148"
     },
     {
         "ListNumber": 50,
         "Title": "Cloudy with a Chance of Meatballs",
         "Year": "2009",
-        "ID": "cloudy-with-a-chance-of-meatballs"
+        "ID": "22794"
     },
     {
         "ListNumber": 51,
         "Title": "The Naked Gun",
         "Year": "2025",
-        "ID": "the-naked-gun"
+        "ID": "1035259"
     },
     {
         "ListNumber": 52,
         "Title": "Videodrome",
         "Year": "1983",
-        "ID": "videodrome"
+        "ID": "837"
     },
     {
         "ListNumber": 53,
-        "Title": "Creep",
+        "Title": "Creep 2014",
         "Year": "2014",
-        "ID": "creep-2014"
+        "ID": "250574"
     },
     {
         "ListNumber": 54,
         "Title": "The Purge",
         "Year": "2013",
-        "ID": "the-purge"
+        "ID": "158015"
     },
     {
         "ListNumber": 55,
-        "Title": "Ghost in the Shell",
+        "Title": "Ghost In The Shell",
         "Year": "1995",
-        "ID": "ghost-in-the-shell"
+        "ID": "9323"
     },
     {
         "ListNumber": 56,
         "Title": "Final Destination 2",
         "Year": "2003",
-        "ID": "final-destination-2"
+        "ID": "9358"
     },
     {
         "ListNumber": 57,
         "Title": "Evil Dead II",
         "Year": "1987",
-        "ID": "evil-dead-ii"
+        "ID": "765"
     },
     {
         "ListNumber": 58,
-        "Title": "Look Back",
+        "Title": "Look Back 2024",
         "Year": "2024",
-        "ID": "look-back-2024"
+        "ID": "1244492"
     },
     {
         "ListNumber": 59,
         "Title": "Tarzan",
         "Year": "1999",
-        "ID": "tarzan"
+        "ID": "37135"
     },
     {
         "ListNumber": 60,
         "Title": "The SpongeBob SquarePants Movie",
         "Year": "2004",
-        "ID": "the-spongebob-squarepants-movie"
+        "ID": "11836"
     },
     {
         "ListNumber": 61,
         "Title": "Alice in Wonderland",
         "Year": "1951",
-        "ID": "alice-in-wonderland-1951"
+        "ID": "12092"
     },
     {
         "ListNumber": 62,
         "Title": "Coherence",
         "Year": "2013",
-        "ID": "coherence"
+        "ID": "220289"
     },
     {
         "ListNumber": 63,
         "Title": "Snow White and the Seven Dwarfs",
         "Year": "1937",
-        "ID": "snow-white-and-the-seven-dwarfs"
+        "ID": "408"
     },
     {
         "ListNumber": 64,
-        "Title": "[REC]",
+        "Title": "Rec",
         "Year": "2007",
-        "ID": "rec"
+        "ID": "8329"
     },
     {
         "ListNumber": 65,
         "Title": "The Simpsons Movie",
         "Year": "2007",
-        "ID": "the-simpsons-movie"
+        "ID": "35"
     },
     {
         "ListNumber": 66,
         "Title": "Red Eye",
         "Year": "2005",
-        "ID": "red-eye"
+        "ID": "11460"
     },
     {
         "ListNumber": 67,
         "Title": "My Old Ass",
         "Year": "2024",
-        "ID": "my-old-ass"
+        "ID": "947891"
     },
     {
         "ListNumber": 68,
         "Title": "Don't Breathe",
         "Year": "2016",
-        "ID": "dont-breathe-2016"
+        "ID": "300669"
     },
     {
         "ListNumber": 69,
         "Title": "Fantastic Planet",
         "Year": "1973",
-        "ID": "fantastic-planet"
+        "ID": "16306"
     },
     {
         "ListNumber": 70,
         "Title": "Shark Tale",
         "Year": "2004",
-        "ID": "shark-tale"
+        "ID": "10555"
     },
     {
         "ListNumber": 71,
-        "Title": "The Naked Gun: From the Files of Police Squad!",
+        "Title": "The Naked Gun From The Files Of Police Squad",
         "Year": "1988",
-        "ID": "the-naked-gun-from-the-files-of-police-squad"
+        "ID": "37136"
     },
     {
         "ListNumber": 72,
-        "Title": "Paths of Glory",
+        "Title": "Paths Of Glory",
         "Year": "1957",
-        "ID": "paths-of-glory"
+        "ID": "975"
     },
     {
         "ListNumber": 73,
         "Title": "The Lorax",
         "Year": "2012",
-        "ID": "the-lorax-2012"
+        "ID": "73723"
     },
     {
         "ListNumber": 74,
         "Title": "The Bling Ring",
         "Year": "2013",
-        "ID": "the-bling-ring"
+        "ID": "96936"
     },
     {
         "ListNumber": 75,
         "Title": "Sausage Party",
         "Year": "2016",
-        "ID": "sausage-party"
+        "ID": "223702"
     },
     {
         "ListNumber": 76,
         "Title": "Chicken Run",
         "Year": "2000",
-        "ID": "chicken-run"
+        "ID": "7443"
     },
     {
         "ListNumber": 77,
         "Title": "Rope",
         "Year": "1948",
-        "ID": "rope"
+        "ID": "1580"
     },
     {
         "ListNumber": 78,
         "Title": "Cloverfield",
         "Year": "2008",
-        "ID": "cloverfield"
+        "ID": "7191"
     },
     {
         "ListNumber": 79,
         "Title": "Drive-Away Dolls",
         "Year": "2024",
-        "ID": "drive-away-dolls"
+        "ID": "957304"
     },
     {
         "ListNumber": 80,
         "Title": "Breathless",
         "Year": "1960",
-        "ID": "breathless"
+        "ID": "269"
     },
     {
         "ListNumber": 81,
         "Title": "Hush",
         "Year": "2016",
-        "ID": "hush-2016"
+        "ID": "376570"
     },
     {
         "ListNumber": 82,
         "Title": "Robots",
         "Year": "2005",
-        "ID": "robots"
+        "ID": "9928"
     },
     {
         "ListNumber": 83,
         "Title": "Brother Bear",
         "Year": "2003",
-        "ID": "brother-bear"
+        "ID": "10009"
     },
     {
         "ListNumber": 84,
         "Title": "Tangerine",
         "Year": "2015",
-        "ID": "tangerine"
+        "ID": "308084"
     },
     {
         "ListNumber": 85,
         "Title": "Pocahontas",
         "Year": "1995",
-        "ID": "pocahontas"
+        "ID": "10530"
     },
     {
         "ListNumber": 86,
         "Title": "Rashomon",
         "Year": "1950",
-        "ID": "rashomon"
+        "ID": "548"
     },
     {
         "ListNumber": 87,
         "Title": "Madagascar: Escape 2 Africa",
         "Year": "2008",
-        "ID": "madagascar-escape-2-africa"
+        "ID": "10527"
     },
     {
         "ListNumber": 88,
         "Title": "Cinderella",
         "Year": "1950",
-        "ID": "cinderella"
+        "ID": "11224"
     },
     {
         "ListNumber": 89,
         "Title": "Cléo from 5 to 7",
         "Year": "1962",
-        "ID": "cleo-from-5-to-7"
+        "ID": "499"
     },
     {
         "ListNumber": 90,
         "Title": "Office Space",
         "Year": "1999",
-        "ID": "office-space"
+        "ID": "1542"
     },
     {
         "ListNumber": 91,
         "Title": "Surf's Up",
         "Year": "2007",
-        "ID": "surfs-up"
+        "ID": "9408"
     },
     {
         "ListNumber": 92,
         "Title": "Space Jam",
         "Year": "1996",
-        "ID": "space-jam"
+        "ID": "2300"
     },
     {
         "ListNumber": 93,
-        "Title": "Chicken Little",
+        "Title": "Chicken Little 2005",
         "Year": "2005",
-        "ID": "chicken-little-2005"
+        "ID": "9982"
     },
     {
         "ListNumber": 94,
         "Title": "Flipped",
         "Year": "2010",
-        "ID": "flipped"
+        "ID": "43949"
     },
     {
         "ListNumber": 95,
         "Title": "Bicycle Thieves",
         "Year": "1948",
-        "ID": "bicycle-thieves"
+        "ID": "5156"
     },
     {
         "ListNumber": 96,
         "Title": "The Final Destination",
         "Year": "2009",
-        "ID": "the-final-destination"
+        "ID": "19912"
     },
     {
         "ListNumber": 97,
-        "Title": "Child's Play",
+        "Title": "Childs Play",
         "Year": "1988",
-        "ID": "childs-play"
+        "ID": "10585"
     },
     {
         "ListNumber": 98,
         "Title": "You Were Never Really Here",
         "Year": "2017",
-        "ID": "you-were-never-really-here"
+        "ID": "398181"
     },
     {
         "ListNumber": 99,
         "Title": "Paranormal Activity",
         "Year": "2007",
-        "ID": "paranormal-activity"
+        "ID": "23827"
     },
     {
         "ListNumber": 100,
         "Title": "Sleeping Beauty",
         "Year": "1959",
-        "ID": "sleeping-beauty"
+        "ID": "10882"
     },
     {
         "ListNumber": 101,
         "Title": "Bambi",
         "Year": "1942",
-        "ID": "bambi"
+        "ID": "3170"
     },
     {
         "ListNumber": 102,
-        "Title": "The Autopsy of Jane Doe",
+        "Title": "The Autopsy Of Jane Doe",
         "Year": "2016",
-        "ID": "the-autopsy-of-jane-doe"
+        "ID": "397243"
     },
     {
         "ListNumber": 103,
         "Title": "Army of Darkness",
         "Year": "1992",
-        "ID": "army-of-darkness"
+        "ID": "766"
     },
     {
         "ListNumber": 104,
         "Title": "The Cabinet of Dr. Caligari",
         "Year": "1920",
-        "ID": "the-cabinet-of-dr-caligari-1920"
+        "ID": "234"
     },
     {
         "ListNumber": 105,
-        "Title": "Women on the Verge of a Nervous Breakdown",
+        "Title": "Women On The Verge Of A Nervous Breakdown",
         "Year": "1988",
-        "ID": "women-on-the-verge-of-a-nervous-breakdown"
+        "ID": "4203"
     },
     {
         "ListNumber": 106,
         "Title": "Liar Liar",
         "Year": "1997",
-        "ID": "liar-liar"
+        "ID": "1624"
     },
     {
         "ListNumber": 107,
         "Title": "Frankenweenie",
         "Year": "2012",
-        "ID": "frankenweenie-2012"
+        "ID": "62214"
     },
     {
         "ListNumber": 108,
         "Title": "Elephant",
         "Year": "2003",
-        "ID": "elephant-2003"
+        "ID": "1807"
     },
     {
         "ListNumber": 109,
         "Title": "Presence",
         "Year": "2024",
-        "ID": "presence-2024"
+        "ID": "1140535"
     },
     {
         "ListNumber": 110,
         "Title": "Saint Maud",
         "Year": "2019",
-        "ID": "saint-maud"
+        "ID": "575776"
     },
     {
         "ListNumber": 111,
         "Title": "One Hundred and One Dalmatians",
         "Year": "1961",
-        "ID": "one-hundred-and-one-dalmatians"
+        "ID": "12230"
     },
     {
         "ListNumber": 112,
-        "Title": "Over the Hedge",
+        "Title": "Over The Hedge",
         "Year": "2006",
-        "ID": "over-the-hedge"
+        "ID": "7518"
     },
     {
         "ListNumber": 113,
-        "Title": "Fear Street: Prom Queen",
+        "Title": "Fear Street Prom Queen",
         "Year": "2025",
-        "ID": "fear-street-prom-queen"
+        "ID": "1001414"
     },
     {
         "ListNumber": 114,
         "Title": "Pinocchio",
         "Year": "1940",
-        "ID": "pinocchio"
+        "ID": "10895"
     },
     {
         "ListNumber": 115,
         "Title": "The Muppet Christmas Carol",
         "Year": "1992",
-        "ID": "the-muppet-christmas-carol"
+        "ID": "10437"
     },
     {
         "ListNumber": 116,
         "Title": "Men in Black II",
         "Year": "2002",
-        "ID": "men-in-black-ii"
+        "ID": "608"
     },
     {
         "ListNumber": 117,
         "Title": "Despicable Me 3",
         "Year": "2017",
-        "ID": "despicable-me-3"
+        "ID": "324852"
     },
     {
         "ListNumber": 118,
-        "Title": "Austin Powers: International Man of Mystery",
+        "Title": "Austin Powers International Man Of Mystery",
         "Year": "1997",
-        "ID": "austin-powers-international-man-of-mystery"
+        "ID": "816"
     },
     {
         "ListNumber": 119,
-        "Title": "Puss in Boots",
+        "Title": "Puss In Boots",
         "Year": "2011",
-        "ID": "puss-in-boots"
+        "ID": "417859"
     },
     {
         "ListNumber": 120,
         "Title": "Run Lola Run",
         "Year": "1998",
-        "ID": "run-lola-run"
+        "ID": "104"
     },
     {
         "ListNumber": 121,
         "Title": "The Babysitter",
         "Year": "2017",
-        "ID": "the-babysitter-2017"
+        "ID": "419479"
     },
     {
         "ListNumber": 122,
-        "Title": "My Life as a Zucchini",
+        "Title": "My Life As A Zucchini",
         "Year": "2016",
-        "ID": "my-life-as-a-zucchini"
+        "ID": "393559"
     },
     {
         "ListNumber": 123,
         "Title": "Flushed Away",
         "Year": "2006",
-        "ID": "flushed-away"
+        "ID": "11619"
     },
     {
         "ListNumber": 124,
         "Title": "The Dictator",
         "Year": "2012",
-        "ID": "the-dictator-2012"
+        "ID": "76493"
     },
     {
         "ListNumber": 125,
-        "Title": "Wallace & Gromit: The Curse of the Were-Rabbit",
+        "Title": "Wallace Gromit The Curse Of The Were Rabbit",
         "Year": "2005",
-        "ID": "wallace-gromit-the-curse-of-the-were-rabbit"
+        "ID": "533"
     },
     {
         "ListNumber": 126,
-        "Title": "Lady and the Tramp",
+        "Title": "Lady And The Tramp",
         "Year": "1955",
-        "ID": "lady-and-the-tramp"
+        "ID": "10340"
     },
     {
         "ListNumber": 127,
         "Title": "Daisies",
         "Year": "1966",
-        "ID": "daisies"
+        "ID": "46919"
     },
     {
         "ListNumber": 128,
         "Title": "The Guardians of the Galaxy Holiday Special",
         "Year": "2022",
-        "ID": "the-guardians-of-the-galaxy-holiday-special"
+        "ID": "774752"
     },
     {
         "ListNumber": 129,
         "Title": "Peter Pan",
         "Year": "1953",
-        "ID": "peter-pan"
+        "ID": "10693"
     },
     {
         "ListNumber": 130,
         "Title": "Eyes Without a Face",
         "Year": "1960",
-        "ID": "eyes-without-a-face"
+        "ID": "31417"
     },
     {
         "ListNumber": 131,
         "Title": "Modern Times",
         "Year": "1936",
-        "ID": "modern-times"
+        "ID": "3082"
     },
     {
         "ListNumber": 132,
         "Title": "Run",
         "Year": "2020",
-        "ID": "run-2020"
+        "ID": "546121"
     },
     {
         "ListNumber": 133,
         "Title": "The Strangers",
         "Year": "2008",
-        "ID": "the-strangers"
+        "ID": "10665"
     },
     {
         "ListNumber": 134,
-        "Title": "The Cat in the Hat",
+        "Title": "The Cat In The Hat 2003",
         "Year": "2003",
-        "ID": "the-cat-in-the-hat-2003"
+        "ID": "10588"
     },
     {
         "ListNumber": 135,
-        "Title": "Ace Ventura: Pet Detective",
+        "Title": "Ace Ventura Pet Detective",
         "Year": "1994",
-        "ID": "ace-ventura-pet-detective"
+        "ID": "3049"
     },
     {
         "ListNumber": 136,
-        "Title": "The Secret Life of Pets",
+        "Title": "The Secret Life Of Pets",
         "Year": "2016",
-        "ID": "the-secret-life-of-pets"
+        "ID": "328111"
     },
     {
         "ListNumber": 137,
         "Title": "Chronicle",
         "Year": "2012",
-        "ID": "chronicle"
+        "ID": "76726"
     },
     {
         "ListNumber": 138,
         "Title": "The Aristocats",
         "Year": "1970",
-        "ID": "the-aristocats"
+        "ID": "10112"
     },
     {
         "ListNumber": 139,
         "Title": "The Jungle Book",
         "Year": "1967",
-        "ID": "the-jungle-book"
+        "ID": "9325"
     },
     {
         "ListNumber": 140,
         "Title": "Fallen Leaves",
         "Year": "2023",
-        "ID": "fallen-leaves-2023"
+        "ID": "986280"
     },
     {
         "ListNumber": 141,
         "Title": "Gummo",
         "Year": "1997",
-        "ID": "gummo"
+        "ID": "18415"
     },
     {
         "ListNumber": 142,
         "Title": "Bride Wars",
         "Year": "2009",
-        "ID": "bride-wars"
+        "ID": "10521"
     },
     {
         "ListNumber": 143,
         "Title": "Empire Records",
         "Year": "1995",
-        "ID": "empire-records"
+        "ID": "13531"
     },
     {
         "ListNumber": 144,
         "Title": "Popstar: Never Stop Never Stopping",
         "Year": "2016",
-        "ID": "popstar-never-stop-never-stopping"
+        "ID": "341012"
     },
     {
         "ListNumber": 145,
         "Title": "Spy Kids",
         "Year": "2001",
-        "ID": "spy-kids"
+        "ID": "10054"
     },
     {
         "ListNumber": 146,
-        "Title": "The Passion of Joan of Arc",
+        "Title": "The Passion Of Joan Of Arc",
         "Year": "1928",
-        "ID": "the-passion-of-joan-of-arc"
+        "ID": "780"
     },
     {
         "ListNumber": 147,
         "Title": "ParaNorman",
         "Year": "2012",
-        "ID": "paranorman"
+        "ID": "77174"
     },
     {
         "ListNumber": 148,
-        "Title": "It's Such a Beautiful Day",
+        "Title": "Its Such A Beautiful Day",
         "Year": "2012",
-        "ID": "its-such-a-beautiful-day"
+        "ID": "489412"
     },
     {
         "ListNumber": 149,
         "Title": "Mad God",
         "Year": "2021",
-        "ID": "mad-god"
+        "ID": "846867"
     },
     {
         "ListNumber": 150,
         "Title": "The Cat Returns",
         "Year": "2002",
-        "ID": "the-cat-returns"
+        "ID": "15370"
     },
     {
         "ListNumber": 151,
-        "Title": "Frankenstein",
+        "Title": "Frankenstein 1931",
         "Year": "1931",
-        "ID": "frankenstein-1931"
+        "ID": "3035"
     },
     {
         "ListNumber": 152,
         "Title": "City Lights",
         "Year": "1931",
-        "ID": "city-lights"
+        "ID": "901"
     },
     {
         "ListNumber": 153,
         "Title": "The Grinch",
         "Year": "2018",
-        "ID": "the-grinch"
+        "ID": "360920"
     },
     {
         "ListNumber": 154,
         "Title": "Stuart Little",
         "Year": "1999",
-        "ID": "stuart-little"
+        "ID": "10137"
     },
     {
         "ListNumber": 155,
         "Title": "Idiocracy",
         "Year": "2006",
-        "ID": "idiocracy"
+        "ID": "7512"
     },
     {
         "ListNumber": 156,
-        "Title": "Cold War",
+        "Title": "Cold War 2018",
         "Year": "2018",
-        "ID": "cold-war-2018"
+        "ID": "440298"
     },
     {
         "ListNumber": 157,
         "Title": "Petite Maman",
         "Year": "2021",
-        "ID": "petite-maman"
+        "ID": "749004"
     },
     {
         "ListNumber": 158,
         "Title": "Am I OK?",
         "Year": "2022",
-        "ID": "am-i-ok"
+        "ID": "641934"
     },
     {
         "ListNumber": 159,
         "Title": "Werewolf by Night",
         "Year": "2022",
-        "ID": "werewolf-by-night"
+        "ID": "894205"
     },
     {
         "ListNumber": 160,
         "Title": "Bill & Ted's Excellent Adventure",
         "Year": "1989",
-        "ID": "bill-teds-excellent-adventure"
+        "ID": "1648"
     },
     {
         "ListNumber": 161,
         "Title": "Nowhere",
         "Year": "1997",
-        "ID": "nowhere"
+        "ID": "1811"
     },
     {
         "ListNumber": 162,
-        "Title": "The Road to El Dorado",
+        "Title": "The Road To El Dorado",
         "Year": "2000",
-        "ID": "the-road-to-el-dorado"
+        "ID": "10501"
     },
     {
         "ListNumber": 163,
         "Title": "Millennium Actress",
         "Year": "2001",
-        "ID": "millennium-actress"
+        "ID": "33320"
     },
     {
         "ListNumber": 164,
-        "Title": "Honey Don't!",
+        "Title": "Honey Dont",
         "Year": "2025",
-        "ID": "honey-dont"
+        "ID": "1149504"
     },
     {
         "ListNumber": 165,
         "Title": "Vivre Sa Vie",
         "Year": "1962",
-        "ID": "vivre-sa-vie"
+        "ID": "1626"
     },
     {
         "ListNumber": 166,
         "Title": "Texas Chainsaw Massacre",
         "Year": "2022",
-        "ID": "texas-chainsaw-massacre"
+        "ID": "632727"
     },
     {
         "ListNumber": 167,
         "Title": "Dumbo",
         "Year": "1941",
-        "ID": "dumbo"
+        "ID": "11360"
     },
     {
         "ListNumber": 168,
         "Title": "Rye Lane",
         "Year": "2023",
-        "ID": "rye-lane"
+        "ID": "1049638"
     },
     {
         "ListNumber": 169,
         "Title": "Hotel Transylvania 2",
         "Year": "2015",
-        "ID": "hotel-transylvania-2"
+        "ID": "159824"
     },
     {
         "ListNumber": 170,
         "Title": "Primer",
         "Year": "2004",
-        "ID": "primer"
+        "ID": "14337"
     },
     {
         "ListNumber": 171,
         "Title": "This Is Spinal Tap",
         "Year": "1984",
-        "ID": "this-is-spinal-tap"
+        "ID": "11031"
     },
     {
         "ListNumber": 172,
         "Title": "The Last Showgirl",
         "Year": "2024",
-        "ID": "the-last-showgirl"
+        "ID": "1235499"
     },
     {
         "ListNumber": 173,
         "Title": "Trick 'r Treat",
         "Year": "2007",
-        "ID": "trick-r-treat"
+        "ID": "23202"
     },
     {
         "ListNumber": 174,
         "Title": "Hot Rod",
         "Year": "2007",
-        "ID": "hot-rod"
+        "ID": "10074"
     },
     {
         "ListNumber": 175,
         "Title": "Scary Movie 2",
         "Year": "2001",
-        "ID": "scary-movie-2"
+        "ID": "4248"
     },
     {
         "ListNumber": 176,
         "Title": "Lake Mungo",
         "Year": "2008",
-        "ID": "lake-mungo"
+        "ID": "27374"
     },
     {
         "ListNumber": 177,
         "Title": "Cube",
         "Year": "1997",
-        "ID": "cube"
+        "ID": "431"
     },
     {
         "ListNumber": 178,
         "Title": "Robin Hood",
         "Year": "1973",
-        "ID": "robin-hood"
+        "ID": "11886"
     },
     {
         "ListNumber": 179,
         "Title": "Zola",
         "Year": "2020",
-        "ID": "zola"
+        "ID": "539565"
     },
     {
         "ListNumber": 180,
-        "Title": "Where Is the Friend's House?",
+        "Title": "Where Is The Friends House",
         "Year": "1987",
-        "ID": "where-is-the-friends-house"
+        "ID": "49964"
     },
     {
         "ListNumber": 181,
         "Title": "Jeepers Creepers",
         "Year": "2001",
-        "ID": "jeepers-creepers"
+        "ID": "8922"
     },
     {
         "ListNumber": 182,
-        "Title": "We're All Going to the World's Fair",
+        "Title": "Were All Going To The Worlds Fair",
         "Year": "2021",
-        "ID": "were-all-going-to-the-worlds-fair"
+        "ID": "776501"
     },
     {
         "ListNumber": 183,
         "Title": "John Tucker Must Die",
         "Year": "2006",
-        "ID": "john-tucker-must-die"
+        "ID": "9293"
     },
     {
         "ListNumber": 184,
         "Title": "Re-Animator",
         "Year": "1985",
-        "ID": "re-animator"
+        "ID": "1694"
     },
     {
         "ListNumber": 185,
-        "Title": "Ice Age: Continental Drift",
+        "Title": "Ice Age Continental Drift",
         "Year": "2012",
-        "ID": "ice-age-continental-drift"
+        "ID": "57800"
     },
     {
         "ListNumber": 186,
         "Title": "Unfriended",
         "Year": "2014",
-        "ID": "unfriended"
+        "ID": "277685"
     },
     {
         "ListNumber": 187,
-        "Title": "Spirit: Stallion of the Cimarron",
+        "Title": "Spirit Stallion Of The Cimarron",
         "Year": "2002",
-        "ID": "spirit-stallion-of-the-cimarron"
+        "ID": "9023"
     },
     {
         "ListNumber": 188,
         "Title": "The Color of Pomegranates",
         "Year": "1969",
-        "ID": "the-color-of-pomegranates"
+        "ID": "26302"
     },
     {
         "ListNumber": 189,
-        "Title": "The Hunt",
+        "Title": "The Hunt 2020",
         "Year": "2020",
-        "ID": "the-hunt-2020"
+        "ID": "514847"
     },
     {
         "ListNumber": 190,
         "Title": "A Goofy Movie",
         "Year": "1995",
-        "ID": "a-goofy-movie"
+        "ID": "15789"
     },
     {
         "ListNumber": 191,
-        "Title": "House of 1000 Corpses",
+        "Title": "House Of 1000 Corpses",
         "Year": "2003",
-        "ID": "house-of-1000-corpses"
+        "ID": "2662"
     },
     {
         "ListNumber": 192,
         "Title": "Pi",
         "Year": "1998",
-        "ID": "pi"
+        "ID": "473"
     },
     {
         "ListNumber": 193,
         "Title": "Only God Forgives",
         "Year": "2013",
-        "ID": "only-god-forgives"
+        "ID": "77987"
     },
     {
         "ListNumber": 194,
         "Title": "Belladonna of Sadness",
         "Year": "1973",
-        "ID": "belladonna-of-sadness"
+        "ID": "64847"
     },
     {
         "ListNumber": 195,
         "Title": "Good Boys",
         "Year": "2019",
-        "ID": "good-boys-2019"
+        "ID": "521777"
     },
     {
         "ListNumber": 196,
         "Title": "The Emoji Movie",
         "Year": "2017",
-        "ID": "the-emoji-movie"
+        "ID": "378236"
     },
     {
         "ListNumber": 197,
         "Title": "Not Another Teen Movie",
         "Year": "2001",
-        "ID": "not-another-teen-movie"
+        "ID": "11397"
     },
     {
         "ListNumber": 198,
         "Title": "Rush Hour 2",
         "Year": "2001",
-        "ID": "rush-hour-2"
+        "ID": "5175"
     },
     {
         "ListNumber": 199,
         "Title": "Host",
         "Year": "2020",
-        "ID": "host-2020"
+        "ID": "723072"
     },
     {
         "ListNumber": 200,
         "Title": "Speak",
         "Year": "2004",
-        "ID": "speak"
+        "ID": "15058"
     },
     {
         "ListNumber": 201,
         "Title": "Tetsuo: The Iron Man",
         "Year": "1989",
-        "ID": "tetsuo-the-iron-man"
+        "ID": "41428"
     },
     {
         "ListNumber": 202,
         "Title": "Sleepaway Camp",
         "Year": "1983",
-        "ID": "sleepaway-camp"
+        "ID": "13567"
     },
     {
         "ListNumber": 203,
         "Title": "Angel's Egg",
         "Year": "1985",
-        "ID": "angels-egg"
+        "ID": "15916"
     },
     {
         "ListNumber": 204,
         "Title": "Fast Times at Ridgemont High",
         "Year": "1982",
-        "ID": "fast-times-at-ridgemont-high"
+        "ID": "13342"
     },
     {
         "ListNumber": 205,
         "Title": "Creep 2",
         "Year": "2017",
-        "ID": "creep-2"
+        "ID": "396493"
     },
     {
         "ListNumber": 206,
         "Title": "Killer Klowns from Outer Space",
         "Year": "1988",
-        "ID": "killer-klowns-from-outer-space"
+        "ID": "16296"
     },
     {
         "ListNumber": 207,
         "Title": "Lights Out",
         "Year": "2016",
-        "ID": "lights-out-2016"
+        "ID": "345911"
     },
     {
         "ListNumber": 208,
         "Title": "The Killing",
         "Year": "1956",
-        "ID": "the-killing"
+        "ID": "247"
     },
     {
         "ListNumber": 209,
         "Title": "Saw VI",
         "Year": "2009",
-        "ID": "saw-vi"
+        "ID": "22804"
     },
     {
         "ListNumber": 210,
         "Title": "Horton Hears a Who!",
         "Year": "2008",
-        "ID": "horton-hears-a-who-2008"
+        "ID": "12222"
     },
     {
         "ListNumber": 211,
         "Title": "Sexy Beast",
         "Year": "2000",
-        "ID": "sexy-beast"
+        "ID": "11826"
     },
     {
         "ListNumber": 212,
-        "Title": "Predator: Killer of Killers",
+        "Title": "Predator Killer Of Killers",
         "Year": "2025",
-        "ID": "predator-killer-of-killers"
+        "ID": "1376434"
     },
     {
         "ListNumber": 213,
         "Title": "Dracula",
         "Year": "1931",
-        "ID": "dracula"
+        "ID": "138"
     },
     {
         "ListNumber": 214,
         "Title": "Hoodwinked!",
         "Year": "2005",
-        "ID": "hoodwinked"
+        "ID": "10982"
     },
     {
         "ListNumber": 215,
         "Title": "Locke",
         "Year": "2013",
-        "ID": "locke"
+        "ID": "210479"
     },
     {
         "ListNumber": 216,
         "Title": "The Fog",
         "Year": "1980",
-        "ID": "the-fog"
+        "ID": "790"
     },
     {
         "ListNumber": 217,
         "Title": "Time Cut",
         "Year": "2024",
-        "ID": "time-cut"
+        "ID": "827931"
     },
     {
         "ListNumber": 218,
-        "Title": "South Park: Bigger, Longer & Uncut",
+        "Title": "South Park Bigger Longer Uncut",
         "Year": "1999",
-        "ID": "south-park-bigger-longer-uncut"
+        "ID": "9473"
     },
     {
         "ListNumber": 219,
         "Title": "The Doom Generation",
         "Year": "1995",
-        "ID": "the-doom-generation"
+        "ID": "13552"
     },
     {
         "ListNumber": 220,
         "Title": "Friday the 13th Part 2",
         "Year": "1981",
-        "ID": "friday-the-13th-part-2"
+        "ID": "9725"
     },
     {
         "ListNumber": 221,
-        "Title": "Batman: Mask of the Phantasm",
+        "Title": "Batman Mask Of The Phantasm",
         "Year": "1993",
-        "ID": "batman-mask-of-the-phantasm"
+        "ID": "14919"
     },
     {
         "ListNumber": 222,
         "Title": "Bride of Frankenstein",
         "Year": "1935",
-        "ID": "bride-of-frankenstein"
+        "ID": "229"
     },
     {
         "ListNumber": 223,
         "Title": "Serendipity",
         "Year": "2001",
-        "ID": "serendipity"
+        "ID": "9778"
     },
     {
         "ListNumber": 224,
         "Title": "The Squid and the Whale",
         "Year": "2005",
-        "ID": "the-squid-and-the-whale"
+        "ID": "10707"
     },
     {
         "ListNumber": 225,
         "Title": "9",
         "Year": "2009",
-        "ID": "9"
+        "ID": "12244"
     },
     {
         "ListNumber": 226,
         "Title": "Tucker and Dale vs. Evil",
         "Year": "2010",
-        "ID": "tucker-and-dale-vs-evil"
+        "ID": "46838"
     },
     {
         "ListNumber": 227,
         "Title": "Scary Movie 3",
         "Year": "2003",
-        "ID": "scary-movie-3"
+        "ID": "4256"
     },
     {
         "ListNumber": 228,
         "Title": "Identity",
         "Year": "2003",
-        "ID": "identity"
+        "ID": "2832"
     },
     {
         "ListNumber": 229,
         "Title": "Kimi",
         "Year": "2022",
-        "ID": "kimi"
+        "ID": "800510"
     },
     {
         "ListNumber": 230,
-        "Title": "The Fox and the Hound",
+        "Title": "The Fox And The Hound",
         "Year": "1981",
-        "ID": "the-fox-and-the-hound"
+        "ID": "10948"
     },
     {
         "ListNumber": 231,
         "Title": "Brief Encounter",
         "Year": "1945",
-        "ID": "brief-encounter"
+        "ID": "851"
     },
     {
         "ListNumber": 232,
         "Title": "Following",
         "Year": "1998",
-        "ID": "following"
+        "ID": "11660"
     },
     {
         "ListNumber": 233,
         "Title": "The Watermelon Woman",
         "Year": "1996",
-        "ID": "the-watermelon-woman"
+        "ID": "44479"
     },
     {
         "ListNumber": 234,
         "Title": "James and the Giant Peach",
         "Year": "1996",
-        "ID": "james-and-the-giant-peach"
+        "ID": "10539"
     },
     {
         "ListNumber": 235,
-        "Title": "A Nightmare on Elm Street Part 2: Freddy's Revenge",
+        "Title": "A Nightmare On Elm Street Part 2 Freddys Revenge",
         "Year": "1985",
-        "ID": "a-nightmare-on-elm-street-part-2-freddys-revenge"
+        "ID": "10014"
     },
     {
         "ListNumber": 236,
-        "Title": "Welcome to the Dollhouse",
+        "Title": "Welcome To The Dollhouse",
         "Year": "1995",
-        "ID": "welcome-to-the-dollhouse"
+        "ID": "11446"
     },
     {
         "ListNumber": 237,
         "Title": "Jingle All the Way",
         "Year": "1996",
-        "ID": "jingle-all-the-way"
+        "ID": "9279"
     },
     {
         "ListNumber": 238,
         "Title": "Fruitvale Station",
         "Year": "2013",
-        "ID": "fruitvale-station"
+        "ID": "157354"
     },
     {
         "ListNumber": 239,
         "Title": "Jawbreaker",
         "Year": "1999",
-        "ID": "jawbreaker"
+        "ID": "18892"
     },
     {
         "ListNumber": 240,
-        "Title": "Sherlock Jr.",
+        "Title": "Sherlock Jr",
         "Year": "1924",
-        "ID": "sherlock-jr"
+        "ID": "992"
     },
     {
         "ListNumber": 241,
         "Title": "The Garden of Words",
         "Year": "2013",
-        "ID": "the-garden-of-words"
+        "ID": "198375"
     },
     {
         "ListNumber": 242,
         "Title": "Saw 3D",
         "Year": "2010",
-        "ID": "saw-3d"
+        "ID": "41439"
     },
     {
         "ListNumber": 243,
         "Title": "The Happening",
         "Year": "2008",
-        "ID": "the-happening"
+        "ID": "8645"
     },
     {
         "ListNumber": 244,
         "Title": "Crawl",
         "Year": "2019",
-        "ID": "crawl-2019"
+        "ID": "511987"
     },
     {
         "ListNumber": 245,
-        "Title": "Barbie as The Princess & the Pauper",
+        "Title": "Barbie As The Princess And The Pauper",
         "Year": "2004",
-        "ID": "barbie-as-the-princess-and-the-pauper"
+        "ID": "15165"
     },
     {
         "ListNumber": 246,
         "Title": "Garfield",
         "Year": "2004",
-        "ID": "garfield"
+        "ID": "8920"
     },
     {
         "ListNumber": 247,
         "Title": "The Taking of Deborah Logan",
         "Year": "2014",
-        "ID": "the-taking-of-deborah-logan"
+        "ID": "297608"
     },
     {
         "ListNumber": 248,
-        "Title": "5 Centimeters per Second",
+        "Title": "5 Centimeters Per Second",
         "Year": "2007",
-        "ID": "5-centimeters-per-second"
+        "ID": "38142"
     },
     {
         "ListNumber": 249,
         "Title": "Gnomeo & Juliet",
         "Year": "2011",
-        "ID": "gnomeo-juliet"
+        "ID": "45772"
     },
     {
         "ListNumber": 250,
         "Title": "Alvin and the Chipmunks: The Squeakquel",
         "Year": "2009",
-        "ID": "alvin-and-the-chipmunks-the-squeakquel"
+        "ID": "23398"
     }
 ]

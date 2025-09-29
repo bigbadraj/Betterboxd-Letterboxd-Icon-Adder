@@ -1,452 +1,452 @@
 [
     {
         "ListNumber": 1,
-        "Title": "Oppenheimer",
+        "Title": "Oppenheimer 2023",
         "Year": "2023",
-        "ID": "oppenheimer-2023"
+        "ID": "872585"
     },
     {
         "ListNumber": 2,
-        "Title": "The Wolf of Wall Street",
+        "Title": "The Wolf Of Wall Street",
         "Year": "2013",
-        "ID": "the-wolf-of-wall-street"
+        "ID": "106646"
     },
     {
         "ListNumber": 3,
-        "Title": "Avengers: Endgame",
+        "Title": "Avengers Endgame",
         "Year": "2019",
-        "ID": "avengers-endgame"
+        "ID": "299534"
     },
     {
         "ListNumber": 4,
-        "Title": "Titanic",
+        "Title": "Titanic 1997",
         "Year": "1997",
-        "ID": "titanic-1997"
+        "ID": "597"
     },
     {
         "ListNumber": 5,
-        "Title": "Avatar: The Way of Water",
+        "Title": "Avatar The Way Of Water",
         "Year": "2022",
-        "ID": "avatar-the-way-of-water"
+        "ID": "76600"
     },
     {
         "ListNumber": 6,
         "Title": "The Lord of the Rings: The Return of the King",
         "Year": "2003",
-        "ID": "the-lord-of-the-rings-the-return-of-the-king"
+        "ID": "122"
     },
     {
         "ListNumber": 7,
-        "Title": "Schindler's List",
+        "Title": "Schindlers List",
         "Year": "1993",
-        "ID": "schindlers-list"
+        "ID": "424"
     },
     {
         "ListNumber": 8,
         "Title": "Killers of the Flower Moon",
         "Year": "2023",
-        "ID": "killers-of-the-flower-moon"
+        "ID": "466420"
     },
     {
         "ListNumber": 9,
-        "Title": "Babylon",
+        "Title": "Babylon 2022",
         "Year": "2022",
-        "ID": "babylon-2022"
+        "ID": "615777"
     },
     {
         "ListNumber": 10,
         "Title": "The Godfather Part II",
         "Year": "1974",
-        "ID": "the-godfather-part-ii"
+        "ID": "240"
     },
     {
         "ListNumber": 11,
         "Title": "The Brutalist",
         "Year": "2024",
-        "ID": "the-brutalist"
+        "ID": "549509"
     },
     {
         "ListNumber": 12,
         "Title": "The Hateful Eight",
         "Year": "2015",
-        "ID": "the-hateful-eight"
+        "ID": "273248"
     },
     {
         "ListNumber": 13,
         "Title": "The Green Mile",
         "Year": "1999",
-        "ID": "the-green-mile"
+        "ID": "497"
     },
     {
         "ListNumber": 14,
         "Title": "The Irishman",
         "Year": "2019",
-        "ID": "the-irishman-2019"
+        "ID": "398978"
     },
     {
         "ListNumber": 15,
         "Title": "Magnolia",
         "Year": "1999",
-        "ID": "magnolia"
+        "ID": "334"
     },
     {
         "ListNumber": 16,
         "Title": "Seven Samurai",
         "Year": "1954",
-        "ID": "seven-samurai"
+        "ID": "346"
     },
     {
         "ListNumber": 17,
         "Title": "Barry Lyndon",
         "Year": "1975",
-        "ID": "barry-lyndon"
+        "ID": "3175"
     },
     {
         "ListNumber": 18,
-        "Title": "Lawrence of Arabia",
+        "Title": "Lawrence Of Arabia",
         "Year": "1962",
-        "ID": "lawrence-of-arabia"
+        "ID": "947"
     },
     {
         "ListNumber": 19,
-        "Title": "Zack Snyder's Justice League",
+        "Title": "Zack Snyders Justice League",
         "Year": "2021",
-        "ID": "zack-snyders-justice-league"
+        "ID": "791373"
     },
     {
         "ListNumber": 20,
-        "Title": "RRR",
+        "Title": "Rrr",
         "Year": "2022",
-        "ID": "rrr"
+        "ID": "579974"
     },
     {
         "ListNumber": 21,
         "Title": "Once Upon a Time in America",
         "Year": "1984",
-        "ID": "once-upon-a-time-in-america"
+        "ID": "311"
     },
     {
         "ListNumber": 22,
         "Title": "The Deer Hunter",
         "Year": "1978",
-        "ID": "the-deer-hunter"
+        "ID": "11778"
     },
     {
         "ListNumber": 23,
-        "Title": "Blue Is the Warmest Color",
+        "Title": "Blue Is The Warmest Color",
         "Year": "2013",
-        "ID": "blue-is-the-warmest-color"
+        "ID": "152584"
     },
     {
         "ListNumber": 24,
-        "Title": "Gone with the Wind",
+        "Title": "Gone With The Wind",
         "Year": "1939",
-        "ID": "gone-with-the-wind"
+        "ID": "770"
     },
     {
         "ListNumber": 25,
         "Title": "King Kong",
         "Year": "2005",
-        "ID": "king-kong-2005"
+        "ID": "254"
     },
     {
         "ListNumber": 26,
         "Title": "Inland Empire",
         "Year": "2006",
-        "ID": "inland-empire"
+        "ID": "1730"
     },
     {
         "ListNumber": 27,
         "Title": "Malcolm X",
         "Year": "1992",
-        "ID": "malcolm-x-1992"
+        "ID": "1883"
     },
     {
         "ListNumber": 28,
         "Title": "A Brighter Summer Day",
         "Year": "1991",
-        "ID": "a-brighter-summer-day"
+        "ID": "15804"
     },
     {
         "ListNumber": 29,
-        "Title": "Jeanne Dielman, 23, quai du Commerce, 1080 Bruxelles",
+        "Title": "Jeanne Dielman 23 Quai Du Commerce 1080 Bruxelles",
         "Year": "1975",
-        "ID": "jeanne-dielman-23-quai-du-commerce-1080-bruxelles"
+        "ID": "44012"
     },
     {
         "ListNumber": 30,
         "Title": "Andrei Rublev",
         "Year": "1966",
-        "ID": "andrei-rublev"
+        "ID": "895"
     },
     {
         "ListNumber": 31,
         "Title": "Love Exposure",
         "Year": "2008",
-        "ID": "love-exposure"
+        "ID": "28422"
     },
     {
         "ListNumber": 32,
         "Title": "JFK",
         "Year": "1991",
-        "ID": "jfk"
+        "ID": "820"
     },
     {
         "ListNumber": 33,
-        "Title": "Ben-Hur",
+        "Title": "Ben Hur 1959",
         "Year": "1959",
-        "ID": "ben-hur-1959"
+        "ID": "665"
     },
     {
         "ListNumber": 34,
         "Title": "Dances with Wolves",
         "Year": "1990",
-        "ID": "dances-with-wolves"
+        "ID": "581"
     },
     {
         "ListNumber": 35,
         "Title": "Pearl Harbor",
         "Year": "2001",
-        "ID": "pearl-harbor"
+        "ID": "676"
     },
     {
         "ListNumber": 36,
-        "Title": "Fanny and Alexander",
+        "Title": "Fanny And Alexander",
         "Year": "1982",
-        "ID": "fanny-and-alexander"
+        "ID": "5961"
     },
     {
         "ListNumber": 37,
         "Title": "Spartacus",
         "Year": "1960",
-        "ID": "spartacus"
+        "ID": "967"
     },
     {
         "ListNumber": 38,
         "Title": "Satantango",
         "Year": "1994",
-        "ID": "satantango"
+        "ID": "31414"
     },
     {
         "ListNumber": 39,
         "Title": "Kwaidan",
         "Year": "1964",
-        "ID": "kwaidan"
+        "ID": "30959"
     },
     {
         "ListNumber": 40,
         "Title": "The Human Condition I: No Greater Love",
         "Year": "1959",
-        "ID": "the-human-condition-i-no-greater-love"
+        "ID": "31217"
     },
     {
         "ListNumber": 41,
         "Title": "An Elephant Sitting Still",
         "Year": "2018",
-        "ID": "an-elephant-sitting-still"
+        "ID": "499556"
     },
     {
         "ListNumber": 42,
         "Title": "The Leopard",
         "Year": "1963",
-        "ID": "the-leopard"
+        "ID": "1040"
     },
     {
         "ListNumber": 43,
-        "Title": "The Human Condition III: A Soldier's Prayer",
+        "Title": "The Human Condition Iii A Soldiers Prayer",
         "Year": "1961",
-        "ID": "the-human-condition-iii-a-soldiers-prayer"
+        "ID": "34530"
     },
     {
         "ListNumber": 44,
         "Title": "Doctor Zhivago",
         "Year": "1965",
-        "ID": "doctor-zhivago"
+        "ID": "907"
     },
     {
         "ListNumber": 45,
         "Title": "Kagemusha",
         "Year": "1980",
-        "ID": "kagemusha"
+        "ID": "11953"
     },
     {
         "ListNumber": 46,
         "Title": "Céline and Julie Go Boating",
         "Year": "1974",
-        "ID": "celine-and-julie-go-boating"
+        "ID": "27019"
     },
     {
         "ListNumber": 47,
         "Title": "Short Cuts",
         "Year": "1993",
-        "ID": "short-cuts"
+        "ID": "695"
     },
     {
         "ListNumber": 48,
         "Title": "Gandhi",
         "Year": "1982",
-        "ID": "gandhi"
+        "ID": "783"
     },
     {
         "ListNumber": 49,
         "Title": "Children of Paradise",
         "Year": "1945",
-        "ID": "children-of-paradise"
+        "ID": "2457"
     },
     {
         "ListNumber": 50,
         "Title": "Winter Sleep",
         "Year": "2014",
-        "ID": "winter-sleep"
+        "ID": "265169"
     },
     {
         "ListNumber": 51,
         "Title": "Red Beard",
         "Year": "1965",
-        "ID": "red-beard"
+        "ID": "3780"
     },
     {
         "ListNumber": 52,
         "Title": "Judgment at Nuremberg",
         "Year": "1961",
-        "ID": "judgment-at-nuremberg"
+        "ID": "821"
     },
     {
         "ListNumber": 53,
         "Title": "About Dry Grasses",
         "Year": "2023",
-        "ID": "about-dry-grasses"
+        "ID": "665733"
     },
     {
         "ListNumber": 54,
         "Title": "Horizon: An American Saga – Chapter 1",
         "Year": "2024",
-        "ID": "horizon-an-american-saga-chapter-1"
+        "ID": "932086"
     },
     {
         "ListNumber": 55,
         "Title": "Napoleon",
         "Year": "1927",
-        "ID": "napoleon"
+        "ID": "42536"
     },
     {
         "ListNumber": 56,
-        "Title": "Fiddler on the Roof",
+        "Title": "Fiddler On The Roof",
         "Year": "1971",
-        "ID": "fiddler-on-the-roof"
+        "ID": "14811"
     },
     {
         "ListNumber": 57,
         "Title": "La Belle Noiseuse",
         "Year": "1991",
-        "ID": "la-belle-noiseuse"
+        "ID": "12627"
     },
     {
         "ListNumber": 58,
         "Title": "Salem's Lot",
         "Year": "1979",
-        "ID": "salems-lot"
+        "ID": "11343"
     },
     {
         "ListNumber": 59,
         "Title": "The Mother and the Whore",
         "Year": "1973",
-        "ID": "the-mother-and-the-whore"
+        "ID": "48693"
     },
     {
         "ListNumber": 60,
-        "Title": "It's a Mad, Mad, Mad, Mad World",
-        "Year": "1963",
-        "ID": "its-a-mad-mad-mad-mad-world"
+        "Title": "\"It's a Mad",
+        "Year": " Mad",
+        "ID": " Mad"
     },
     {
         "ListNumber": 61,
         "Title": "The Ten Commandments",
         "Year": "1956",
-        "ID": "the-ten-commandments-1956"
+        "ID": "6844"
     },
     {
         "ListNumber": 62,
         "Title": "The Birth of a Nation",
         "Year": "1915",
-        "ID": "the-birth-of-a-nation"
+        "ID": "618"
     },
     {
         "ListNumber": 63,
         "Title": "Giant",
         "Year": "1956",
-        "ID": "giant"
+        "ID": "1712"
     },
     {
         "ListNumber": 64,
         "Title": "The Right Stuff",
         "Year": "1983",
-        "ID": "the-right-stuff"
+        "ID": "9549"
     },
     {
         "ListNumber": 65,
         "Title": "Reds",
         "Year": "1981",
-        "ID": "reds"
+        "ID": "18254"
     },
     {
         "ListNumber": 66,
-        "Title": "Heaven's Gate",
+        "Title": "Heavens Gate",
         "Year": "1980",
-        "ID": "heavens-gate"
+        "ID": "10935"
     },
     {
         "ListNumber": 67,
         "Title": "Cleopatra",
         "Year": "1963",
-        "ID": "cleopatra-1963"
+        "ID": "8095"
     },
     {
         "ListNumber": 68,
         "Title": "Kabhi Khushi Kabhie Gham",
         "Year": "2001",
-        "ID": "kabhi-khushi-kabhie-gham"
+        "ID": "10757"
     },
     {
         "ListNumber": 69,
         "Title": "Hamlet",
         "Year": "1996",
-        "ID": "hamlet-1996"
+        "ID": "10549"
     },
     {
         "ListNumber": 70,
         "Title": "Intolerance: Love's Struggle Throughout the Ages",
         "Year": "1916",
-        "ID": "intolerance-loves-struggle-throughout-the-ages"
+        "ID": "3059"
     },
     {
         "ListNumber": 71,
         "Title": "The Wild Pear Tree",
         "Year": "2018",
-        "ID": "the-wild-pear-tree"
+        "ID": "418472"
     },
     {
         "ListNumber": 72,
         "Title": "1900",
         "Year": "1976",
-        "ID": "1900"
+        "ID": "3870"
     },
     {
         "ListNumber": 73,
-        "Title": "A Touch of Zen",
+        "Title": "A Touch Of Zen",
         "Year": "1970",
-        "ID": "a-touch-of-zen"
+        "ID": "44154"
     },
     {
         "ListNumber": 74,
         "Title": "The Best of Youth",
         "Year": "2003",
-        "ID": "the-best-of-youth"
+        "ID": "11659"
     },
     {
         "ListNumber": 75,
         "Title": "Never Look Away",
         "Year": "2018",
-        "ID": "never-look-away"
+        "ID": "423612"
     }
 ]

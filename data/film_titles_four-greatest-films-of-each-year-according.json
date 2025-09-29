@@ -618,5 +618,65 @@
         "Title": "The Lion King",
         "Year": "1994",
         "ID": "the-lion-king"
+    },
+    {
+        "Title": "Jurassic Park",
+        "Year": "1993",
+        "ID": "jurassic-park"
+    },
+    {
+        "Title": "Three Colours: Blue",
+        "Year": "1993",
+        "ID": "three-colours-blue"
+    },
+    {
+        "Title": "Dazed and Confused",
+        "Year": "1993",
+        "ID": "dazed-and-confused"
+    },
+    {
+        "Title": "Schindler's List",
+        "Year": "1993",
+        "ID": "schindlers-list"
+    },
+    {
+        "Title": "Twin Peaks: Fire Walk with Me",
+        "Year": "1992",
+        "ID": "twin-peaks-fire-walk-with-me"
+    },
+    {
+        "Title": "Unforgiven",
+        "Year": "1992",
+        "ID": "unforgiven"
+    },
+    {
+        "Title": "Reservoir Dogs",
+        "Year": "1992",
+        "ID": "reservoir-dogs"
+    },
+    {
+        "Title": "My Cousin Vinny",
+        "Year": "1992",
+        "ID": "my-cousin-vinny"
+    },
+    {
+        "Title": "The Silence of the Lambs",
+        "Year": "1991",
+        "ID": "the-silence-of-the-lambs"
+    },
+    {
+        "Title": "Terminator 2: Judgment Day",
+        "Year": "1991",
+        "ID": "terminator-2-judgment-day"
+    },
+    {
+        "Title": "Thelma & Louise",
+        "Year": "1991",
+        "ID": "thelma-louise"
+    },
+    {
+        "Title": "A Brighter Summer Day",
+        "Year": "1991",
+        "ID": "a-brighter-summer-day"
     }
 ]

@@ -67,15 +67,15 @@
     },
     {
         "ListNumber": 12,
-        "Title": "The Devils",
-        "Year": "1971",
-        "ID": "the-devils"
-    },
-    {
-        "ListNumber": 13,
         "Title": "Demons",
         "Year": "1971",
         "ID": "demons-1971"
+    },
+    {
+        "ListNumber": 13,
+        "Title": "The Devils",
+        "Year": "1971",
+        "ID": "the-devils"
     },
     {
         "ListNumber": 14,
@@ -157,15 +157,15 @@
     },
     {
         "ListNumber": 27,
-        "Title": "Aliens",
-        "Year": "1986",
-        "ID": "aliens"
-    },
-    {
-        "ListNumber": 28,
         "Title": "Phantom of the Paradise",
         "Year": "1974",
         "ID": "phantom-of-the-paradise"
+    },
+    {
+        "ListNumber": 28,
+        "Title": "Aliens",
+        "Year": "1986",
+        "ID": "aliens"
     },
     {
         "ListNumber": 29,
@@ -181,9 +181,9 @@
     },
     {
         "ListNumber": 31,
-        "Title": "The Cabinet of Dr. Caligari",
-        "Year": "1920",
-        "ID": "the-cabinet-of-dr-caligari-1920"
+        "Title": "The Sixth Sense",
+        "Year": "1999",
+        "ID": "the-sixth-sense"
     },
     {
         "ListNumber": 32,
@@ -193,9 +193,9 @@
     },
     {
         "ListNumber": 33,
-        "Title": "The Sixth Sense",
-        "Year": "1999",
-        "ID": "the-sixth-sense"
+        "Title": "The Cabinet of Dr. Caligari",
+        "Year": "1920",
+        "ID": "the-cabinet-of-dr-caligari-1920"
     },
     {
         "ListNumber": 34,
@@ -259,15 +259,15 @@
     },
     {
         "ListNumber": 44,
-        "Title": "The Vanishing",
-        "Year": "1988",
-        "ID": "the-vanishing"
-    },
-    {
-        "ListNumber": 45,
         "Title": "Scream",
         "Year": "1996",
         "ID": "scream"
+    },
+    {
+        "ListNumber": 45,
+        "Title": "The Vanishing",
+        "Year": "1988",
+        "ID": "the-vanishing"
     },
     {
         "ListNumber": 46,
@@ -349,39 +349,39 @@
     },
     {
         "ListNumber": 59,
+        "Title": "Targets",
+        "Year": "1968",
+        "ID": "targets"
+    },
+    {
+        "ListNumber": 60,
         "Title": "The Exorcist",
         "Year": "1973",
         "ID": "the-exorcist"
     },
     {
-        "ListNumber": 60,
+        "ListNumber": 61,
         "Title": "Dawn of the Dead",
         "Year": "1978",
         "ID": "dawn-of-the-dead"
     },
     {
-        "ListNumber": 61,
+        "ListNumber": 62,
         "Title": "Night of the Living Dead",
         "Year": "1968",
         "ID": "night-of-the-living-dead"
     },
     {
-        "ListNumber": 62,
+        "ListNumber": 63,
         "Title": "Mother Joan of the Angels",
         "Year": "1961",
         "ID": "mother-joan-of-the-angels"
     },
     {
-        "ListNumber": 63,
+        "ListNumber": 64,
         "Title": "Shaun of the Dead",
         "Year": "2004",
         "ID": "shaun-of-the-dead"
-    },
-    {
-        "ListNumber": 64,
-        "Title": "Invasion of the Body Snatchers",
-        "Year": "1978",
-        "ID": "invasion-of-the-body-snatchers-1978"
     },
     {
         "ListNumber": 65,
@@ -391,63 +391,63 @@
     },
     {
         "ListNumber": 66,
+        "Title": "Invasion of the Body Snatchers",
+        "Year": "1978",
+        "ID": "invasion-of-the-body-snatchers-1978"
+    },
+    {
+        "ListNumber": 67,
         "Title": "Jaws",
         "Year": "1975",
         "ID": "jaws"
     },
     {
-        "ListNumber": 67,
+        "ListNumber": 68,
         "Title": "Freaks",
         "Year": "1932",
         "ID": "freaks"
     },
     {
-        "ListNumber": 68,
+        "ListNumber": 69,
         "Title": "Braindead",
         "Year": "1992",
         "ID": "braindead-1992"
     },
     {
-        "ListNumber": 69,
+        "ListNumber": 70,
         "Title": "Beauty and the Beast",
         "Year": "1978",
         "ID": "beauty-and-the-beast-1978"
     },
     {
-        "ListNumber": 70,
+        "ListNumber": 71,
         "Title": "Suspiria",
         "Year": "1977",
         "ID": "suspiria"
     },
     {
-        "ListNumber": 71,
+        "ListNumber": 72,
         "Title": "Eyes Without a Face",
         "Year": "1960",
         "ID": "eyes-without-a-face"
     },
     {
-        "ListNumber": 72,
+        "ListNumber": 73,
         "Title": "Funny Games",
         "Year": "1997",
         "ID": "funny-games"
     },
     {
-        "ListNumber": 73,
+        "ListNumber": 74,
         "Title": "Deep Red",
         "Year": "1975",
         "ID": "deep-red"
     },
     {
-        "ListNumber": 74,
+        "ListNumber": 75,
         "Title": "Repulsion",
         "Year": "1965",
         "ID": "repulsion"
-    },
-    {
-        "ListNumber": 75,
-        "Title": "The Skeleton of Mrs. Morales",
-        "Year": "1960",
-        "ID": "the-skeleton-of-mrs-morales"
     },
     {
         "ListNumber": 76,
@@ -463,27 +463,27 @@
     },
     {
         "ListNumber": 78,
+        "Title": "The Skeleton of Mrs. Morales",
+        "Year": "1960",
+        "ID": "the-skeleton-of-mrs-morales"
+    },
+    {
+        "ListNumber": 79,
         "Title": "The Man Who Laughs",
         "Year": "1928",
         "ID": "the-man-who-laughs"
     },
     {
-        "ListNumber": 79,
+        "ListNumber": 80,
         "Title": "Humanist Vampire Seeking Consenting Suicidal Person",
         "Year": "2023",
         "ID": "humanist-vampire-seeking-consenting-suicidal-person"
     },
     {
-        "ListNumber": 80,
+        "ListNumber": 81,
         "Title": "Witchhammer",
         "Year": "1970",
         "ID": "witchhammer"
-    },
-    {
-        "ListNumber": 81,
-        "Title": "Inland Empire",
-        "Year": "2006",
-        "ID": "inland-empire"
     },
     {
         "ListNumber": 82,
@@ -493,27 +493,27 @@
     },
     {
         "ListNumber": 83,
+        "Title": "Inland Empire",
+        "Year": "2006",
+        "ID": "inland-empire"
+    },
+    {
+        "ListNumber": 84,
         "Title": "Angel Dust",
         "Year": "1994",
         "ID": "angel-dust"
     },
     {
-        "ListNumber": 84,
+        "ListNumber": 85,
         "Title": "Videodrome",
         "Year": "1983",
         "ID": "videodrome"
     },
     {
-        "ListNumber": 85,
+        "ListNumber": 86,
         "Title": "Little Shop of Horrors",
         "Year": "1986",
         "ID": "little-shop-of-horrors"
-    },
-    {
-        "ListNumber": 86,
-        "Title": "The Tenant",
-        "Year": "1976",
-        "ID": "the-tenant"
     },
     {
         "ListNumber": 87,
@@ -523,81 +523,81 @@
     },
     {
         "ListNumber": 88,
+        "Title": "The Tenant",
+        "Year": "1976",
+        "ID": "the-tenant"
+    },
+    {
+        "ListNumber": 89,
         "Title": "Shin Godzilla",
         "Year": "2016",
         "ID": "shin-godzilla"
     },
     {
-        "ListNumber": 89,
+        "ListNumber": 90,
         "Title": "Toby Dammit",
         "Year": "1968",
         "ID": "toby-dammit"
     },
     {
-        "ListNumber": 90,
+        "ListNumber": 91,
         "Title": "Tetsuo: The Iron Man",
         "Year": "1989",
         "ID": "tetsuo-the-iron-man"
     },
     {
-        "ListNumber": 91,
+        "ListNumber": 92,
         "Title": "Scooby-Doo on Zombie Island",
         "Year": "1998",
         "ID": "scooby-doo-on-zombie-island"
     },
     {
-        "ListNumber": 92,
+        "ListNumber": 93,
         "Title": "The Incredible Shrinking Man",
         "Year": "1957",
         "ID": "the-incredible-shrinking-man"
     },
     {
-        "ListNumber": 93,
+        "ListNumber": 94,
         "Title": "Kotoko",
         "Year": "2011",
         "ID": "kotoko"
     },
     {
-        "ListNumber": 94,
+        "ListNumber": 95,
         "Title": "The Discarnates",
         "Year": "1988",
         "ID": "the-discarnates"
     },
     {
-        "ListNumber": 95,
+        "ListNumber": 96,
         "Title": "Manhunter",
         "Year": "1986",
         "ID": "manhunter"
     },
     {
-        "ListNumber": 96,
+        "ListNumber": 97,
         "Title": "The Devil",
         "Year": "1972",
         "ID": "the-devil-1972"
     },
     {
-        "ListNumber": 97,
+        "ListNumber": 98,
         "Title": "The Third Part of the Night",
         "Year": "1971",
         "ID": "the-third-part-of-the-night"
     },
     {
-        "ListNumber": 98,
+        "ListNumber": 99,
         "Title": "Carrie",
         "Year": "1976",
         "ID": "carrie-1976"
     },
     {
-        "ListNumber": 99,
+        "ListNumber": 100,
         "Title": "Jacob's Ladder",
         "Year": "1990",
         "ID": "jacobs-ladder"
-    },
-    {
-        "ListNumber": 100,
-        "Title": "Dead Ringers",
-        "Year": "1988",
-        "ID": "dead-ringers"
     },
     {
         "ListNumber": 101,
@@ -607,63 +607,63 @@
     },
     {
         "ListNumber": 102,
-        "Title": "King Kong",
-        "Year": "1933",
-        "ID": "king-kong"
+        "Title": "Dead Ringers",
+        "Year": "1988",
+        "ID": "dead-ringers"
     },
     {
         "ListNumber": 103,
-        "Title": "An American Werewolf in London",
-        "Year": "1981",
-        "ID": "an-american-werewolf-in-london"
-    },
-    {
-        "ListNumber": 104,
-        "Title": "Eraserhead",
-        "Year": "1977",
-        "ID": "eraserhead"
-    },
-    {
-        "ListNumber": 105,
         "Title": "Ghostwatch",
         "Year": "1992",
         "ID": "ghostwatch"
     },
     {
+        "ListNumber": 104,
+        "Title": "An American Werewolf in London",
+        "Year": "1981",
+        "ID": "an-american-werewolf-in-london"
+    },
+    {
+        "ListNumber": 105,
+        "Title": "King Kong",
+        "Year": "1933",
+        "ID": "king-kong"
+    },
+    {
         "ListNumber": 106,
+        "Title": "Eraserhead",
+        "Year": "1977",
+        "ID": "eraserhead"
+    },
+    {
+        "ListNumber": 107,
         "Title": "Morgiana",
         "Year": "1972",
         "ID": "morgiana"
     },
     {
-        "ListNumber": 107,
+        "ListNumber": 108,
         "Title": "Black Christmas",
         "Year": "1974",
         "ID": "black-christmas"
     },
     {
-        "ListNumber": 108,
+        "ListNumber": 109,
         "Title": "Nosferatu",
         "Year": "1922",
         "ID": "nosferatu"
     },
     {
-        "ListNumber": 109,
+        "ListNumber": 110,
         "Title": "The Witch",
         "Year": "2015",
         "ID": "the-witch-2015"
     },
     {
-        "ListNumber": 110,
+        "ListNumber": 111,
         "Title": "Invasion of the Body Snatchers",
         "Year": "1956",
         "ID": "invasion-of-the-body-snatchers"
-    },
-    {
-        "ListNumber": 111,
-        "Title": "A Page of Madness",
-        "Year": "1926",
-        "ID": "a-page-of-madness"
     },
     {
         "ListNumber": 112,
@@ -679,57 +679,57 @@
     },
     {
         "ListNumber": 114,
+        "Title": "A Page of Madness",
+        "Year": "1926",
+        "ID": "a-page-of-madness"
+    },
+    {
+        "ListNumber": 115,
         "Title": "The Unknown",
         "Year": "1927",
         "ID": "the-unknown"
     },
     {
-        "ListNumber": 115,
+        "ListNumber": 116,
         "Title": "November",
         "Year": "2017",
         "ID": "november-2017"
     },
     {
-        "ListNumber": 116,
+        "ListNumber": 117,
         "Title": "Bramayugam",
         "Year": "2024",
         "ID": "bramayugam"
     },
     {
-        "ListNumber": 117,
+        "ListNumber": 118,
         "Title": "Nosferatu the Vampyre",
         "Year": "1979",
         "ID": "nosferatu-the-vampyre"
     },
     {
-        "ListNumber": 118,
+        "ListNumber": 119,
         "Title": "Godzilla vs. Destoroyah",
         "Year": "1995",
         "ID": "godzilla-vs-destoroyah"
     },
     {
-        "ListNumber": 119,
+        "ListNumber": 120,
+        "Title": "Strangler vs Strangler",
+        "Year": "1984",
+        "ID": "strangler-vs-strangler"
+    },
+    {
+        "ListNumber": 121,
         "Title": "Gamera 3: Revenge of Iris",
         "Year": "1999",
         "ID": "gamera-3-revenge-of-iris"
     },
     {
-        "ListNumber": 120,
+        "ListNumber": 122,
         "Title": "The Skin I Live In",
         "Year": "2011",
         "ID": "the-skin-i-live-in"
-    },
-    {
-        "ListNumber": 121,
-        "Title": "The Texas Chain Saw Massacre",
-        "Year": "1974",
-        "ID": "the-texas-chain-saw-massacre"
-    },
-    {
-        "ListNumber": 122,
-        "Title": "Strangler vs Strangler",
-        "Year": "1984",
-        "ID": "strangler-vs-strangler"
     },
     {
         "ListNumber": 123,
@@ -739,213 +739,213 @@
     },
     {
         "ListNumber": 124,
+        "Title": "The Texas Chain Saw Massacre",
+        "Year": "1974",
+        "ID": "the-texas-chain-saw-massacre"
+    },
+    {
+        "ListNumber": 125,
         "Title": "The Return of the Living Dead",
         "Year": "1985",
         "ID": "the-return-of-the-living-dead"
     },
     {
-        "ListNumber": 125,
-        "Title": "Audition",
-        "Year": "1999",
-        "ID": "audition"
-    },
-    {
         "ListNumber": 126,
-        "Title": "American Psycho",
-        "Year": "2000",
-        "ID": "american-psycho"
-    },
-    {
-        "ListNumber": 127,
-        "Title": "Frankenstein",
-        "Year": "1931",
-        "ID": "frankenstein-1931"
-    },
-    {
-        "ListNumber": 128,
         "Title": "The Snow Woman",
         "Year": "1968",
         "ID": "the-snow-woman"
     },
     {
+        "ListNumber": 127,
+        "Title": "Audition",
+        "Year": "1999",
+        "ID": "audition"
+    },
+    {
+        "ListNumber": 128,
+        "Title": "American Psycho",
+        "Year": "2000",
+        "ID": "american-psycho"
+    },
+    {
         "ListNumber": 129,
+        "Title": "Frankenstein",
+        "Year": "1931",
+        "ID": "frankenstein-1931"
+    },
+    {
+        "ListNumber": 130,
         "Title": "Rapture",
         "Year": "1979",
         "ID": "rapture-1979"
     },
     {
-        "ListNumber": 130,
+        "ListNumber": 131,
         "Title": "In the Mouth of Madness",
         "Year": "1994",
         "ID": "in-the-mouth-of-madness"
     },
     {
-        "ListNumber": 131,
+        "ListNumber": 132,
+        "Title": "The Plague",
+        "Year": "2025",
+        "ID": "the-plague-2025"
+    },
+    {
+        "ListNumber": 133,
         "Title": "Despite the Night",
         "Year": "2015",
         "ID": "despite-the-night"
     },
     {
-        "ListNumber": 132,
+        "ListNumber": 134,
         "Title": "The Scapular",
         "Year": "1968",
         "ID": "the-scapular"
     },
     {
-        "ListNumber": 133,
+        "ListNumber": 135,
         "Title": "Mad God",
         "Year": "2021",
         "ID": "mad-god"
     },
     {
-        "ListNumber": 134,
+        "ListNumber": 136,
         "Title": "Taste of Fear",
         "Year": "1961",
         "ID": "taste-of-fear"
     },
     {
-        "ListNumber": 135,
+        "ListNumber": 137,
         "Title": "Don't Look Now",
         "Year": "1973",
         "ID": "dont-look-now"
     },
     {
-        "ListNumber": 136,
+        "ListNumber": 138,
         "Title": "Vampyr",
         "Year": "1932",
         "ID": "vampyr"
     },
     {
-        "ListNumber": 137,
+        "ListNumber": 139,
         "Title": "Night of the Demon",
         "Year": "1957",
         "ID": "night-of-the-demon"
     },
     {
-        "ListNumber": 138,
+        "ListNumber": 140,
         "Title": "Variola Vera",
         "Year": "1982",
         "ID": "variola-vera"
     },
     {
-        "ListNumber": 139,
+        "ListNumber": 141,
         "Title": "Senritsu Kaiki File Kowasugi! Final Chapter",
         "Year": "2015",
         "ID": "senritsu-kaiki-file-kowasugi-final-chapter"
     },
     {
-        "ListNumber": 140,
+        "ListNumber": 142,
         "Title": "Thirst",
         "Year": "2009",
         "ID": "thirst-2009"
     },
     {
-        "ListNumber": 141,
-        "Title": "Under the Blossoming Cherry Trees",
-        "Year": "1975",
-        "ID": "under-the-blossoming-cherry-trees"
-    },
-    {
-        "ListNumber": 142,
-        "Title": "A Girl Walks Home Alone at Night",
-        "Year": "2014",
-        "ID": "a-girl-walks-home-alone-at-night"
-    },
-    {
         "ListNumber": 143,
-        "Title": "Halloween",
-        "Year": "1978",
-        "ID": "halloween-1978"
-    },
-    {
-        "ListNumber": 144,
-        "Title": "The Boxer's Omen",
-        "Year": "1983",
-        "ID": "the-boxers-omen"
-    },
-    {
-        "ListNumber": 145,
-        "Title": "The Haunting",
-        "Year": "1963",
-        "ID": "the-haunting"
-    },
-    {
-        "ListNumber": 146,
-        "Title": "The Hunchback of Notre Dame",
-        "Year": "1939",
-        "ID": "the-hunchback-of-notre-dame-1939"
-    },
-    {
-        "ListNumber": 147,
         "Title": "Excitation",
         "Year": "1977",
         "ID": "excitation"
     },
     {
+        "ListNumber": 144,
+        "Title": "Under the Blossoming Cherry Trees",
+        "Year": "1975",
+        "ID": "under-the-blossoming-cherry-trees"
+    },
+    {
+        "ListNumber": 145,
+        "Title": "A Girl Walks Home Alone at Night",
+        "Year": "2014",
+        "ID": "a-girl-walks-home-alone-at-night"
+    },
+    {
+        "ListNumber": 146,
+        "Title": "Halloween",
+        "Year": "1978",
+        "ID": "halloween-1978"
+    },
+    {
+        "ListNumber": 147,
+        "Title": "The Haunting",
+        "Year": "1963",
+        "ID": "the-haunting"
+    },
+    {
         "ListNumber": 148,
+        "Title": "The Boxer's Omen",
+        "Year": "1983",
+        "ID": "the-boxers-omen"
+    },
+    {
+        "ListNumber": 149,
+        "Title": "The Hunchback of Notre Dame",
+        "Year": "1939",
+        "ID": "the-hunchback-of-notre-dame-1939"
+    },
+    {
+        "ListNumber": 150,
         "Title": "The Others",
         "Year": "2001",
         "ID": "the-others"
     },
     {
-        "ListNumber": 149,
+        "ListNumber": 151,
         "Title": "Carnival of Souls",
         "Year": "1962",
         "ID": "carnival-of-souls"
     },
     {
-        "ListNumber": 150,
-        "Title": "The Substance",
-        "Year": "2024",
-        "ID": "the-substance"
-    },
-    {
-        "ListNumber": 151,
+        "ListNumber": 152,
         "Title": "Day of the Dead",
         "Year": "1985",
         "ID": "day-of-the-dead"
     },
     {
-        "ListNumber": 152,
-        "Title": "Re-Animator",
-        "Year": "1985",
-        "ID": "re-animator"
+        "ListNumber": 153,
+        "Title": "The Substance",
+        "Year": "2024",
+        "ID": "the-substance"
     },
     {
-        "ListNumber": 153,
+        "ListNumber": 154,
         "Title": "Dr. Jekyll and Mr. Hyde",
         "Year": "1931",
         "ID": "dr-jekyll-and-mr-hyde-1931"
     },
     {
-        "ListNumber": 154,
+        "ListNumber": 155,
+        "Title": "Re-Animator",
+        "Year": "1985",
+        "ID": "re-animator"
+    },
+    {
+        "ListNumber": 156,
         "Title": "The Host",
         "Year": "2006",
         "ID": "the-host"
     },
     {
-        "ListNumber": 155,
-        "Title": "Little Otik",
-        "Year": "2000",
-        "ID": "little-otik"
-    },
-    {
-        "ListNumber": 156,
+        "ListNumber": 157,
         "Title": "Climax",
         "Year": "2018",
         "ID": "climax-2018"
     },
     {
-        "ListNumber": 157,
+        "ListNumber": 158,
         "Title": "Midsommar",
         "Year": "2019",
         "ID": "midsommar"
-    },
-    {
-        "ListNumber": 158,
-        "Title": "Senritsu Kaiki File Kowasugi! File 04: The Truth! Hanako-san in the Toilet",
-        "Year": "2013",
-        "ID": "senritsu-kaiki-file-kowasugi-file-04-the-truth-hanako-san-in-the-toilet"
     },
     {
         "ListNumber": 159,
@@ -955,69 +955,69 @@
     },
     {
         "ListNumber": 160,
-        "Title": "A Chinese Ghost Story",
-        "Year": "1987",
-        "ID": "a-chinese-ghost-story"
-    },
-    {
-        "ListNumber": 161,
         "Title": "Clearcut",
         "Year": "1991",
         "ID": "clearcut"
     },
     {
+        "ListNumber": 161,
+        "Title": "Senritsu Kaiki File Kowasugi! File 04: The Truth! Hanako-san in the Toilet",
+        "Year": "2013",
+        "ID": "senritsu-kaiki-file-kowasugi-file-04-the-truth-hanako-san-in-the-toilet"
+    },
+    {
         "ListNumber": 162,
+        "Title": "Little Otik",
+        "Year": "2000",
+        "ID": "little-otik"
+    },
+    {
+        "ListNumber": 163,
+        "Title": "A Chinese Ghost Story",
+        "Year": "1987",
+        "ID": "a-chinese-ghost-story"
+    },
+    {
+        "ListNumber": 164,
         "Title": "The Birds",
         "Year": "1963",
         "ID": "the-birds"
     },
     {
-        "ListNumber": 163,
+        "ListNumber": 165,
         "Title": "Images",
         "Year": "1972",
         "ID": "images"
     },
     {
-        "ListNumber": 164,
+        "ListNumber": 166,
         "Title": "Tenebre",
         "Year": "1982",
         "ID": "tenebre"
     },
     {
-        "ListNumber": 165,
-        "Title": "Guilty of Romance",
-        "Year": "2011",
-        "ID": "guilty-of-romance"
-    },
-    {
-        "ListNumber": 166,
+        "ListNumber": 167,
         "Title": "Elvira: Mistress of the Dark",
         "Year": "1988",
         "ID": "elvira-mistress-of-the-dark"
     },
     {
-        "ListNumber": 167,
+        "ListNumber": 168,
+        "Title": "Guilty of Romance",
+        "Year": "2011",
+        "ID": "guilty-of-romance"
+    },
+    {
+        "ListNumber": 169,
         "Title": "Death Becomes Her",
         "Year": "1992",
         "ID": "death-becomes-her"
     },
     {
-        "ListNumber": 168,
+        "ListNumber": 170,
         "Title": "The Stepford Wives",
         "Year": "1975",
         "ID": "the-stepford-wives"
-    },
-    {
-        "ListNumber": 169,
-        "Title": "The Long Walk",
-        "Year": "2025",
-        "ID": "the-long-walk-2025"
-    },
-    {
-        "ListNumber": 170,
-        "Title": "Weapons",
-        "Year": "2025",
-        "ID": "weapons-2025"
     },
     {
         "ListNumber": 171,
@@ -1045,75 +1045,75 @@
     },
     {
         "ListNumber": 175,
-        "Title": "Who Can Kill a Child?",
-        "Year": "1976",
-        "ID": "who-can-kill-a-child"
-    },
-    {
-        "ListNumber": 176,
-        "Title": "28 Days Later",
-        "Year": "2002",
-        "ID": "28-days-later"
-    },
-    {
-        "ListNumber": 177,
         "Title": "Suspiria",
         "Year": "2018",
         "ID": "suspiria-2018"
     },
     {
-        "ListNumber": 178,
+        "ListNumber": 176,
+        "Title": "Who Can Kill a Child?",
+        "Year": "1976",
+        "ID": "who-can-kill-a-child"
+    },
+    {
+        "ListNumber": 177,
         "Title": "Blood and Black Lace",
         "Year": "1964",
         "ID": "blood-and-black-lace"
     },
     {
+        "ListNumber": 178,
+        "Title": "28 Days Later",
+        "Year": "2002",
+        "ID": "28-days-later"
+    },
+    {
         "ListNumber": 179,
+        "Title": "It Ends",
+        "Year": "2025",
+        "ID": "it-ends"
+    },
+    {
+        "ListNumber": 180,
         "Title": "The Demon",
         "Year": "1963",
         "ID": "the-demon-1963"
     },
     {
-        "ListNumber": 180,
+        "ListNumber": 181,
         "Title": "Lunacy",
         "Year": "2005",
         "ID": "lunacy"
     },
     {
-        "ListNumber": 181,
+        "ListNumber": 182,
         "Title": "The Fall of the House of Usher",
         "Year": "1928",
         "ID": "the-fall-of-the-house-of-usher"
     },
     {
-        "ListNumber": 182,
+        "ListNumber": 183,
         "Title": "Angst",
         "Year": "1983",
         "ID": "angst"
     },
     {
-        "ListNumber": 183,
+        "ListNumber": 184,
         "Title": "Cemetery Man",
         "Year": "1994",
         "ID": "cemetery-man"
     },
     {
-        "ListNumber": 184,
-        "Title": "Memoirs of a Strangler of Blondes",
-        "Year": "1971",
-        "ID": "memoirs-of-a-strangler-of-blondes"
-    },
-    {
         "ListNumber": 185,
-        "Title": "Bram Stoker's Dracula",
-        "Year": "1992",
-        "ID": "bram-stokers-dracula"
-    },
-    {
-        "ListNumber": 186,
         "Title": "The Seventh Curse",
         "Year": "1986",
         "ID": "the-seventh-curse"
+    },
+    {
+        "ListNumber": 186,
+        "Title": "Bram Stoker's Dracula",
+        "Year": "1992",
+        "ID": "bram-stokers-dracula"
     },
     {
         "ListNumber": 187,
@@ -1129,99 +1129,99 @@
     },
     {
         "ListNumber": 189,
-        "Title": "It Ends",
-        "Year": "2025",
-        "ID": "it-ends"
+        "Title": "Memoirs of a Strangler of Blondes",
+        "Year": "1971",
+        "ID": "memoirs-of-a-strangler-of-blondes"
     },
     {
         "ListNumber": 190,
-        "Title": "Dogra Magra",
-        "Year": "1988",
-        "ID": "dogra-magra"
-    },
-    {
-        "ListNumber": 191,
         "Title": "Hush... Hush, Sweet Charlotte",
         "Year": "1964",
         "ID": "hush-hush-sweet-charlotte"
     },
     {
-        "ListNumber": 192,
+        "ListNumber": 191,
         "Title": "Bones and All",
         "Year": "2022",
         "ID": "bones-and-all"
     },
     {
+        "ListNumber": 192,
+        "Title": "Weapons",
+        "Year": "2025",
+        "ID": "weapons-2025"
+    },
+    {
         "ListNumber": 193,
+        "Title": "Dogra Magra",
+        "Year": "1988",
+        "ID": "dogra-magra"
+    },
+    {
+        "ListNumber": 194,
         "Title": "Army of Darkness",
         "Year": "1992",
         "ID": "army-of-darkness"
     },
     {
-        "ListNumber": 194,
-        "Title": "I, the Executioner",
-        "Year": "1968",
-        "ID": "i-the-executioner"
-    },
-    {
         "ListNumber": 195,
-        "Title": "Bring Her Back",
-        "Year": "2025",
-        "ID": "bring-her-back"
-    },
-    {
-        "ListNumber": 196,
         "Title": "Blind Beast",
         "Year": "1969",
         "ID": "blind-beast"
     },
     {
+        "ListNumber": 196,
+        "Title": "Bring Her Back",
+        "Year": "2025",
+        "ID": "bring-her-back"
+    },
+    {
         "ListNumber": 197,
+        "Title": "I, the Executioner",
+        "Year": "1968",
+        "ID": "i-the-executioner"
+    },
+    {
+        "ListNumber": 198,
         "Title": "Cold Fish",
         "Year": "2010",
         "ID": "cold-fish"
     },
     {
-        "ListNumber": 198,
+        "ListNumber": 199,
         "Title": "Pearl",
         "Year": "2022",
         "ID": "pearl-2022"
     },
     {
-        "ListNumber": 199,
+        "ListNumber": 200,
         "Title": "The Bird with the Crystal Plumage",
         "Year": "1970",
         "ID": "the-bird-with-the-crystal-plumage"
     },
     {
-        "ListNumber": 200,
+        "ListNumber": 201,
         "Title": "Gamera 2: Attack of Legion",
         "Year": "1996",
         "ID": "gamera-2-attack-of-legion"
     },
     {
-        "ListNumber": 201,
+        "ListNumber": 202,
         "Title": "A Tale of Two Sisters",
         "Year": "2003",
         "ID": "a-tale-of-two-sisters"
     },
     {
-        "ListNumber": 202,
+        "ListNumber": 203,
         "Title": "White Dog",
         "Year": "1982",
         "ID": "white-dog"
     },
     {
-        "ListNumber": 203,
+        "ListNumber": 204,
         "Title": "Frenzy",
         "Year": "1972",
         "ID": "frenzy"
-    },
-    {
-        "ListNumber": 204,
-        "Title": "Nosferatu",
-        "Year": "2024",
-        "ID": "nosferatu-2024"
     },
     {
         "ListNumber": 205,
@@ -1237,15 +1237,15 @@
     },
     {
         "ListNumber": 207,
-        "Title": "The Golem: How He Came Into the World",
-        "Year": "1920",
-        "ID": "the-golem-how-he-came-into-the-world"
+        "Title": "Nosferatu",
+        "Year": "2024",
+        "ID": "nosferatu-2024"
     },
     {
         "ListNumber": 208,
-        "Title": "Tumbbad",
-        "Year": "2018",
-        "ID": "tumbbad"
+        "Title": "The Golem: How He Came Into the World",
+        "Year": "1920",
+        "ID": "the-golem-how-he-came-into-the-world"
     },
     {
         "ListNumber": 209,
@@ -1255,27 +1255,27 @@
     },
     {
         "ListNumber": 210,
+        "Title": "Tumbbad",
+        "Year": "2018",
+        "ID": "tumbbad"
+    },
+    {
+        "ListNumber": 211,
         "Title": "[REC]",
         "Year": "2007",
         "ID": "rec"
     },
     {
-        "ListNumber": 211,
-        "Title": "Digital Video Editing with Adobe Premiere Pro: The Real-World Guide to Set Up and Workflow",
-        "Year": "2020",
-        "ID": "digital-video-editing-with-adobe-premiere-pro-the-real-world-guide-to-set-up-and-workflow"
-    },
-    {
         "ListNumber": 212,
-        "Title": "Raw",
-        "Year": "2016",
-        "ID": "raw-2016"
-    },
-    {
-        "ListNumber": 213,
         "Title": "Poison for the Fairies",
         "Year": "1986",
         "ID": "poison-for-the-fairies"
+    },
+    {
+        "ListNumber": 213,
+        "Title": "The Ghost of Yotsuya",
+        "Year": "1959",
+        "ID": "the-ghost-of-yotsuya"
     },
     {
         "ListNumber": 214,
@@ -1285,15 +1285,15 @@
     },
     {
         "ListNumber": 215,
-        "Title": "Nope",
-        "Year": "2022",
-        "ID": "nope"
+        "Title": "Raw",
+        "Year": "2016",
+        "ID": "raw-2016"
     },
     {
         "ListNumber": 216,
-        "Title": "Island of Lost Souls",
-        "Year": "1932",
-        "ID": "island-of-lost-souls"
+        "Title": "Digital Video Editing with Adobe Premiere Pro: The Real-World Guide to Set Up and Workflow",
+        "Year": "2020",
+        "ID": "digital-video-editing-with-adobe-premiere-pro-the-real-world-guide-to-set-up-and-workflow"
     },
     {
         "ListNumber": 217,
@@ -1303,33 +1303,33 @@
     },
     {
         "ListNumber": 218,
-        "Title": "The Ghost of Yotsuya",
-        "Year": "1959",
-        "ID": "the-ghost-of-yotsuya"
+        "Title": "Nope",
+        "Year": "2022",
+        "ID": "nope"
     },
     {
         "ListNumber": 219,
+        "Title": "Island of Lost Souls",
+        "Year": "1932",
+        "ID": "island-of-lost-souls"
+    },
+    {
+        "ListNumber": 220,
         "Title": "Gozu",
         "Year": "2003",
         "ID": "gozu"
     },
     {
-        "ListNumber": 220,
-        "Title": "Altered States",
-        "Year": "1980",
-        "ID": "altered-states"
-    },
-    {
         "ListNumber": 221,
-        "Title": "Cat People",
-        "Year": "1942",
-        "ID": "cat-people"
-    },
-    {
-        "ListNumber": 222,
         "Title": "The Birth of Kitaro: The Mystery of GeGeGe",
         "Year": "2023",
         "ID": "the-birth-of-kitaro-the-mystery-of-gegege"
+    },
+    {
+        "ListNumber": 222,
+        "Title": "Altered States",
+        "Year": "1980",
+        "ID": "altered-states"
     },
     {
         "ListNumber": 223,
@@ -1339,147 +1339,147 @@
     },
     {
         "ListNumber": 224,
+        "Title": "Cat People",
+        "Year": "1942",
+        "ID": "cat-people"
+    },
+    {
+        "ListNumber": 225,
         "Title": "The Inugami Family",
         "Year": "1976",
         "ID": "the-inugami-family"
     },
     {
-        "ListNumber": 225,
+        "ListNumber": 226,
         "Title": "Encounters of the Spooky Kind",
         "Year": "1980",
         "ID": "encounters-of-the-spooky-kind"
     },
     {
-        "ListNumber": 226,
-        "Title": "The Bad Seed",
-        "Year": "1956",
-        "ID": "the-bad-seed"
-    },
-    {
         "ListNumber": 227,
-        "Title": "Senritsu Kaiki File Kowasugi! The Most Terrifying Movie in History",
-        "Year": "2014",
-        "ID": "senritsu-kaiki-file-kowasugi-the-most-terrifying-movie-in-history"
-    },
-    {
-        "ListNumber": 228,
         "Title": "Tales from the Hood",
         "Year": "1995",
         "ID": "tales-from-the-hood"
     },
     {
+        "ListNumber": 228,
+        "Title": "The Bad Seed",
+        "Year": "1956",
+        "ID": "the-bad-seed"
+    },
+    {
         "ListNumber": 229,
-        "Title": "Love Massacre",
-        "Year": "1981",
-        "ID": "love-massacre"
-    },
-    {
-        "ListNumber": 230,
-        "Title": "Nazareno Cruz and the Wolf",
-        "Year": "1975",
-        "ID": "nazareno-cruz-and-the-wolf"
-    },
-    {
-        "ListNumber": 231,
-        "Title": "The Ugly Stepsister",
-        "Year": "2025",
-        "ID": "the-ugly-stepsister"
-    },
-    {
-        "ListNumber": 232,
-        "Title": "Tucker and Dale vs. Evil",
-        "Year": "2010",
-        "ID": "tucker-and-dale-vs-evil"
-    },
-    {
-        "ListNumber": 233,
-        "Title": "The Other Side of the Underneath",
-        "Year": "1972",
-        "ID": "the-other-side-of-the-underneath"
-    },
-    {
-        "ListNumber": 234,
         "Title": "Bhooter Bhabishyat",
         "Year": "2012",
         "ID": "bhooter-bhabishyat"
     },
     {
+        "ListNumber": 230,
+        "Title": "Senritsu Kaiki File Kowasugi! The Most Terrifying Movie in History",
+        "Year": "2014",
+        "ID": "senritsu-kaiki-file-kowasugi-the-most-terrifying-movie-in-history"
+    },
+    {
+        "ListNumber": 231,
+        "Title": "Tucker and Dale vs. Evil",
+        "Year": "2010",
+        "ID": "tucker-and-dale-vs-evil"
+    },
+    {
+        "ListNumber": 232,
+        "Title": "The Ugly Stepsister",
+        "Year": "2025",
+        "ID": "the-ugly-stepsister"
+    },
+    {
+        "ListNumber": 233,
+        "Title": "The Long Walk",
+        "Year": "2025",
+        "ID": "the-long-walk-2025"
+    },
+    {
+        "ListNumber": 234,
+        "Title": "The Other Side of the Underneath",
+        "Year": "1972",
+        "ID": "the-other-side-of-the-underneath"
+    },
+    {
         "ListNumber": 235,
+        "Title": "Nazareno Cruz and the Wolf",
+        "Year": "1975",
+        "ID": "nazareno-cruz-and-the-wolf"
+    },
+    {
+        "ListNumber": 236,
+        "Title": "Love Massacre",
+        "Year": "1981",
+        "ID": "love-massacre"
+    },
+    {
+        "ListNumber": 237,
         "Title": "Black Sunday",
         "Year": "1960",
         "ID": "black-sunday-1960"
     },
     {
-        "ListNumber": 236,
+        "ListNumber": 238,
         "Title": "The Lost Boys",
         "Year": "1987",
         "ID": "the-lost-boys"
     },
     {
-        "ListNumber": 237,
-        "Title": "Carnival of Sinners",
-        "Year": "1943",
-        "ID": "carnival-of-sinners"
-    },
-    {
-        "ListNumber": 238,
+        "ListNumber": 239,
         "Title": "Don't Torture a Duckling",
         "Year": "1972",
         "ID": "dont-torture-a-duckling"
     },
     {
-        "ListNumber": 239,
-        "Title": "Anguish",
-        "Year": "1987",
-        "ID": "anguish"
+        "ListNumber": 240,
+        "Title": "Carnival of Sinners",
+        "Year": "1943",
+        "ID": "carnival-of-sinners"
     },
     {
-        "ListNumber": 240,
+        "ListNumber": 241,
         "Title": "Singapore Sling",
         "Year": "1990",
         "ID": "singapore-sling"
     },
     {
-        "ListNumber": 241,
+        "ListNumber": 242,
         "Title": "Gemini",
         "Year": "1999",
         "ID": "gemini"
     },
     {
-        "ListNumber": 242,
-        "Title": "Angel Heart",
+        "ListNumber": 243,
+        "Title": "Anguish",
         "Year": "1987",
-        "ID": "angel-heart"
+        "ID": "anguish"
     },
     {
-        "ListNumber": 243,
+        "ListNumber": 244,
         "Title": "The Secret Adventures of Tom Thumb",
         "Year": "1993",
         "ID": "the-secret-adventures-of-tom-thumb"
     },
     {
-        "ListNumber": 244,
+        "ListNumber": 245,
+        "Title": "Angel Heart",
+        "Year": "1987",
+        "ID": "angel-heart"
+    },
+    {
+        "ListNumber": 246,
         "Title": "Candyman",
         "Year": "1992",
         "ID": "candyman"
     },
     {
-        "ListNumber": 245,
-        "Title": "The Evil Dead",
-        "Year": "1981",
-        "ID": "the-evil-dead"
-    },
-    {
-        "ListNumber": 246,
+        "ListNumber": 247,
         "Title": "Saw",
         "Year": "2004",
         "ID": "saw"
-    },
-    {
-        "ListNumber": 247,
-        "Title": "The Abominable Dr. Phibes",
-        "Year": "1971",
-        "ID": "the-abominable-dr-phibes"
     },
     {
         "ListNumber": 248,
@@ -1489,14 +1489,14 @@
     },
     {
         "ListNumber": 249,
-        "Title": "Robin Redbreast",
-        "Year": "1970",
-        "ID": "robin-redbreast"
+        "Title": "The Evil Dead",
+        "Year": "1981",
+        "ID": "the-evil-dead"
     },
     {
         "ListNumber": 250,
-        "Title": "Mr. Vampire",
-        "Year": "1985",
-        "ID": "mr-vampire"
+        "Title": "The Abominable Dr. Phibes",
+        "Year": "1971",
+        "ID": "the-abominable-dr-phibes"
     }
 ]
