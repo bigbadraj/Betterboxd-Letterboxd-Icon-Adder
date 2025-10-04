@@ -331,15 +331,15 @@
     },
     {
         "ListNumber": 56,
-        "Title": "Chris Rock: Bigger & Blacker",
-        "Year": "1999",
-        "ID": "chris-rock-bigger-blacker"
-    },
-    {
-        "ListNumber": 57,
         "Title": "An Evening with Tim Heidecker",
         "Year": "2020",
         "ID": "an-evening-with-tim-heidecker"
+    },
+    {
+        "ListNumber": 57,
+        "Title": "Chris Rock: Bigger & Blacker",
+        "Year": "1999",
+        "ID": "chris-rock-bigger-blacker"
     },
     {
         "ListNumber": 58,
@@ -487,15 +487,15 @@
     },
     {
         "ListNumber": 82,
-        "Title": "Hank Green: Pissing Out Cancer",
-        "Year": "2024",
-        "ID": "hank-green-pissing-out-cancer"
-    },
-    {
-        "ListNumber": 83,
         "Title": "Sam Morril: I Got This",
         "Year": "2020",
         "ID": "sam-morril-i-got-this"
+    },
+    {
+        "ListNumber": 83,
+        "Title": "Hank Green: Pissing Out Cancer",
+        "Year": "2024",
+        "ID": "hank-green-pissing-out-cancer"
     },
     {
         "ListNumber": 84,
@@ -523,15 +523,15 @@
     },
     {
         "ListNumber": 88,
-        "Title": "Bo Burnham: Words, Words, Words",
-        "Year": "2010",
-        "ID": "bo-burnham-words-words-words"
-    },
-    {
-        "ListNumber": 89,
         "Title": "Hannibal Buress: Animal Furnace",
         "Year": "2012",
         "ID": "hannibal-buress-animal-furnace"
+    },
+    {
+        "ListNumber": 89,
+        "Title": "Bo Burnham: Words, Words, Words",
+        "Year": "2010",
+        "ID": "bo-burnham-words-words-words"
     },
     {
         "ListNumber": 90,

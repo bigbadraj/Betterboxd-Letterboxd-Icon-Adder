@@ -199,15 +199,15 @@
     },
     {
         "ListNumber": 34,
-        "Title": "Dances with Wolves",
-        "Year": "1990",
-        "ID": "dances-with-wolves"
-    },
-    {
-        "ListNumber": 35,
         "Title": "Pearl Harbor",
         "Year": "2001",
         "ID": "pearl-harbor"
+    },
+    {
+        "ListNumber": 35,
+        "Title": "Dances with Wolves",
+        "Year": "1990",
+        "ID": "dances-with-wolves"
     },
     {
         "ListNumber": 36,
@@ -319,15 +319,15 @@
     },
     {
         "ListNumber": 54,
-        "Title": "Horizon: An American Saga – Chapter 1",
-        "Year": "2024",
-        "ID": "horizon-an-american-saga-chapter-1"
-    },
-    {
-        "ListNumber": 55,
         "Title": "Napoleon",
         "Year": "1927",
         "ID": "napoleon"
+    },
+    {
+        "ListNumber": 55,
+        "Title": "Horizon: An American Saga – Chapter 1",
+        "Year": "2024",
+        "ID": "horizon-an-american-saga-chapter-1"
     },
     {
         "ListNumber": 56,
