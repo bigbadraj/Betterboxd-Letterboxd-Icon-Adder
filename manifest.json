@@ -27,8 +27,7 @@
     "web_accessible_resources": [
         {
             "resources": [
-                "images/*",
-                "data/*.json"
+                "images/*"
             ],
             "matches": [
                 "https://letterboxd.com/*"
