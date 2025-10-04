@@ -2051,9 +2051,9 @@ function createIconAdder({ href, imgSrc, height, width, className, showRanking, 
         return li;
     };
 }
-// Generic data fetcher - now uses local JSON files
+// Generic data fetcher - now uses GitHub repository JSON files
 async function fetchData(url) {
-    const response = await fetch(chrome.runtime.getURL(`data/${url}`));
+    const response = await fetch(`https://raw.githubusercontent.com/bigbadraj/Letterboxd-List-JSONs/main/${url}`);
     return await response.json();
 }
 
