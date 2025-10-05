@@ -2057,9 +2057,6 @@ async function fetchData(url) {
     return await response.json();
 }
 
-// Near the top of the file, add a static audio instance
-
-
 function isInTop250() {
     return new Promise((resolve) => {
         // debugLog('ICON', 'Waiting for 0.1 seconds to ensure the DOM has loaded...');
