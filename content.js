@@ -1,5 +1,5 @@
 const DEBUG = {
-    ICON: false,    // For icon-related debugging
+    ICON: true,    // For icon-related debugging
     SETTINGS: false, // For general Letterboxd tweaks debugging
 };
 
@@ -2051,10 +2051,31 @@ function createIconAdder({ href, imgSrc, height, width, className, showRanking, 
         return li;
     };
 }
-// Generic data fetcher - now uses GitHub repository JSON files
-async function fetchData(url) {
-    const response = await fetch(`https://raw.githubusercontent.com/bigbadraj/Letterboxd-List-JSONs/main/${url}`);
-    return await response.json();
+// Generic data fetcher with retry logic
+async function fetchData(url, retryCount = 0) {
+    const maxRetries = 3;
+    
+    try {
+        const response = await fetch(`https://raw.githubusercontent.com/bigbadraj/Letterboxd-List-JSONs/main/${url}`);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const data = await response.json();
+        debugLog('ICON', `Successfully fetched data for ${url}`);
+        return data;
+    } catch (error) {
+        debugLog('ICON', `Failed to fetch ${url}: ${error.message}`);
+        
+        if (retryCount < maxRetries) {
+            debugLog('ICON', `Retrying fetch for ${url} in ${(retryCount + 1) * 1000}ms (attempt ${retryCount + 1}/${maxRetries})`);
+            await new Promise(resolve => setTimeout(resolve, (retryCount + 1) * 1000));
+            return fetchData(url, retryCount + 1);
+        }
+        
+        throw error;
+    }
 }
 
 function isInTop250() {
@@ -2106,9 +2127,21 @@ async function isInImdbTop250() {
     }
 }
 
-// Unified icon addition function
-async function addIcon(filmId, iconKey, settings) {
-    debugLog('ICON', `Attempting to add icon: ${iconKey} for film ID: ${filmId}`);
+// Global icon tracking to prevent duplicates
+window.addedIcons = window.addedIcons || new Set();
+
+// Unified icon addition function with improved reliability
+async function addIcon(filmId, iconKey, settings, retryCount = 0) {
+    const maxRetries = 3;
+    const iconId = `${filmId}-${iconKey}`;
+    
+    // Prevent duplicate processing
+    if (window.addedIcons.has(iconId)) {
+        debugLog('ICON', `Icon ${iconKey} already processed for film ${filmId}`);
+        return Promise.resolve();
+    }
+    
+    debugLog('ICON', `Attempting to add icon: ${iconKey} for film ID: ${filmId} (attempt ${retryCount + 1})`);
     
     // Handle mutual exclusivity between money and moneyAlt
     if (iconKey === 'money' && settings.showMoneyAlt === true) {
@@ -2138,8 +2171,6 @@ async function addIcon(filmId, iconKey, settings) {
         return;
     }
 
-
-
     if (iconKey === 'crown' || iconKey === 'gray') {
         // Wait for isInTop250() to finish before proceeding
         const isTop250 = await isInTop250();
@@ -2151,11 +2182,6 @@ async function addIcon(filmId, iconKey, settings) {
         // Proceed with adding the icon if not in the Top 250
         debugLog('ICON', `Proceeding with adding ${iconKey} icon.`);
     }  
-
-    
-    // Proceed with adding the icon if not in the IMDb Top 250
-    debugLog('ICON', `Proceeding with adding ${iconKey} icon.`);
-    
 
     // Check for parent toggle dependencies
     if ((iconKey === 'moneyAlt' && settings.showMoney === false) || 
@@ -2181,7 +2207,6 @@ async function addIcon(filmId, iconKey, settings) {
         return;
     }
 
-
     const settingName = `show${iconKey.charAt(0).toUpperCase() + iconKey.slice(1)}`;
     debugLog('ICON', `Checking setting: ${settingName} = ${settings[settingName]}`);
     if (settings[settingName] === false) {
@@ -2190,7 +2215,6 @@ async function addIcon(filmId, iconKey, settings) {
     }
     
     try {
-        // debugLog('ICON', `Fetching data for ${iconKey}`);
         const data = await fetchData(ICON_CONFIG[iconKey].url);
         
         // Try to find the film by ID (could be numeric ID or film slug)
@@ -2267,28 +2291,37 @@ async function addIcon(filmId, iconKey, settings) {
             const iconElement = ICON_CONFIG[iconKey].addFunction(itemIndex + 1);
             debugLog('ICON', `Created icon element for ${iconKey}:`, iconElement);
             
+            // Mark as processed to prevent duplicates
+            window.addedIcons.add(iconId);
+            
             return new Promise((resolve) => {
-                const observer = new MutationObserver((mutations, observer) => {
-                    debugLog('ICON', `Mutation observer triggered for ${iconKey}`);
+                let attempts = 0;
+                const maxAttempts = 50; // 5 seconds max wait time
+                
+                const tryAddIcon = () => {
+                    attempts++;
                     const ul = document.querySelector(".production-statistic-list, .film-stats, .stats, [class*='stats']");
-                    debugLog('ICON', `Looking for stats container for ${iconKey} - found: ${!!ul}`);
-                    if (ul) {
-                        debugLog('ICON', `Stats container outerHTML (first 300 chars): ${ul.outerHTML.substring(0, 300)}...`);
-                    }
+                    
                     if (ul && !ul.querySelector(`.${iconKey}-icon`)) {
-                        debugLog('ICON', `Appending ${iconKey} icon to DOM`);
+                        debugLog('ICON', `Appending ${iconKey} icon to DOM (attempt ${attempts})`);
                         ul.appendChild(iconElement);
-                        observer.disconnect();
                         resolve();
                     } else if (ul) {
                         debugLog('ICON', `Icon ${iconKey} already exists in container`);
-                        observer.disconnect();
                         resolve();
+                    } else if (attempts < maxAttempts) {
+                        debugLog('ICON', `Stats container not found for ${iconKey}, retrying in 100ms (attempt ${attempts}/${maxAttempts})`);
+                        setTimeout(tryAddIcon, 100);
                     } else {
-                        debugLog('ICON', `Still waiting for stats container for ${iconKey}`);
+                        debugLog('ICON', `Failed to find stats container for ${iconKey} after ${maxAttempts} attempts`);
+                        // Remove from processed set so it can be retried later
+                        window.addedIcons.delete(iconId);
+                        resolve();
                     }
-                });
-                observer.observe(document, { childList: true, subtree: true });
+                };
+                
+                // Start trying immediately
+                tryAddIcon();
             });
         } else {
             debugLog('ICON', `Film not found in ${iconKey} list`);
@@ -2297,6 +2330,20 @@ async function addIcon(filmId, iconKey, settings) {
     } catch (error) {
         console.error(`Failed to add ${iconKey} icon:`, error);
         debugLog('ICON', `Error adding ${iconKey} icon:`, error);
+        
+        // Remove from processed set so it can be retried
+        window.addedIcons.delete(iconId);
+        
+        // Retry if we haven't exceeded max retries
+        if (retryCount < maxRetries) {
+            debugLog('ICON', `Retrying ${iconKey} icon in 1 second (retry ${retryCount + 1}/${maxRetries})`);
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    resolve(addIcon(filmId, iconKey, settings, retryCount + 1));
+                }, 1000);
+            });
+        }
+        
         return Promise.resolve();
     }
 }
@@ -2617,13 +2664,27 @@ async function fetchID() {
                               iconKey !== 'nomOscar')
             .map(iconKey => addIcon(filmId, iconKey, settings));
 
-        // Wait for all icons to be processed
-        await Promise.all(iconPromises);
-        debugLog('ICON', '✓ All icons have been processed and added');
+        // Wait for all icons to be processed with better error handling
+        try {
+            const results = await Promise.allSettled(iconPromises);
+            const successful = results.filter(r => r.status === 'fulfilled').length;
+            const failed = results.filter(r => r.status === 'rejected').length;
+            
+            debugLog('ICON', `✓ Icon processing complete: ${successful} successful, ${failed} failed`);
+            
+            if (failed > 0) {
+                debugLog('ICON', 'Some icons failed to load. This may be due to network issues or missing data.');
+                // Schedule a retry for failed icons
+                setTimeout(() => retryFailedIcons(filmId, settings), 3000);
+            }
+        } catch (error) {
+            console.error('Error processing icons:', error);
+            debugLog('ICON', 'Error processing icons:', error);
+        }
     });
 }
 
-// Replace the current fetchID() call with this code
+// Improved initialization with better reliability
 const initializeIcons = () => {
     // Check if we're on a film page - only proceed if URL starts with /film/
     if (!window.location.pathname.startsWith('/film/')) {
@@ -2631,28 +2692,49 @@ const initializeIcons = () => {
         return;
     }
     
-    debugLog('ICON', 'Waiting for film elements and stats container to be available...');
+    // Clear any existing icon tracking for this page
+    window.addedIcons = new Set();
+    
+    debugLog('ICON', 'Starting icon initialization process...');
     
     // Set a timeout to prevent infinite waiting
     const timeout = setTimeout(() => {
-        debugLog('ICON', 'WARNING: Timeout reached waiting for page elements. Page structure may have changed significantly.');
-        console.warn('Letterboxd extension: Timeout waiting for page elements. Page structure may have changed.');
+        debugLog('ICON', 'WARNING: Timeout reached waiting for page elements. Attempting to initialize anyway.');
+        console.warn('Letterboxd extension: Timeout waiting for page elements. Attempting to initialize anyway.');
         
         // Try to run fetchID anyway - it will handle the error gracefully
         fetchID();
-    }, 10000); // 10 second timeout
+    }, 8000); // 8 second timeout
     
-    const observer = new MutationObserver((mutations, obs) => {
+    let observer = null;
+    let initializationAttempted = false;
+    
+    const attemptInitialization = () => {
+        if (initializationAttempted) {
+            debugLog('ICON', 'Initialization already attempted, skipping');
+            return;
+        }
+        
         // Try to find any film-related element and stats container
         const filmElement = document.querySelector(".film-poster, [data-film-id], [data-film-slug], .film-header, .film-details");
         const statsContainer = document.querySelector(".production-statistic-list, .film-stats, .stats, [class*='stats']");
         
         if (filmElement && statsContainer) {
             debugLog('ICON', 'Film element and stats container found, initializing icons');
+            initializationAttempted = true;
             clearTimeout(timeout);
-            obs.disconnect();
+            if (observer) {
+                observer.disconnect();
+            }
             fetchID();
+        } else {
+            debugLog('ICON', `Waiting for elements - film: ${!!filmElement}, stats: ${!!statsContainer}`);
         }
+    };
+    
+    // Create observer
+    observer = new MutationObserver((mutations, obs) => {
+        attemptInitialization();
     });
 
     observer.observe(document.body, {
@@ -2660,14 +2742,75 @@ const initializeIcons = () => {
         subtree: true
     });
 
-    // Also try immediately in case the elements are already there
-    const filmElement = document.querySelector(".film-poster, [data-film-id], [data-film-slug], .film-header, .film-details");
-    const statsContainer = document.querySelector(".production-statistic-list, .film-stats, .stats, [class*='stats']");
-    if (filmElement && statsContainer) {
-        debugLog('ICON', 'Film element and stats container already present, initializing icons');
-        clearTimeout(timeout);
-        observer.disconnect();
-        fetchID();
+    // Try immediately in case the elements are already there
+    attemptInitialization();
+    
+    // Also try after a short delay to catch any late-loading elements
+    setTimeout(attemptInitialization, 500);
+    setTimeout(attemptInitialization, 1000);
+    setTimeout(attemptInitialization, 2000);
+};
+
+// Handle page navigation and cleanup
+let currentUrl = window.location.href;
+
+// Function to handle URL changes (for SPA navigation)
+const handleUrlChange = () => {
+    const newUrl = window.location.href;
+    if (newUrl !== currentUrl) {
+        debugLog('ICON', `URL changed from ${currentUrl} to ${newUrl}`);
+        currentUrl = newUrl;
+        
+        // Clear existing icon tracking
+        window.addedIcons = new Set();
+        
+        // Re-initialize if we're on a film page
+        if (window.location.pathname.startsWith('/film/')) {
+            debugLog('ICON', 'Navigated to film page, re-initializing icons');
+            setTimeout(initializeIcons, 100); // Small delay to let page settle
+        }
+    }
+};
+
+// Monitor for URL changes (for SPA navigation)
+const urlObserver = new MutationObserver(() => {
+    handleUrlChange();
+});
+
+// Start monitoring
+urlObserver.observe(document.body, {
+    childList: true,
+    subtree: true
+});
+
+// Also monitor popstate events
+window.addEventListener('popstate', handleUrlChange);
+
+// Function to retry failed icons
+const retryFailedIcons = async (filmId, settings) => {
+    debugLog('ICON', 'Checking for failed icons to retry...');
+    
+    // Get all icon keys that should be processed
+    const allIconKeys = Object.keys(ICON_CONFIG)
+        .filter(iconKey => !iconKey.startsWith('oscar') && 
+                          iconKey !== 'winOscar' && 
+                          iconKey !== 'nomOscar');
+    
+    // Find icons that haven't been successfully added
+    const failedIcons = allIconKeys.filter(iconKey => {
+        const iconId = `${filmId}-${iconKey}`;
+        return !window.addedIcons.has(iconId);
+    });
+    
+    if (failedIcons.length > 0) {
+        debugLog('ICON', `Retrying ${failedIcons.length} failed icons: ${failedIcons.join(', ')}`);
+        
+        // Retry failed icons with a delay
+        setTimeout(async () => {
+            const retryPromises = failedIcons.map(iconKey => addIcon(filmId, iconKey, settings));
+            await Promise.allSettled(retryPromises);
+            debugLog('ICON', 'Retry attempt completed');
+        }, 2000);
     }
 };
 
