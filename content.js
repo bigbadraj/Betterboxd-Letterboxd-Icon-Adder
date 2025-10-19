@@ -373,7 +373,7 @@ const ICON_CONFIG = {
         })
     },
     marty: {
-        url: 'film_titles_martin-scorseses-film-school.json',
+        url: 'film_titles_martin-scorseses-film-school-the-85-films.json',
         addFunction: createIconAdder({
             href: "https://letterboxd.com/pinheadlarry145/list/martin-scorseses-film-school-the-85-films/",
             imgSrc: "marty.png",
@@ -795,7 +795,7 @@ const ICON_CONFIG = {
     movies1001Alt: {
         url: 'film_titles_1001-movies-you-must-see-before-you-die.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/peterstanley/list/1001-movies-you-must-see-before-you-die/by/rating/",
+            href: "https://letterboxd.com/peterstanley/list/1001-movies-you-must-see-before-you-die/",
             imgSrc: "1001.png",
             height: "16",
             width: "16",
@@ -2059,6 +2059,11 @@ async function fetchData(url, retryCount = 0) {
         const response = await fetch(`https://raw.githubusercontent.com/bigbadraj/Letterboxd-List-JSONs/main/${url}`);
         
         if (!response.ok) {
+            // Don't retry 404 errors - the file doesn't exist
+            if (response.status === 404) {
+                debugLog('ICON', `File not found: ${url} (404) - skipping retries`);
+                throw new Error(`HTTP 404: File not found`);
+            }
             throw new Error(`HTTP ${response.status}: ${response.statusText}`);
         }
         
@@ -2066,7 +2071,15 @@ async function fetchData(url, retryCount = 0) {
         debugLog('ICON', `Successfully fetched data for ${url}`);
         return data;
     } catch (error) {
-        debugLog('ICON', `Failed to fetch ${url}: ${error.message}`);
+        // Only log detailed error info on first attempt or final failure
+        if (retryCount === 0 || retryCount >= maxRetries) {
+            debugLog('ICON', `Failed to fetch ${url}: ${error.message}`);
+        }
+        
+        // Don't retry 404 errors or if we've exceeded max retries
+        if (error.message.includes('404') || retryCount >= maxRetries) {
+            throw error;
+        }
         
         if (retryCount < maxRetries) {
             debugLog('ICON', `Retrying fetch for ${url} in ${(retryCount + 1) * 1000}ms (attempt ${retryCount + 1}/${maxRetries})`);
@@ -2138,6 +2151,15 @@ async function addIcon(filmId, iconKey, settings, retryCount = 0) {
     // Prevent duplicate processing
     if (window.addedIcons.has(iconId)) {
         debugLog('ICON', `Icon ${iconKey} already processed for film ${filmId}`);
+        return Promise.resolve();
+    }
+    
+    // Also check if the icon already exists in the DOM
+    const existingIcon = document.querySelector(`.${iconKey}-icon`);
+    if (existingIcon) {
+        debugLog('ICON', `Icon ${iconKey} already exists in DOM, skipping`);
+        // Mark as processed to prevent future attempts
+        window.addedIcons.add(iconId);
         return Promise.resolve();
     }
     
@@ -2331,6 +2353,12 @@ async function addIcon(filmId, iconKey, settings, retryCount = 0) {
         console.error(`Failed to add ${iconKey} icon:`, error);
         debugLog('ICON', `Error adding ${iconKey} icon:`, error);
         
+        // Don't retry 404 errors - the file doesn't exist
+        if (error.message.includes('404')) {
+            debugLog('ICON', `Skipping retry for ${iconKey} - file not found (404)`);
+            return Promise.reject(new Error(`File not found: ${iconKey}`));
+        }
+        
         // Remove from processed set so it can be retried
         window.addedIcons.delete(iconId);
         
@@ -2344,7 +2372,7 @@ async function addIcon(filmId, iconKey, settings, retryCount = 0) {
             });
         }
         
-        return Promise.resolve();
+        return Promise.reject(error);
     }
 }
 
@@ -2673,7 +2701,15 @@ async function fetchID() {
             debugLog('ICON', `✓ Icon processing complete: ${successful} successful, ${failed} failed`);
             
             if (failed > 0) {
-                debugLog('ICON', 'Some icons failed to load. This may be due to network issues or missing data.');
+                // Log which icons failed for debugging
+                const failedIcons = results
+                    .map((result, index) => ({ result, index }))
+                    .filter(({ result }) => result.status === 'rejected')
+                    .map(({ index }) => Object.keys(ICON_CONFIG)[index])
+                    .filter(Boolean);
+                
+                debugLog('ICON', `Failed icons: ${failedIcons.join(', ')}`);
+                debugLog('ICON', 'Some icons failed to load. This may be due to network issues or missing data files.');
                 // Schedule a retry for failed icons
                 setTimeout(() => retryFailedIcons(filmId, settings), 3000);
             }
@@ -2692,8 +2728,16 @@ const initializeIcons = () => {
         return;
     }
     
+    // Check if icons are already initialized for this film
+    const currentFilmSlug = window.location.pathname.match(/\/film\/([^\/\?]+)/)?.[1];
+    if (window.initializedFilm === currentFilmSlug) {
+        debugLog('ICON', `Icons already initialized for film ${currentFilmSlug}, skipping`);
+        return;
+    }
+    
     // Clear any existing icon tracking for this page
     window.addedIcons = new Set();
+    window.initializedFilm = currentFilmSlug;
     
     debugLog('ICON', 'Starting icon initialization process...');
     
@@ -2761,13 +2805,20 @@ const handleUrlChange = () => {
         debugLog('ICON', `URL changed from ${currentUrl} to ${newUrl}`);
         currentUrl = newUrl;
         
-        // Clear existing icon tracking
-        window.addedIcons = new Set();
-        
-        // Re-initialize if we're on a film page
+        // Only clear icon tracking and re-initialize if we're actually on a different film page
         if (window.location.pathname.startsWith('/film/')) {
-            debugLog('ICON', 'Navigated to film page, re-initializing icons');
-            setTimeout(initializeIcons, 100); // Small delay to let page settle
+            // Check if we're on a different film by comparing the film slug in the URL
+            const currentFilmSlug = currentUrl.match(/\/film\/([^\/\?]+)/)?.[1];
+            const newFilmSlug = newUrl.match(/\/film\/([^\/\?]+)/)?.[1];
+            
+            if (currentFilmSlug !== newFilmSlug) {
+                debugLog('ICON', 'Navigated to different film page, clearing icon tracking and re-initializing');
+                // Clear existing icon tracking only for different films
+                window.addedIcons = new Set();
+                setTimeout(initializeIcons, 100); // Small delay to let page settle
+            } else {
+                debugLog('ICON', 'Same film page, no need to re-initialize icons');
+            }
         }
     }
 };
