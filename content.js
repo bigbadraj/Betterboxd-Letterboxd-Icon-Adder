@@ -3046,10 +3046,13 @@ function formatDuration(duration) {
     const hours = Math.floor(duration / 60);
     const minutes = duration % 60;
 
+    // Format hours with proper comma placement (only for thousands and above)
+    const formattedHours = hours >= 1000 ? hours.toLocaleString() : hours.toString();
+
     if (hours > 0 && minutes > 0) {
-        return `${hours} hour${hours !== 1 ? 's' : ''} and ${minutes} minute${minutes !== 1 ? 's' : ''}`;
+        return `${formattedHours} hour${hours !== 1 ? 's' : ''} and ${minutes} minute${minutes !== 1 ? 's' : ''}`;
     } else if (hours > 0) {
-        return `${hours} hour${hours !== 1 ? 's' : ''}`;
+        return `${formattedHours} hour${hours !== 1 ? 's' : ''}`;
     } else {
         return `${minutes} minute${minutes !== 1 ? 's' : ''}`;
     }
