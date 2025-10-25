@@ -1,5 +1,5 @@
 const DEBUG = {
-    ICON: true,    // For icon-related debugging
+    ICON: false,    // For icon-related debugging
     SETTINGS: false, // For general Letterboxd tweaks debugging
 };
 
@@ -2988,11 +2988,11 @@ async function convertRuntime() {
             const runtimeElements = [
                 {
                     selector: '.text-link.text-footer',
-                    getRuntime: el => el.textContent.match(/(\d+)\s*mins/),
+                    getRuntime: el => el.textContent.match(/([\d,]+)\s*mins/),
                     setRuntime: (el, newText) => {
                         el.childNodes.forEach(node => {
                             if (node.nodeType === Node.TEXT_NODE) {
-                                node.textContent = node.textContent.replace(/(\d+\s*mins)/, newText);
+                                node.textContent = node.textContent.replace(/([\d,]+\s*mins)/, newText);
                             }
                         });
                     }
@@ -3003,7 +3003,7 @@ async function convertRuntime() {
                     setRuntime: (el, newText) => {
                         el.childNodes.forEach(node => {
                             if (node.nodeType === Node.TEXT_NODE) {
-                                node.textContent = node.textContent.replace(/(\d+\s*mins)/, newText);
+                                node.textContent = node.textContent.replace(/([\d,]+\s*mins)/, newText);
                             }
                         });
                     }
@@ -3017,11 +3017,11 @@ async function convertRuntime() {
                     if (match) {
                         let newRuntimeText;
                         if (match.length === 2) {
-                            const minutes = parseInt(match[1], 10);
+                            const minutes = parseInt(match[1].replace(/,/g, ''), 10);
                             newRuntimeText = formatDuration(minutes);
                         } else if (match.length === 3) {
-                            const hours = parseInt(match[1], 10);
-                            const minutes = parseInt(match[2], 10);
+                            const hours = parseInt(match[1].replace(/,/g, ''), 10);
+                            const minutes = parseInt(match[2].replace(/,/g, ''), 10);
                             newRuntimeText = formatDuration(hours * 60 + minutes);
                         }
 
@@ -3046,13 +3046,10 @@ function formatDuration(duration) {
     const hours = Math.floor(duration / 60);
     const minutes = duration % 60;
 
-    // Format hours with proper comma placement (only for thousands and above)
-    const formattedHours = hours >= 1000 ? hours.toLocaleString() : hours.toString();
-
     if (hours > 0 && minutes > 0) {
-        return `${formattedHours} hour${hours !== 1 ? 's' : ''} and ${minutes} minute${minutes !== 1 ? 's' : ''}`;
+        return `${hours} hour${hours !== 1 ? 's' : ''} and ${minutes} minute${minutes !== 1 ? 's' : ''}`;
     } else if (hours > 0) {
-        return `${formattedHours} hour${hours !== 1 ? 's' : ''}`;
+        return `${hours} hour${hours !== 1 ? 's' : ''}`;
     } else {
         return `${minutes} minute${minutes !== 1 ? 's' : ''}`;
     }
