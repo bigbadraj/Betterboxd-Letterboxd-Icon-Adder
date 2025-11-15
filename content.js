@@ -914,51 +914,51 @@ const ICON_CONFIG = {
         })
     },
     male: {  // New icon for Most Fans on Letterboxd with Pronoun He
-        url: 'film_titles_most-fans-on-letterboxd-with-pronoun-he-2024.json',
+        url: 'film_titles_most-fans-on-letterboxd-with-pronoun-he-2025.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/crew/list/most-fans-on-letterboxd-with-pronoun-he-2024/",
+            href: "https://letterboxd.com/crew/list/most-fans-on-letterboxd-with-pronoun-he-2025/",
             imgSrc: "male.png",
             height: "16",
             width: "16",
             className: "male-icon floating-icon",
             showRanking: true,
-            tooltipText: "№ {ranking} in the Most Fans with He Pronouns 2024"
+            tooltipText: "№ {ranking} in the Most Fans with He Pronouns 2025"
         })
     },
     she: {  // New icon entry for "Most Fans on Letterboxd with Pronoun She"
-        url: 'film_titles_most-fans-on-letterboxd-with-pronoun-she-3.json',
+        url: 'film_titles_most-fans-on-letterboxd-with-pronoun-she-4.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/crew/list/most-fans-on-letterboxd-with-pronoun-she-3/",
+            href: "https://letterboxd.com/crew/list/most-fans-on-letterboxd-with-pronoun-she-4/",
             imgSrc: "female.png",
             height: "16",
             width: "16",
             className: "she-icon floating-icon",
             showRanking: true,
-            tooltipText: "№ {ranking} in the Most Fans with She Pronouns 2024"
+            tooltipText: "№ {ranking} in the Most Fans with She Pronouns 2025"
         })
     },
     ze: {  // New icon entry for Most Fans on Letterboxd with Pronoun Ze
-        url: 'film_titles_most-fans-on-letterboxd-with-pronoun-ze-or-3.json',
+        url: 'film_titles_most-fans-on-letterboxd-with-pronoun-ze-or-4.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/crew/list/most-fans-on-letterboxd-with-pronoun-ze-or-3/",
+            href: "https://letterboxd.com/crew/list/most-fans-on-letterboxd-with-pronoun-ze-or-4/",
             imgSrc: "nonbi.png",  // Assuming the image is named nonbi.png
             height: "16",
             width: "16",
             className: "ze-icon floating-icon",
             showRanking: true,
-            tooltipText: "№ {ranking} in the Most Fans with Ze or Xe Pronouns 2024"
+            tooltipText: "№ {ranking} in the Most Fans with Ze or Xe Pronouns 2025"
         })
     },
     fansPerView: {  // New icon for Most Fans per Viewer
-        url: 'film_titles_most-fans-per-viewer-on-letterboxd-2024.json',
+        url: 'film_titles_most-fans-per-viewer-on-letterboxd-2025.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/crew/list/most-fans-per-viewer-on-letterboxd-2024/",
+            href: "https://letterboxd.com/crew/list/most-fans-per-viewer-on-letterboxd-2025/",
             imgSrc: "fansperview.png",
             height: "16",
             width: "16",
             className: "fansperview-icon floating-icon",
             showRanking: true,
-            tooltipText: "№ {ranking} in the Most Fans per Viewer"
+            tooltipText: "№ {ranking} in the Most Fans per Viewer 2025"
         })
     },
     obscure: {
