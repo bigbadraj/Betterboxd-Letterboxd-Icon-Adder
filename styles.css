@@ -42,21 +42,20 @@
     padding: 2px 0;
 }
 
-/* Tooltip styles */
-.tooltip-wrapper:hover::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: 100%;
-    right: -40px;
-    transform: none;
+/* Floating tooltip - rendered via JS and appended to body so it appears above all content */
+.betterboxd-floating-tooltip {
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -100%) !important;
     background-color: rgb(69, 85, 102);
-    padding: 5px 10px 6px;
+    padding: 5px 10px 6px !important;
     border-radius: 3px;
     white-space: nowrap;
     z-index: 2147483647 !important;
-    margin-bottom: 7px;
+    pointer-events: none !important;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
-    font-size: 0.85rem !important;
+    font-size: 11px !important;
     font-family: "Graphik-Regular-Web", sans-serif !important;
     line-height: 1.3 !important;
     font-weight: bold !important;
@@ -64,21 +63,18 @@
     color: rgb(187, 204, 221) !important;
     -webkit-font-smoothing: antialiased !important;
     text-rendering: optimizeLegibility !important;
-    pointer-events: none !important;
-    opacity: 1 !important;
 }
 
-/* Tooltip arrow */
-.tooltip-wrapper:hover::before {
+/* Arrow for floating tooltip - at bottom, pointing down at icon */
+.betterboxd-floating-tooltip::after {
     content: '' !important;
     position: absolute !important;
-    bottom: 100% !important;
-    right: 4px !important;
-    transform: none !important;
+    top: 100% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
     border: 6px solid transparent !important;
     border-bottom: none !important;
     border-top: 6px solid rgb(69, 85, 102) !important;
-    margin-bottom: 2px !important;
     z-index: 2147483647 !important;
     width: 0 !important;
     height: 0 !important;
@@ -90,6 +86,13 @@
     display: inline-flex;
     align-items: center;
     gap: 2px;
+}
+
+/* Number next to icon - match Letterboxd's span.label styling */
+.tooltip-wrapper .label {
+    font-family: GraphikWeb, -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", Meiryo, sans-serif, ColorEmoji;
+    font-size: 12px;
+    color: var(--content-color, rgb(102, 119, 136));
 }
 
 /* Production Statistic List Styles */

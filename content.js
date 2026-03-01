@@ -132,21 +132,21 @@ const ICON_CONFIG = {
         })
     },
     animation: {
-        url: 'film_titles_letterboxd-100-animation.json',
+        url: 'film_titles_top-250-animated-films.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/lifeasfiction/list/letterboxd-100-animation/",
+            href: "https://letterboxd.com/official/list/top-250-animated-films/",
             imgSrc: "animation.png",
             height: "16",
             width: "16",
             className: "animation-icon floating-icon",
             showRanking: true,
-            tooltipText: "№ {ranking} in the Animation Top 100"
+            tooltipText: "№ {ranking} in the Animation Top 250"
         })
     },
     documentary: {
-        url: 'film_titles_official-top-250-documentary-films.json',
+        url: 'film_titles_top-250-documentary-films.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/jack/list/official-top-250-documentary-films/",
+            href: "https://letterboxd.com/official/list/top-250-documentary-films/",
             imgSrc: "documentary.jpg",
             height: "16",
             width: "16",
@@ -192,9 +192,9 @@ const ICON_CONFIG = {
         })
     },
     horror: {
-        url: 'film_titles_letterboxds-top-250-horror-films.json',
+        url: 'film_titles_top-250-horror-films.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/darrencb/list/letterboxds-top-250-horror-films/",
+            href: "https://letterboxd.com/official/list/top-250-horror-films/",
             imgSrc: "ghost.png",
             height: "16",
             width: "16",
@@ -204,9 +204,9 @@ const ICON_CONFIG = {
         })
     },
     heartEyes: {
-        url: 'film_titles_official-top-250-films-with-the-most-fans.json',
+        url: 'film_titles_top-250-films-with-the-most-fans.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/jack/list/official-top-250-films-with-the-most-fans/",
+            href: "https://letterboxd.com/official/list/top-250-films-with-the-most-fans/",
             imgSrc: "hearteyes.png",
             height: "16",
             width: "16",
@@ -216,21 +216,21 @@ const ICON_CONFIG = {
         })
     },
     black: {
-        url: 'film_titles_black-directors-the-official-top-100-narrative.json',
+        url: 'film_titles_top-250-films-by-black-directors.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/jack/list/black-directors-the-official-top-100-narrative/",
+            href: "https://letterboxd.com/official/list/top-250-films-by-black-directors/",
             imgSrc: "black.png",
             height: "16",
             width: "16",
             className: "black-icon floating-icon",
             showRanking: true,
-            tooltipText: "№ {ranking} in the Black Directors Top 100"
+            tooltipText: "№ {ranking} in the Black Directors Top 250"
         })
     },
     pink: {
-        url: 'film_titles_women-directors-the-official-top-250-narrative.json',
+        url: 'film_titles_top-250-films-by-women-directors.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/jack/list/women-directors-the-official-top-250-narrative/",
+            href: "https://letterboxd.com/official/list/top-250-films-by-women-directors/",
             imgSrc: "pink.png",
             height: "16",
             width: "16",
@@ -493,9 +493,9 @@ const ICON_CONFIG = {
         })
     },
     concert: {
-        url: 'film_titles_top-100-concert-films-digital-albums.json',
+        url: 'film_titles_top-100-concert-films.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/offensivename/list/top-100-concert-films-digital-albums/",
+            href: "https://letterboxd.com/official/list/top-100-concert-films/",
             imgSrc: "concert.png",
             height: "16",
             width: "16",
@@ -916,7 +916,7 @@ const ICON_CONFIG = {
     male: {  // New icon for Most Fans on Letterboxd with Pronoun He
         url: 'film_titles_most-fans-on-letterboxd-with-pronoun-he-2025.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/crew/list/most-fans-on-letterboxd-with-pronoun-he-2025/",
+            href: "https://letterboxd.com/official/list/most-fans-on-letterboxd-with-pronoun-he-2025/",
             imgSrc: "male.png",
             height: "16",
             width: "16",
@@ -928,7 +928,7 @@ const ICON_CONFIG = {
     she: {  // New icon entry for "Most Fans on Letterboxd with Pronoun She"
         url: 'film_titles_most-fans-on-letterboxd-with-pronoun-she-4.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/crew/list/most-fans-on-letterboxd-with-pronoun-she-4/",
+            href: "https://letterboxd.com/official/list/most-fans-on-letterboxd-with-pronoun-she-4/",
             imgSrc: "female.png",
             height: "16",
             width: "16",
@@ -940,8 +940,8 @@ const ICON_CONFIG = {
     ze: {  // New icon entry for Most Fans on Letterboxd with Pronoun Ze
         url: 'film_titles_most-fans-on-letterboxd-with-pronoun-ze-or-4.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/crew/list/most-fans-on-letterboxd-with-pronoun-ze-or-4/",
-            imgSrc: "nonbi.png",  // Assuming the image is named nonbi.png
+            href: "https://letterboxd.com/official/list/most-fans-on-letterboxd-with-pronoun-ze-or-4/",
+            imgSrc: "nonbi.png",
             height: "16",
             width: "16",
             className: "ze-icon floating-icon",
@@ -952,7 +952,7 @@ const ICON_CONFIG = {
     fansPerView: {  // New icon for Most Fans per Viewer
         url: 'film_titles_most-fans-per-viewer-on-letterboxd-2025.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/crew/list/most-fans-per-viewer-on-letterboxd-2025/",
+            href: "https://letterboxd.com/official/list/most-fans-per-viewer-on-letterboxd-2025/",
             imgSrc: "fansperview.png",
             height: "16",
             width: "16",
@@ -962,9 +962,9 @@ const ICON_CONFIG = {
         })
     },
     obscure: {
-        url: 'film_titles_official-top-50-narrative-feature-films-under.json',
+        url: 'film_titles_top-100-underseen-films.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/offensivename/list/official-top-50-narrative-feature-films-under/",
+            href: "https://letterboxd.com/official/list/top-100-underseen-films/",
             imgSrc: "obscure.png", // New image for the obscure icon
             height: "16",
             width: "16",
@@ -1671,9 +1671,9 @@ const ICON_CONFIG = {
         })
     },
     shortFilms250: {  // New icon entry for Top 250 Short Films
-        url: 'film_titles_the-top-250-highest-rated-films-of-90-minutes.json',
+        url: 'film_titles_top-250-short-films.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/bigbadraj/list/the-top-250-highest-rated-films-of-90-minutes/",
+            href: "https://letterboxd.com/official/list/top-250-short-films/",
             imgSrc: "90.png",
             height: "16",
             width: "16",
@@ -2008,6 +2008,39 @@ const ICON_CONFIG = {
     },
 };
 
+// Floating tooltip - appended to body so it appears above all content (e.g. Cast section)
+let floatingTooltipEl = null;
+let floatingTooltipWrapper = null;
+
+function positionFloatingTooltip() {
+    if (!floatingTooltipEl || !floatingTooltipWrapper) return;
+    const rect = floatingTooltipWrapper.getBoundingClientRect();
+    floatingTooltipEl.style.left = (rect.left + rect.width / 2) + 'px';
+    floatingTooltipEl.style.top = (rect.top - 7) + 'px';
+}
+
+function showFloatingTooltip(wrapper) {
+    const text = wrapper.getAttribute('data-tooltip');
+    if (!text) return;
+    hideFloatingTooltip();
+    floatingTooltipWrapper = wrapper;
+    floatingTooltipEl = document.createElement('div');
+    floatingTooltipEl.className = 'betterboxd-floating-tooltip';
+    floatingTooltipEl.textContent = text;
+    document.body.appendChild(floatingTooltipEl);
+    positionFloatingTooltip();
+    window.addEventListener('scroll', positionFloatingTooltip, true);
+}
+
+function hideFloatingTooltip() {
+    if (floatingTooltipEl) {
+        floatingTooltipEl.remove();
+        floatingTooltipEl = null;
+    }
+    floatingTooltipWrapper = null;
+    window.removeEventListener('scroll', positionFloatingTooltip, true);
+}
+
 // Generic icon creator function
 function createIconAdder({ href, imgSrc, height, width, className, showRanking, tooltipText, alt }) {
     return function(ranking) {
@@ -2040,9 +2073,18 @@ function createIconAdder({ href, imgSrc, height, width, className, showRanking, 
         iconWrapper.appendChild(img);
         tooltipWrapper.appendChild(iconWrapper);
         
-        // Add ranking number to the same tooltip wrapper
+        // Add ranking number to the same tooltip wrapper (styled to match Letterboxd's span.label)
         if (showRanking && ranking) {
-            tooltipWrapper.appendChild(document.createTextNode(ranking));
+            const labelSpan = document.createElement("span");
+            labelSpan.className = "label";
+            labelSpan.textContent = ranking;
+            tooltipWrapper.appendChild(labelSpan);
+        }
+        
+        // Floating tooltip (appears above Cast etc.) - only when we have tooltip text
+        if (tooltipText) {
+            tooltipWrapper.addEventListener('mouseenter', () => showFloatingTooltip(tooltipWrapper));
+            tooltipWrapper.addEventListener('mouseleave', hideFloatingTooltip);
         }
         
         a.appendChild(tooltipWrapper);
@@ -2099,20 +2141,20 @@ function isInTop250() {
             // debugLog('ICON', 'Checking if the film is in the Top 250...');
     
             // Search specifically for an <a> tag with the unique href
-            const top250Link = document.querySelector('a[href="/dave/list/official-top-250-narrative-feature-films/"]');
+            const top250Link = document.querySelector('a[href="/official/list/letterboxds-top-500-films/"]');
     
             if (top250Link) {
                 // debugLog('ICON', 'Top 250 link found:', top250Link.outerHTML); // Log the found element's HTML
-                debugLog('ICON', 'Skipping crown or gray icon - film is already in Top 250');
+                debugLog('ICON', 'Skipping crown or gray icon - film is already in Top 500');
                 resolve(true); // The film is in the Top 250
             } else {
-                debugLog('ICON', 'No Top 250 link found. Proceeding with icon logic...');
+                debugLog('ICON', 'No Top 500 link found. Proceeding with icon logic...');
                 
                 // Log all <a> elements for debugging
                 const allLinks = document.querySelectorAll('a'); // Get all <a> elements in the DOM
                 // debugLog('ICON', `Total <a> elements found: ${allLinks.length}`);
     
-                resolve(false); // The film is not in the Top 250
+                resolve(false); // The film is not in the Top 500
             }
         }, 100); // 100 milliseconds delay
     });
