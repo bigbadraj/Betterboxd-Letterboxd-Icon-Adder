@@ -997,18 +997,6 @@ const ICON_CONFIG = {
             tooltipText: "№ {ranking} in the Top 250 Anime TV Miniseries"
         })
     },
-    criterion: { // New entry for Criterion Collection
-        url: 'film_titles_the-complete-criterion-collection.json',
-        addFunction: createIconAdder({
-            href: "https://letterboxd.com/jbutts15/list/the-complete-criterion-collection/",
-            imgSrc: "collection.png", // New image for Criterion Collection
-            height: "16",
-            width: "16",
-            className: "criterion-icon positioned-icon",
-            showRanking: false,
-            tooltipText: "Included within the Criterion Collection"
-        })
-    },
     fourGreatest: {  // New icon entry for Four Greatest Films
         url: 'film_titles_four-greatest-films-of-each-year-according.json',
         addFunction: createIconAdder({
@@ -1751,7 +1739,7 @@ const ICON_CONFIG = {
             width: "16",
             className: "top240Minutes-icon floating-icon",
             showRanking: true,
-            tooltipText: "№ {ranking} in the Top 20 Films Over 4 Hours"
+            tooltipText: "№ {ranking} in the Top 25 Films Over 4 Hours"
         })
     },
     pop240Minutes: {  // New icon entry for Popular 20 Films Over 240 Minutes
