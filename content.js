@@ -1,5 +1,5 @@
 const DEBUG = {
-    ICON: false,    // For icon-related debugging
+    ICON: true,    // For icon-related debugging
     SETTINGS: false, // For general Letterboxd tweaks debugging
 };
 
@@ -277,9 +277,9 @@ const ICON_CONFIG = {
     },
 
     shorts: {
-        url: 'film_titles_letterboxds-top-250-highest-rated-short-films.json',
+        url: 'film_titles_top-250-short-films.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/slinkyman/list/letterboxds-top-250-highest-rated-short-films/",
+            href: "https://letterboxd.com/official/list/top-250-short-films/",
             imgSrc: "shorts.png",
             height: "16",
             width: "16",
@@ -1659,9 +1659,9 @@ const ICON_CONFIG = {
         })
     },
     shortFilms250: {  // New icon entry for Top 250 Short Films
-        url: 'film_titles_top-250-short-films.json',
+        url: 'film_titles_the-top-250-highest-rated-films-of-90-minutes.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/official/list/top-250-short-films/",
+            href: "https://letterboxd.com/bigbadraj/list/the-top-250-highest-rated-films-of-90-minutes/",
             imgSrc: "90.png",
             height: "16",
             width: "16",
