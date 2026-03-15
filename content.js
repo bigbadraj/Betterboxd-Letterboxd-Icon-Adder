@@ -1,5 +1,5 @@
 const DEBUG = {
-    ICON: true,    // For icon-related debugging
+    ICON: false,    // For icon-related debugging
     SETTINGS: false, // For general Letterboxd tweaks debugging
 };
 
@@ -970,7 +970,7 @@ const ICON_CONFIG = {
             width: "16",
             className: "obscure-icon floating-icon",
             showRanking: true,
-            tooltipText: "№ {ranking} in the Top 50 Under 15,000 Reviews"
+            tooltipText: "№ {ranking} in the Top 100 Under 25,000 Reviews"
         })
     },
     romcom: {
