@@ -1647,9 +1647,9 @@ const ICON_CONFIG = {
         })
     },
     australianNarrative: {  // New icon entry for Australian Narrative
-        url: 'film_titles_top-75-highest-rated-australian-narrative.json',
+        url: 'film_titles_top-75-highest-rated-australian-narrative-1.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/bigbadraj/list/top-75-highest-rated-australian-narrative/",
+            href: "https://letterboxd.com/bigbadraj/list/top-75-highest-rated-australian-narrative-1/",
             imgSrc: "australia.png",
             height: "16",
             width: "16",
