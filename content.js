@@ -48,18 +48,6 @@ const ICON_CONFIG = {
         })
     },
     money: {
-        url: 'film_titles_all-time-worldwide-box-office.json',
-        addFunction: createIconAdder({
-            href: "https://letterboxd.com/matthew/list/all-time-worldwide-box-office/",
-            imgSrc: "money.png",
-            height: "16",
-            width: "16",
-            className: "money-icon floating-icon",
-            showRanking: true,
-            tooltipText: "№ {ranking} in the Box Office 100"
-        })
-    },
-    moneyAlt: {
         url: 'film_titles_top-250-highest-grossing-movies-of-all-time-1.json',
         addFunction: createIconAdder({
             href: "https://letterboxd.com/bigbadraj/list/250-highest-grossing-movies-of-all-time/",
@@ -890,9 +878,9 @@ const ICON_CONFIG = {
         })
     },
     billionDollarClub: {  // New icon configuration
-        url: 'film_titles_billion-dollar-movies.json',
+        url: 'film_titles_1-billion-club.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/jonny5244/list/billion-dollar-movies/",
+            href: "https://letterboxd.com/000_leo/list/1-billion-club/",
             imgSrc: "billion.png",
             height: "16",
             width: "16",
@@ -1826,18 +1814,6 @@ const ICON_CONFIG = {
             tooltipText: "№ {ranking} in the Most Expensive Films"
         })
     },
-    moneybag: {  // New icon configuration
-        url: 'film_titles_most-expensive-films-unadjusted-for-inflation.json',
-        addFunction: createIconAdder({
-            href: "https://letterboxd.com/arhodes/list/most-expensive-films-unadjusted-for-inflation/",
-            imgSrc: "moneybag.png",
-            height: "16",
-            width: "16",
-            className: "moneybag-icon floating-icon",
-            showRanking: true,
-            tooltipText: "№ {ranking} in the Most Expensive Films"
-        })
-    },
     horrorAlt: {  // New icon configuration
         url: 'film_titles_top-250-highest-rated-horror-narrative-feature.json',
         addFunction: createIconAdder({
@@ -2195,12 +2171,6 @@ async function addIcon(filmId, iconKey, settings, retryCount = 0) {
     
     debugLog('ICON', `Attempting to add icon: ${iconKey} for film ID: ${filmId} (attempt ${retryCount + 1})`);
     
-    // Handle mutual exclusivity between money and moneyAlt
-    if (iconKey === 'money' && settings.showMoneyAlt === true) {
-        debugLog('ICON', 'Skipping money icon - moneyAlt is enabled');
-        return;
-    }
-
     // Ensure both 1001 and 1001Alt toggles are on for 1001Alt icon
     if (iconKey === 'movies1001' && settings.showMovies1001Alt === true) {
         debugLog('ICON', 'Skipping 1001 icon - 1001Alt toggle is enabled');
@@ -2236,8 +2206,7 @@ async function addIcon(filmId, iconKey, settings, retryCount = 0) {
     }  
 
     // Check for parent toggle dependencies
-    if ((iconKey === 'moneyAlt' && settings.showMoney === false) || 
-        (iconKey === 'movies1001Alt' && settings.showMovies1001 === false) ||
+    if ((iconKey === 'movies1001Alt' && settings.showMovies1001 === false) ||
         (iconKey === 'animation250' && settings.showAnimation === false)) {
         debugLog('ICON', `Skipping ${iconKey} - parent toggle is disabled`);
         return;

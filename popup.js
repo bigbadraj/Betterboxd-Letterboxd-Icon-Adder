@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'showImdb': true,
         'showFilm': true,
         'showPalm': true,
-        'showMoney': true,
+        'showBillionDollarClub': true,
         'showAFI': true,
         'showSightSound': true,
         'showMovies1001': true,
@@ -152,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'showWga101': true,
         'showNerd': false,
         'showInflate': false,
+        'showMoney': true,
         'showFresh': true,
         'showScream': false,
         'showFourFavorites': false,
@@ -160,7 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'showTop10': false,
         'showRegister': false,
         'showShoot': false,
-        'showBillionDollarClub': true,
         'showFlanagan': false,
         'showFourGreatest': false,
         'showBoxOffice': false,
@@ -182,7 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'hideNomForWin': true,
         'showMovies1001Alt': false,
         'showOscarHierarchy': true,
-        'showMoneyAlt': false,
         'useNonPremiereYear': false,
         'showRemoveRatings': false,
         'showConvertRuntime': false,
@@ -274,15 +273,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Define sections and their toggles
     const sections = {
         'MajorAwards': ['NomOscar', 'WinOscar', 'Bafta', 'Goldend', 'Goldenc', 'Critic', 'Screen', 'Direct', 'Pga'],
-        'StatsPage': ['Imdb', 'Film', 'Palm', 'Money', 'AFI', 'SightSound', 'Movies1001', 'Edgar', 'Ebert', 'Pink', 'Black', 'HeartEyes', 'Documentary', 'Animation', 'Ghost'],
+        'StatsPage': ['Imdb', 'Film', 'Palm', 'BillionDollarClub', 'AFI', 'SightSound', 'Movies1001', 'Edgar', 'Ebert', 'Pink', 'Black', 'HeartEyes', 'Documentary', 'Animation', 'Ghost'],
         'GenreLists': ['Funny', 'Romcom', 'Anime', 'Comedy', 'Shorts', 'Tv', 'Concert', 'Action', 'PopAction', 'Adventure', 'PopAdventure', 'PopAnimation', 'PopComedy', 'Crime', 'PopCrime', 'Drama', 'PopDrama', 'Family', 'PopFamily', 'Fantasy', 'PopFantasy', 'History', 'PopHistory', 'PopHorror', 'Music', 'PopMusic', 'Mystery', 'PopMystery', 'Romance', 'PopRomance', 'ScienceFiction', 'PopScienceFiction', 'Thriller', 'PopThriller', 'War', 'PopWar', 'Western', 'PopWestern'],
         'OtherAwards': ['Lion', 'Sundance', 'Bear', 'Tiff', 'Spirit', 'Wga', 'Annie', 'Saturnh', 'Saturnf', 'Saturns', 'Razzie', 'Gotham', 'Lafca', 'Nbr', 'Nsf', 'Nyfc'],
         'LetterboxdLists': ['Crown', 'Fire', 'Poop', 'LetterboxdTop250', 'MostPopularYear', 'Gray', 'Thumbs', 'Year', 'FiveStar', 'Male', 'She', 'Ze', 'FansPerView', 'Letterboxd113', 'Obscure', 'GRated', 'PopGRated', 'PGRated', 'PopPGRated', 'PG13Rated', 'PopPG13Rated', 'RRated', 'PopRRated', 'NC17Rated', 'PopNC17Rated', 'NorthAmerica', 'PopNorthAmerica', 'PopSouthAmerica', 'PopEurope', 'PopAfrica', 'PopAsia', 'PopAustralia', 'SouthAmerica', 'EuropeanNarrative', 'AfricanNarrative', 'AsianNarrative', 'AustralianNarrative', 'ShortFilms250', 'PopFilms250', 'Top250Under120', 'Pop250Under120', 'Top150Over180', 'Pop150Over180', 'Top240Minutes', 'Pop240Minutes', 'Unweighted', 'Silent'],
-        'ExternalLists': ['Marty', 'Toro', 'Ford', 'Wga101', 'Nerd', 'Inflate', 'Fresh', 'Scream', 'FourFavorites', 'TrueFilm', 'Rmovies', 'Top10', 'Register', 'Shoot', "BillionDollarClub", "Flanagan", 'FourGreatest', 'BoxOffice', 'BurningCash', 'YearlyDollar', 'MoneybagOld', 'Moneybag', 'ImdbGray', 'Harvard', 'Bong', 'Spike', 'Tarantino', 'Greta', 'Kubrick', 'Kurosawa', 'Fincher'],
+        'ExternalLists': ['Marty', 'Toro', 'Ford', 'Wga101', 'Nerd', 'Money', 'Inflate', 'Fresh', 'Scream', 'FourFavorites', 'TrueFilm', 'Rmovies', 'Top10', 'Register', 'Shoot', 'Flanagan', 'FourGreatest', 'BoxOffice', 'BurningCash', 'YearlyDollar', 'MoneybagOld', 'Moneybag', 'ImdbGray', 'Harvard', 'Bong', 'Spike', 'Tarantino', 'Greta', 'Kubrick', 'Kurosawa', 'Fincher'],
     };
 
     // Excluded from master toggle
-    const excludedToggles = ['HideNomForWin', 'Movies1001Alt', 'OscarHierarchy', 'MoneyAlt', 'NonPremiere', 'RemoveRatings', 'ConvertRuntime', 'Animation250', 'HorrorAlt'];
+    const excludedToggles = ['HideNomForWin', 'Movies1001Alt', 'OscarHierarchy', 'NonPremiere', 'RemoveRatings', 'ConvertRuntime', 'Animation250', 'HorrorAlt'];
 
     // Function to toggle section visibility
     function toggleSection(header) {
@@ -453,7 +452,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'Concert': 'showConcert',
         'Tv': 'showTv',
         'LetterboxdTop250': 'showLetterboxdTop250',
-        'MoneyAlt': 'showMoneyAlt',
         'Inflate': 'showInflate',
         'Lion': 'showLion',
         'Bafta': 'showBafta',
