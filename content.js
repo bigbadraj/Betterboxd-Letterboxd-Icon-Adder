@@ -757,7 +757,7 @@ const ICON_CONFIG = {
         })
     },
     pga: {
-        url: 'film_titles_every-producers-guild-of-america-best-theatrical.json',
+        url: 'film_titles_they-shoot-pictures-dont-they-1000-greatest-7.json',
         addFunction: createIconAdder({
             href: "https://letterboxd.com/bigbadraj/list/every-producers-guild-of-america-best-theatrical/",
             imgSrc: "pga.png",
@@ -771,7 +771,7 @@ const ICON_CONFIG = {
     shoot: {
         url: 'film_titles_they-shoot-pictures-dont-they-1000-greatest-5.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/thisisdrew/list/they-shoot-pictures-dont-they-1000-greatest-5/",
+            href: "https://letterboxd.com/thisisdrew/list/they-shoot-pictures-dont-they-1000-greatest-7/",
             imgSrc: "shoot.png",
             height: "16",
             width: "16",
