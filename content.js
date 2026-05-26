@@ -1970,6 +1970,30 @@ const ICON_CONFIG = {
             tooltipText: "David Fincher’s Favorite Films"
         })
     },
+    wgaAlltime: {
+        url: 'film_titles_writers-guild-of-america-101-greatest-screenplays.json',
+        addFunction: createIconAdder({
+            href: "https://letterboxd.com/travissmcclain/list/writers-guild-of-america-101-greatest-screenplays/",
+            imgSrc: "WGA_All_Time.png",
+            height: "16",
+            width: "16",
+            className: "wgaAlltime-icon floating-icon",
+            showRanking: true,
+            tooltipText: "№ {ranking} in the WGA's 101 Greatest Screenplays (Original 2005 Version)"
+        })
+    },
+    TabulaWatchlist: {
+        url: 'film_titles_the-ultimate-film-studies-watchlist-by-the.json',
+        addFunction: createIconAdder({
+            href: "https://letterboxd.com/j_calgaro/list/the-ultimate-film-studies-watchlist-by-the/",
+            imgSrc: "TabulaWatchlist.png",
+            height: "16",
+            width: "16",
+            className: "TabulaWatchlist-icon floating-icon",
+            showRanking: false,
+            tooltipText: "The House of Tabula's Ultimate Film Studies Watchlist"
+        })
+    },
 };
 
 // Floating tooltip - appended to body so it appears above all content (e.g. Cast section)
