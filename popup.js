@@ -150,6 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'showToro': false,
         'showFord': false,
         'showWga101': true,
+        'showFunny101': false,
         'showNerd': false,
         'showInflate': false,
         'showMoney': true,
@@ -179,6 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'showFincher': false,
         'showWgaAlltime': false,
         'showTabulaWatchlist': false,
+        'showTabula30': false,
         // Special settings
         'hideNomForWin': true,
         'showMovies1001Alt': false,
@@ -278,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'GenreLists': ['Funny', 'Romcom', 'Anime', 'Comedy', 'Shorts', 'Tv', 'Concert', 'Action', 'PopAction', 'Adventure', 'PopAdventure', 'PopAnimation', 'PopComedy', 'Crime', 'PopCrime', 'Drama', 'PopDrama', 'Family', 'PopFamily', 'Fantasy', 'PopFantasy', 'History', 'PopHistory', 'PopHorror', 'Music', 'PopMusic', 'Mystery', 'PopMystery', 'Romance', 'PopRomance', 'ScienceFiction', 'PopScienceFiction', 'Thriller', 'PopThriller', 'War', 'PopWar', 'Western', 'PopWestern'],
         'OtherAwards': ['Lion', 'Sundance', 'Bear', 'Tiff', 'Spirit', 'Wga', 'Annie', 'Saturnh', 'Saturnf', 'Saturns', 'Razzie', 'Gotham', 'Lafca', 'Nbr', 'Nsf', 'Nyfc'],
         'LetterboxdLists': ['Crown', 'Fire', 'Poop', 'LetterboxdTop250', 'MostPopularYear', 'Gray', 'Thumbs', 'Year', 'FiveStar', 'Male', 'She', 'Ze', 'FansPerView', 'Letterboxd113', 'Obscure', 'GRated', 'PopGRated', 'PGRated', 'PopPGRated', 'PG13Rated', 'PopPG13Rated', 'RRated', 'PopRRated', 'NC17Rated', 'PopNC17Rated', 'NorthAmerica', 'PopNorthAmerica', 'PopSouthAmerica', 'PopEurope', 'PopAfrica', 'PopAsia', 'PopAustralia', 'SouthAmerica', 'EuropeanNarrative', 'AfricanNarrative', 'AsianNarrative', 'AustralianNarrative', 'ShortFilms250', 'PopFilms250', 'Top250Under120', 'Pop250Under120', 'Top150Over180', 'Pop150Over180', 'Top240Minutes', 'Pop240Minutes', 'Unweighted', 'Silent'],
-        'ExternalLists': ['Marty', 'Toro', 'Ford', 'Wga101', 'Nerd', 'Money', 'Inflate', 'Fresh', 'Scream', 'FourFavorites', 'TrueFilm', 'Rmovies', 'Top10', 'Register', 'Shoot', 'Flanagan', 'FourGreatest', 'BoxOffice', 'BurningCash', 'YearlyDollar', 'MoneybagOld', 'Moneybag', 'ImdbGray', 'Harvard', 'Bong', 'Spike', 'Tarantino', 'Greta', 'Kubrick', 'Kurosawa', 'Fincher', 'WgaAlltime', 'TabulaWatchlist'],
+        'ExternalLists': ['Marty', 'Toro', 'Ford', 'Wga101', 'Nerd', 'Money', 'Inflate', 'Fresh', 'Scream', 'FourFavorites', 'TrueFilm', 'Rmovies', 'Top10', 'Register', 'Shoot', 'Flanagan', 'FourGreatest', 'BoxOffice', 'BurningCash', 'YearlyDollar', 'MoneybagOld', 'Moneybag', 'ImdbGray', 'Harvard', 'Bong', 'Spike', 'Tarantino', 'Greta', 'Kubrick', 'Kurosawa', 'Fincher', 'WgaAlltime', 'TabulaWatchlist', 'Funny101', 'Tabula30'  ],
     };
 
     // Excluded from master toggle
@@ -577,7 +579,9 @@ document.addEventListener('DOMContentLoaded', () => {
         'Kurosawa': 'showKurosawa',
         'Fincher': 'showFincher',
         'WgaAlltime': 'showWgaAlltime',
-        'TabulaWatchlist': 'showTabulaWatchlist'
+        'TabulaWatchlist': 'showTabulaWatchlist',
+        'Funny101': 'showFunny101',
+        'Tabula30': 'showTabula30'
     };
 
     // Set up individual toggle listeners

@@ -1,7 +1,7 @@
 {
     "name": "Betterboxd: Letterboxd Icon Adder",
     "description": "Adds additional list icons to films on Letterboxd",
-    "version": "1.0.12",
+    "version": "1.0.13",
     "manifest_version": 3,
 
     "icons": {

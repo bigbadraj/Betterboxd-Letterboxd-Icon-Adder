@@ -469,15 +469,15 @@ const ICON_CONFIG = {
         })
     },
     comedy: {
-        url: 'film_titles_top-100-highest-rated-stand-up-comedy-specials.json',
+        url: 'film_titles_top-100-comedy-specials.json',
         addFunction: createIconAdder({
-            href: "https://letterboxd.com/bigbadraj/list/top-100-highest-rated-stand-up-comedy-specials/",
+            href: "https://letterboxd.com/official/list/top-100-comedy-specials/",
             imgSrc: "comedy.png",
             height: "16",
             width: "16",
             className: "comedy-icon floating-icon",
             showRanking: true,
-            tooltipText: "№ {ranking} in the Stand-Up Top 100"
+            tooltipText: "№ {ranking} in the Comedy Specials Top 100"
         })
     },
     concert: {
@@ -1994,6 +1994,30 @@ const ICON_CONFIG = {
             tooltipText: "The House of Tabula's Ultimate Film Studies Watchlist"
         })
     },
+    funny101: {
+        url: 'film_titles_wgas-101-funniest-screenplays.json',
+        addFunction: createIconAdder({
+            href: "https://letterboxd.com/bigbadraj/list/wgas-101-funniest-screenplays/",
+            imgSrc: "funny101.png",
+            height: "16",
+            width: "16",
+            className: "funny101-icon floating-icon",
+            showRanking: true,
+            tooltipText: "№ {ranking} in the WGA's 101 Funniest Screenplays"
+        })
+    },
+    tabula30: {
+        url: 'film_titles_the-house-of-tabulas-30-greatest-films.json',
+        addFunction: createIconAdder({
+            href: "https://letterboxd.com/bigbadraj/list/the-house-of-tabulas-30-greatest-films/",
+            imgSrc: "tabula30.png",
+            height: "16",
+            width: "16",
+            className: "tabula30-icon floating-icon",
+            showRanking: true,
+            tooltipText: "№ {ranking} in the The House of Tabula's 30 Greatest Films"
+        })
+    }
 };
 
 // Floating tooltip - appended to body so it appears above all content (e.g. Cast section)
