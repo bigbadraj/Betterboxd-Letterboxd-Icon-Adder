@@ -1487,7 +1487,7 @@ const ICON_CONFIG = {
             width: "16",
             className: "nc17rated-icon floating-icon",
             showRanking: true,
-            tooltipText: "№ {ranking} in the Top 20 NC-17 Rated Films"
+            tooltipText: "№ {ranking} in the Top 15 NC-17 Rated Films"
         })
     },
     popNC17Rated: { // New entry for NC-17 Rated Films
